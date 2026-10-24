@@ -1,0 +1,1433 @@
+{
+ "collected_at": "2026-10-25",
+ "store": "麦当劳上海黄浦华旭国际大厦餐厅 (1450713)",
+ "truth": [
+  {
+   "name": "双层吉士汉堡",
+   "avg": 4.4,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "n": 5,
+   "cat": "招牌类",
+   "price": 23.0,
+   "price_note": null,
+   "official_tags": [
+    "100%纯牛肉",
+    "人气"
+   ],
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [
+    "吉士",
+    "酸黄瓜",
+    "洋葱粒",
+    "番茄酱",
+    "芥末酱"
+   ],
+   "official_desc": null,
+   "real": [
+    "芝士控最爱",
+    "争议大看个人口味",
+    "缩水严重"
+   ],
+   "ugc": [
+    {
+     "score": 5,
+     "text": "性价比之王，简单粗暴美式风。芝士味明显，牛肉香突出。芝士控和牛肉控的快乐老家。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 5,
+     "text": "双层吉士汉堡真的绝了，芝士控必备！双层牛肉饼加上双层芝士，每一口都充满浓郁的芝士香味。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 4,
+     "text": "这个汉堡的争议比较大，得看你怎么吃。点双吉我一般会去酱汁、去配菜，加生菜。它里面是没有菜的，得让店员帮我加。",
+     "source": "微信公众号测评"
+    },
+    {
+     "score": 5,
+     "text": "双层吉士汉堡入口就是浓郁的芝士味道，双层更增加了芝士的香甜，搭配的肉饼真是好吃极了。不过这个汉堡比较小，女生吃可能能吃饱，男生两个应该都可以吃下。",
+     "source": "新厨房测评"
+    },
+    {
+     "score": 3,
+     "text": "双层吉士堡的直径从历史巅峰的13厘米，一路缩水至如今的8-8.5厘米，仅比一张银行卡略宽，甚至还没有成年男性的手掌大，被网友戏称为「牛肉味马卡龙」。",
+     "source": "中华网报道（实测缩水）"
+    }
+   ],
+   "has_review": true
+  },
+  {
+   "name": "板烧鸡腿堡",
+   "avg": 4.2,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "n": 6,
+   "cat": "口味类",
+   "price": 23.5,
+   "price_note": null,
+   "official_tags": [
+    "板烧滋滋",
+    "多汁惹味",
+    "新升级"
+   ],
+   "flavor_tags": [
+    "板烧滋滋",
+    "多汁惹味"
+   ],
+   "ingredients": [
+    "烤味酱",
+    "切块生菜"
+   ],
+   "official_desc": null,
+   "real": [
+    "清爽不油腻",
+    "必须趁热吃",
+    "钠高易水肿"
+   ],
+   "ugc": [
+    {
+     "score": 5,
+     "text": "清爽担当，不那么罪恶的汉堡。煎烤鸡肉，油腻感比麦辣低不少。想吃汉堡又怕太油就选它。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 4,
+     "text": "酱汁微甜咸口，鸡腿肉嫩滑带有胡椒辣味，面包带有奶香。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 3,
+     "text": "必须趁热食用，放久后肉变柴、面包吸油，体验断崖式下跌。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 4,
+     "text": "口感嫩滑，但特制酱汁提升了整体味道，酱汁较多可能导致最后几口有些腻。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 5,
+     "text": "里面有一整款烤制后的鸡腿肉，鸡皮还存在，入口油香四溢，鸡肉的肉汁充斥口腔，非常美味的一款汉堡。这个被众多麦友们认为是麦当劳里的顶级单品。",
+     "source": "微信公众号测评"
+    },
+    {
+     "score": 4,
+     "text": "双面煎炉工艺制作而成的汉堡，不额外加油，煎熟鸡腿所提供的油脂是鸡腿本身所含的油脂。含钠量较高，大约在1174毫克左右，吃完第二天容易水肿。",
+     "source": "公众号营养测评"
+    }
+   ],
+   "has_review": true
+  },
+  {
+   "name": "麦辣鸡腿堡",
+   "avg": 4.2,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "n": 5,
+   "cat": "口味类",
+   "price": 22.5,
+   "price_note": null,
+   "official_tags": [
+    "人气",
+    "人气经典"
+   ],
+   "flavor_tags": [
+    "人气",
+    "人气经典"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "real": [
+    "满足感天花板",
+    "减脂期控制"
+   ],
+   "ugc": [
+    {
+     "score": 5,
+     "text": "满足感天花板，全场MVP。鸡腿肉厚实，外皮酥脆，辣味开胃。一口下去治愈所有不开心。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 4,
+     "text": "外酥里嫩，辣度适中，非常适合喜欢吃辣的朋友。建议搭配冰饮一起享用。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 4,
+     "text": "辣度适中，与麦辣鸡翅做法一致，夹入酱汁和生菜，辣味过瘾。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 3,
+     "text": "热量油脂明显，减脂期控制频率。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 5,
+     "text": "一整块鸡腿肉经过油炸，面粉炸成鳞片形状，刚制作好的汉堡入口脆嫩可口，同时辣辣的味道让人食欲大增。",
+     "source": "新厨房测评"
+    }
+   ],
+   "has_review": true
+  },
+  {
+   "name": "巨无霸",
+   "avg": 4.0,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "n": 8,
+   "cat": "招牌类",
+   "price": 25.5,
+   "price_note": null,
+   "official_tags": [
+    "100%纯牛肉",
+    "人气",
+    "爆款"
+   ],
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [
+    "巨无霸酱",
+    "吉士",
+    "生菜",
+    "酸黄瓜",
+    "洋葱粒"
+   ],
+   "official_desc": null,
+   "real": [
+    "经典不翻车",
+    "酱味偏重",
+    "被吐槽缩水"
+   ],
+   "ugc": [
+    {
+     "score": 5,
+     "text": "经典中的经典，麦当劳亲儿子。双层牛肉饼+酸黄瓜+生菜+芝士+经典酱。不知道点什么就选它，永远不会错。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 5,
+     "text": "牛肉巨无霸，双层牛肉口感好厚实，肉质鲜嫩。加上松软的面包胚，还有酸黄瓜和洋葱的灵魂搭配，大口大口好香。隐藏吃法：牛肉巨无霸+蒜蓉酱+辣椒粉。",
+     "source": "大众点评"
+    },
+    {
+     "score": 4,
+     "text": "酱味偏重，不爱酸黄瓜慎入。吃多了可能觉得腻，但搭配可乐可以缓解这种感觉。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 3,
+     "text": "实物与广告图片存在差距，常被吐槽缩水，视觉上不如预期。近一年来网友一直在说麦麦汉堡缩水了，确实比之前的 size 小。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 4,
+     "text": "肉饼煎得香嫩多汁，两片面包松软不噎人，酸黄瓜和生菜解腻，一口下去咸香适口。薯条刚出锅时金黄酥脆，蘸着番茄酱，怎么吃都不腻。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 4,
+     "text": "连同包装接近230g。肉饼口感偏干但是很香，牛肉饼的味道非常纯粹，尝不出太多调味。整体偏酸，因为有沙拉酱和酸黄瓜——整体偏酸让人更有食欲，而且沙拉酱还能中和牛肉饼偏干的口感。吃完一整个会莫名的感觉有点腻。",
+     "source": "现食研测评"
+    },
+    {
+     "score": 4,
+     "text": "整个堡又厚又有分量，不把面包压实了一口还真咬不透，尤其是里面的黄芥末酱，搭在一起真的好好吃。唯一的缺点就有那么一点小贵。",
+     "source": "微信公众号测评"
+    },
+    {
+     "score": 3,
+     "text": "肉饼单片重量从曾经的25克缩减至22克左右，整体体积仅约477立方厘米。相比之下，竞品汉堡王的皇堡体积可达678立方厘米。",
+     "source": "中华网报道（实测缩水）"
+    }
+   ],
+   "has_review": true
+  },
+  {
+   "name": "龙焰芝士棒鸡腿堡",
+   "avg": 3.7,
+   "min": 2,
+   "max": 5,
+   "spread": 3,
+   "n": 6,
+   "cat": "新品类",
+   "price": 29.9,
+   "price_note": "麦金卡四件套 29 元起",
+   "official_tags": [
+    "浓郁奶香拉丝芝士",
+    "韩式辣椒黄油风味",
+    "上新"
+   ],
+   "flavor_tags": [
+    "上新",
+    "浓郁奶香拉丝芝士"
+   ],
+   "ingredients": [
+    "辣椒黄油风味酱",
+    "切块生菜"
+   ],
+   "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，",
+   "real": [
+    "没拉丝",
+    "芝士棒空心",
+    "像炸糕",
+    "酱好吃"
+   ],
+   "ugc": [
+    {
+     "score": 5,
+     "text": "大块原切鸡腿排，咬下去咔嚓一声特别解压。酱是韩式辣酱，上下两层都刷了，入味很足。重点是个头里还塞了芝士棒，一口下去脆、辣、奶香全撞在一起，层次感拉满。",
+     "source": "微信公众号测评"
+    },
+    {
+     "score": 4,
+     "text": "芝士味比较浓但没拉丝、也没爆浆感，没和鸡腿排、辣酱碰撞出特别的效果。这个韩式龙焰酱挺好吃的，韩式甜酱的发酵味、甜辣味和鸡腿排特别搭。基础款的龙焰鸡腿堡就很好吃了，没必要加钱吃芝士棒款。",
+     "source": "小红书测评"
+    },
+    {
+     "score": 2,
+     "text": "宣传图的拉丝完全是诈骗来的，实物根本没有拉丝，甚至第一口咬下去，芝士棒是空心的只有面粉皮子。芝士味也完全尝不出来。",
+     "source": "微信公众号测评"
+    },
+    {
+     "score": 3,
+     "text": "可能是我吃过的麦当劳最照骗的一次新品。里面的芝士棒是满满的拉丝状，恨不得隔着屏幕都能闻到马苏里拉芝士的咸香味。然而实际真实吃到的，芝士棒里面是中空的，甚至挑出来单独吃，也没有尝出任何奶酪的香味。",
+     "source": "今日头条"
+    },
+    {
+     "score": 3,
+     "text": "韩式甜辣酱的解腻功效不错，鸡排也足够汁水丰盈。但芝士棒去掉后，感觉就是一个甜辣版本的爆脆星星堡。两根没有奶酪的芝士棒在麦当劳值三块钱。",
+     "source": "今日头条"
+    },
+    {
+     "score": 5,
+     "text": "里面是大块原切鸡腿排，咬下去咔嚓一声特别解压。酱是韩式辣酱，上下两层都刷了，入味很足。芝士棒外壳炸得金黄酥脆，趁热咬开，里面的马苏里拉慢慢涌出来，奶香味很正。",
+     "source": "微信公众号测评"
+    }
+   ],
+   "has_review": true
+  },
+  {
+   "name": "麦香鸡汉堡",
+   "avg": 3.5,
+   "min": 3,
+   "max": 4,
+   "spread": 1,
+   "n": 4,
+   "cat": "新品类",
+   "price": 17.0,
+   "price_note": null,
+   "official_tags": [
+    "人气",
+    "单炸鸡类"
+   ],
+   "flavor_tags": [
+    "人气",
+    "单炸鸡类"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "real": [
+    "物美价廉",
+    "就只是个鸡肉饼",
+    "存在感低"
+   ],
+   "ugc": [
+    {
+     "score": 3,
+     "text": "存在感超低的汉堡。麦香鸡和麦乐鸡块很像，但味道重一些，可惜依然没有什么口感可言，就只是一个鸡肉饼而已。整体表现中规中矩，缺乏惊艳感。",
+     "source": "现食研测评"
+    },
+    {
+     "score": 3,
+     "text": "清爽口感，适合清淡口味爱好者。对于重口味爱好者来说，这款汉堡可能略显平淡。",
+     "source": "什么值得买"
+    },
+    {
+     "score": 4,
+     "text": "一个麦香鸡堡重132.3g，里面的麦香鸡和麦乐鸡块很像，但味道重一些，黑色的小点应该是用黑胡椒调味的结果。一口咬下去能尝到牧场酱的味道，可惜依然没有什么口感可言，就只是一个鸡肉饼而已。",
+     "source": "现食研测评"
+    },
+    {
+     "score": 4,
+     "text": "作为传统的麦当劳汉堡，麦香鸡的存在真可谓是历史悠久，其最主要的特点就是物美价廉，应该是麦当劳最便宜的汉堡了，入口鸡排混合着汉堡酱的味道真是让人难以抗拒，缺点就是小。",
+     "source": "新厨房测评"
+    }
+   ],
+   "has_review": true
+  }
+ ],
+ "hot": [
+  {
+   "name": "精选单人餐三件套",
+   "cat": "精选单人餐",
+   "price": 34.5,
+   "signal": 90,
+   "flavor_tags": [
+    "爆款"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "薄皮焦香V翅",
+   "cat": "炸鸡",
+   "price": 16.0,
+   "signal": 88,
+   "flavor_tags": [
+    "人气"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "高达吉士双牛堡",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 22.5,
+   "signal": 88,
+   "flavor_tags": [
+    "100%纯牛肉",
+    "人气"
+   ],
+   "ingredients": [
+    "酸黄瓜",
+    "洋葱粒",
+    "番茄酱",
+    "芥末酱",
+    "高达干酪片"
+   ],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "鸡肉堡单品精选",
+   "cat": "鸡肉汉堡/卷",
+   "price": 23.5,
+   "signal": 88,
+   "flavor_tags": [
+    "人气"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦乐鸡5块",
+   "cat": "炸鸡",
+   "price": 14.0,
+   "signal": 88,
+   "flavor_tags": [
+    "人气"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "“堡”你欢乐套餐",
+   "cat": "500大卡套餐",
+   "price": 28.0,
+   "signal": 86,
+   "flavor_tags": [
+    "粉丝之选"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "龙焰芝士棒鸡腿堡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 27.0,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "浓郁奶香拉丝芝士"
+   ],
+   "ingredients": [
+    "辣椒黄油风味酱",
+    "切块生菜"
+   ],
+   "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，",
+   "has_review": true,
+   "avg": 3.7,
+   "n": 6
+  },
+  {
+   "name": "“我就喜欢”鸡薯双全盒",
+   "cat": "人气热卖",
+   "price": 15.9,
+   "signal": 80,
+   "flavor_tags": [
+    "心形薯饼同款比心",
+    "上新"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "“葱不求人“按摩捶痒痒挠",
+   "cat": "小食甜品/其他",
+   "price": 14.9,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "既可捶背",
+    "又可挠痒"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "【美汁源】“多汁柠柠”",
+   "cat": "饮品",
+   "price": 12.0,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "清爽上新"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "心形薯饼5块",
+   "cat": "小食甜品/其他",
+   "price": 14.5,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "口口酥脆",
+    "含一份蘸酱"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "心形薯饼8块",
+   "cat": "人气热卖",
+   "price": 22.5,
+   "signal": 80,
+   "flavor_tags": [
+    "含一份蘸酱",
+    "上新"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "旋旋水手帽",
+   "cat": "小食甜品/其他",
+   "price": 48.8,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "汪苏泷限量周边"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "韩式甜辣酱鸡块",
+   "cat": "炸鸡",
+   "price": 15.0,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "韩式风味"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "马来咖喱风味薄皮肉骨鸡3块",
+   "cat": "炸鸡",
+   "price": 15.5,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "浓郁咖喱飘香"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "马苏里拉拉丝芝士条",
+   "cat": "小食甜品/其他",
+   "price": 15.0,
+   "signal": 80,
+   "flavor_tags": [
+    "上新",
+    "趁热拉丝",
+    "奶香醇厚"
+   ],
+   "ingredients": [],
+   "official_desc": "两根马苏里拉拉丝芝士条，热时双倍拉丝更过瘾🧀",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦当劳限定丝巾",
+   "cat": "人气热卖",
+   "price": 39.9,
+   "signal": 80,
+   "flavor_tags": [
+    "上新"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "龙焰芝士棒鸡腿堡三件套",
+   "cat": "人气热卖",
+   "price": 29.9,
+   "signal": 80,
+   "flavor_tags": [
+    "浓郁奶香拉丝芝士",
+    "上新"
+   ],
+   "ingredients": [],
+   "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "龙焰鸡腿堡",
+   "cat": "人气热卖",
+   "price": 15.9,
+   "signal": 80,
+   "flavor_tags": [
+    "韩式辣椒黄油风味",
+    "上新"
+   ],
+   "ingredients": [
+    "辣椒黄油风味酱",
+    "切块生菜"
+   ],
+   "official_desc": "龙焰鸡腿堡三件套 26.9 元起即刻开吃🍔",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "龙焰鸡腿堡三件套",
+   "cat": "人气热卖",
+   "price": 26.9,
+   "signal": 80,
+   "flavor_tags": [
+    "韩式辣椒黄油风味",
+    "上新"
+   ],
+   "ingredients": [],
+   "official_desc": "龙焰鸡腿堡三件套 26.9 元起即刻开吃🍔",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "冰浓浓燕麦黑巧中杯",
+   "cat": "麦咖啡™",
+   "price": 23.0,
+   "signal": 74,
+   "flavor_tags": [
+    "限定特惠",
+    "浓浓黑巧"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "冰浓浓黑巧中杯",
+   "cat": "麦咖啡™",
+   "price": 21.0,
+   "signal": 74,
+   "flavor_tags": [
+    "限定特惠",
+    "浓浓黑巧"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦咖啡™冰奶铁中杯",
+   "cat": "麦咖啡™",
+   "price": 21.0,
+   "signal": 74,
+   "flavor_tags": [
+    "限定特惠"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦咖啡™冰美式中杯",
+   "cat": "人气热卖",
+   "price": 19.0,
+   "signal": 74,
+   "flavor_tags": [
+    "限定特惠"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "板烧鸡腿堡三件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 34.5,
+   "signal": 70,
+   "flavor_tags": [
+    "更多汁"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "人气经典随心配",
+   "cat": "随心配1+1",
+   "price": 14.9,
+   "signal": 64,
+   "flavor_tags": [
+    "超值百种组合随心配"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "精选超值随心配",
+   "cat": "随心配1+1",
+   "price": 14.9,
+   "signal": 64,
+   "flavor_tags": [
+    "超值百种组合随心配"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "堡堡随心拼（7件任选）",
+   "cat": "小食拼盘/多人餐",
+   "price": 72.5,
+   "signal": 60,
+   "flavor_tags": [
+    "万种组合"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "BFF四宫格小食盘",
+   "cat": "小食拼盘/多人餐",
+   "price": 40.8,
+   "signal": 58,
+   "flavor_tags": [
+    "随心拼"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "双层吉士汉堡",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 23.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [
+    "吉士",
+    "酸黄瓜",
+    "洋葱粒",
+    "番茄酱",
+    "芥末酱"
+   ],
+   "official_desc": null,
+   "has_review": true,
+   "avg": 4.4,
+   "n": 5
+  },
+  {
+   "name": "板烧鸡腿堡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 23.5,
+   "signal": 0,
+   "flavor_tags": [
+    "板烧滋滋",
+    "多汁惹味"
+   ],
+   "ingredients": [
+    "烤味酱",
+    "切块生菜"
+   ],
+   "official_desc": null,
+   "has_review": true,
+   "avg": 4.2,
+   "n": 6
+  },
+  {
+   "name": "巨无霸",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 25.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [
+    "巨无霸酱",
+    "吉士",
+    "生菜",
+    "酸黄瓜",
+    "洋葱粒"
+   ],
+   "official_desc": null,
+   "has_review": true,
+   "avg": 4.0,
+   "n": 8
+  },
+  {
+   "name": "100% 苹果汁(盒装)",
+   "cat": "饮品",
+   "price": 11.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "【美汁源】“黄金橙橙”",
+   "cat": "饮品",
+   "price": 13.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "中杯怡泉+C",
+   "cat": "饮品",
+   "price": 11.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "中薯条",
+   "cat": "小食甜品/其他",
+   "price": 13.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "人气超值四件套随心选",
+   "cat": "精选单人餐",
+   "price": 58.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "全明星双人分享餐八件套",
+   "cat": "人气热卖",
+   "price": 117.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "冰燕麦奶铁中杯",
+   "cat": "麦咖啡™",
+   "price": 23.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "北美招牌牧场酱",
+   "cat": "蘸酱炸鸡",
+   "price": 3.0,
+   "signal": 0,
+   "flavor_tags": [
+    "使用动物奶油"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "卡布奇诺中杯",
+   "cat": "麦咖啡™",
+   "price": 21.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "双层吉士汉堡中套餐",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 34.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "可乐",
+   "cat": "饮品",
+   "price": 9.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "吉士汉堡包中套餐",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 26.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "大堡口福三件套",
+   "cat": "大堡口福单人餐",
+   "price": 23.9,
+   "signal": 0,
+   "flavor_tags": [
+    "大口吃肉好快乐"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "小杯鲜萃咖啡",
+   "cat": "麦咖啡™",
+   "price": 9.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "巨无霸三件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 36.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "巨无霸四件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 58.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "板烧鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "汉堡开心乐园餐",
+   "cat": "开心乐园",
+   "price": 23.5,
+   "signal": 0,
+   "flavor_tags": [
+    "童年童款"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "派",
+   "cat": "小食甜品/其他",
+   "price": 8.5,
+   "signal": 0,
+   "flavor_tags": [
+    "派",
+    "第二份优惠"
+   ],
+   "ingredients": [],
+   "official_desc": "过家家派对就要开始啦",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "浓缩咖啡",
+   "cat": "麦咖啡™",
+   "price": 15.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "热燕麦奶中杯",
+   "cat": "麦咖啡™",
+   "price": 21.0,
+   "signal": 0,
+   "flavor_tags": [
+    "其他"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "热牛奶中杯",
+   "cat": "麦咖啡™",
+   "price": 19.0,
+   "signal": 0,
+   "flavor_tags": [
+    "其他"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "牛肉堡单品精选",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 14.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "牛肉汉堡四件套随心选",
+   "cat": "精选单人餐",
+   "price": 54.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "纯悦",
+   "cat": "饮品",
+   "price": 7.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "纯牛奶(盒装)",
+   "cat": "饮品",
+   "price": 10.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "脆脆薯条",
+   "cat": "小食甜品/其他",
+   "price": 16.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "脆薯饼",
+   "cat": "小食甜品/其他",
+   "price": 8.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "苹果片",
+   "cat": "小食甜品/其他",
+   "price": 7.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "蘸酱BFF四宫格小食盘",
+   "cat": "蘸酱炸鸡",
+   "price": 43.8,
+   "signal": 0,
+   "flavor_tags": [
+    "蘸酱炸鸡新吃法"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "蘸酱炸鸡",
+   "cat": "人气热卖",
+   "price": 11.9,
+   "signal": 0,
+   "flavor_tags": [
+    "韩式芝士风味酱上新"
+   ],
+   "ingredients": [],
+   "official_desc": "蘸酱炸鸡仅需11.9元起🍗",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "蘸酱麦麦脆汁鸡",
+   "cat": "蘸酱炸鸡",
+   "price": 11.9,
+   "signal": 0,
+   "flavor_tags": [
+    "韩式芝士风味酱上新"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "酥脆无双套餐",
+   "cat": "500大卡套餐",
+   "price": 20.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "锡兰红茶",
+   "cat": "饮品",
+   "price": 11.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "阳光柠檬红茶小杯",
+   "cat": "饮品",
+   "price": 9.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "雪碧（小杯）",
+   "cat": "饮品",
+   "price": 9.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "韩式烟熏芝士风味酱",
+   "cat": "蘸酱炸鸡",
+   "price": 3.0,
+   "signal": 0,
+   "flavor_tags": [
+    "韩式风味",
+    "浓郁芝香"
+   ],
+   "ingredients": [],
+   "official_desc": "🆕韩式烟熏芝士风味酱",
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "鲜萃冰咖",
+   "cat": "饮品",
+   "price": 11.5,
+   "signal": 0,
+   "flavor_tags": [
+    "冰爽上新"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦乐鸡经典中套餐",
+   "cat": "炸鸡",
+   "price": 25.0,
+   "signal": 0,
+   "flavor_tags": [
+    "立省10.5元起"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦香鸡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 17.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [
+    "麦香鸡酱",
+    "生菜"
+   ],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦香鸡中套餐",
+   "cat": "鸡肉汉堡/卷",
+   "price": 28.0,
+   "signal": 0,
+   "flavor_tags": [
+    "立省10.5元起"
+   ],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "麦麦脆汁鸡1块",
+   "cat": "炸鸡",
+   "price": 15.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "龙焰芝士棒鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  },
+  {
+   "name": "龙焰鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "ingredients": [],
+   "official_desc": null,
+   "has_review": false,
+   "avg": null,
+   "n": 0
+  }
+ ]
+}
