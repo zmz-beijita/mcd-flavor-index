@@ -172,7 +172,7 @@
   <div class="top">
     <div class="logo"><span class="mk">香</span>麦门真香榜</div>
     <div class="pills">
-      <span class="pill y"><span class="d"></span>22 篇真实评价</span>
+      <span class="pill y"><span class="d"></span><span id="pillN">—</span> 篇真实评价</span>
       <span class="pill b"><span class="d"></span>6 个在售商品</span>
     </div>
   </div>
@@ -183,7 +183,7 @@
     <h1>今天想吃麦当劳<br>先看<em>真实口碑</em></h1>
     <p class="sub">
       麦当劳菜单接口给「龙焰芝士棒鸡腿堡」打的是<b>「浓郁奶香拉丝芝士」「趁热拉丝」</b>。<br>
-      而 22 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。我们把两边的账摊开给你看。
+      而 <span id="heroN">—</span> 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。我们把两边的账摊开给你看。
     </p>
     <div class="btns">
       <button class="btn red" onclick="pickTop()">🔍 查最值得吃的</button>
@@ -194,9 +194,9 @@
 
   <!-- 统计 -->
   <div class="stats">
-    <div class="stat"><div class="n red">3.4</div><div class="l">最低真香分</div><div class="s">龙焰芝士棒鸡腿堡 · 区间 2.0–5.0</div></div>
-    <div class="stat"><div class="n y">22</div><div class="l">真实评价样本</div><div class="s">6 个商品全覆盖 · 采集 2026-10-25</div></div>
-    <div class="stat"><div class="n b">5</div><div class="l">官方标签落差</div><div class="s">声称的效果未被真实口碑证实</div></div>
+    <div class="stat"><div class="n red" id="statLow">—</div><div class="l">最低真香分</div><div class="s" id="statLowSub">—</div></div>
+    <div class="stat"><div class="n y" id="statN">—</div><div class="l">真实评价样本</div><div class="s" id="statNSub">—</div></div>
+    <div class="stat"><div class="n b" id="statGap">—</div><div class="l">官方标签落差</div><div class="s">声称的效果未被真实口碑证实</div></div>
   </div>
 
   <!-- 商品选择 -->
@@ -278,7 +278,25 @@ function boot(items){
   if(!DATA.length){ return; }
   byId = Object.fromEntries(DATA.map(d=>[d.name,d]));
   current = DATA[0].name;
+  renderStats();
   renderPicker(); renderPanel(); renderComments();
+}
+
+/* 顶部统计：全部由数据算出，改数据即变 */
+function renderStats(){
+  const total = DATA.reduce((s,d)=>s+d.n,0);
+  const low = DATA.reduce((a,d)=>d.avg<a.avg?d:a);
+  const maxSpread = Math.max(...DATA.map(d=>d.spread));
+  const gapCount = DATA.filter(d=>d.real.some(r=>/没拉丝|空心|缩水|趁热|平淡|惊艳|腻/.test(r))).length;
+
+  const set=(id,v)=>{const e=document.getElementById(id); if(e) e.textContent=v;};
+  set('pillN', total);
+  set('heroN', total);
+  set('statN', total);
+  set('statNSub', `${DATA.length} 个商品全覆盖 · 采集 2026-10-25`);
+  set('statLow', low.avg.toFixed(1));
+  set('statLowSub', `${low.name} · 区间 ${low.min.toFixed(1)}–${low.max.toFixed(1)}`);
+  set('statGap', gapCount);
 }
 
 function scoreCls(s){ return s>=5?'hi':(s<=3?'lo':'mid'); }
