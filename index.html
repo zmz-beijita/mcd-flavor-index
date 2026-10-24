@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>麦门真香榜 · 今天想吃麦当劳，先看真实口碑</title>
+<style>
+  :root{
+    --red:#E8342A; --red-d:#B32018;
+    --yellow:#FFC72C; --yellow-d:#DFA000;
+    --blue:#1CB0F6; --blue-d:#0E8ACC;
+    --green:#3CC93C; --green-d:#2AA02A;
+    --cream:#FFF6E9; --paper:#FFFDF8; --ink:#2B2520; --mute:#8A7F73;
+    --line:#F0E4CE;
+    --round:"Baloo 2","Nunito","PingFang SC","Microsoft YaHei",sans-serif;
+    --mono:"JetBrains Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:var(--round);
+    -webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+
+  /* ===== 顶栏 ===== */
+  .top{display:flex;align-items:center;justify-content:space-between;padding:16px 0;
+    border-bottom:2px solid var(--line);margin-bottom:26px}
+  .logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:800;letter-spacing:-.01em}
+  .logo .mk{width:34px;height:34px;border-radius:11px;background:var(--red);
+    color:#fff;display:grid;place-items:center;font-size:18px;font-weight:900;
+    box-shadow:0 3px 0 var(--red-d)}
+  .pills{display:flex;gap:8px}
+  .pill{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;
+    padding:6px 13px;border-radius:999px;background:#fff;border:2px solid var(--line)}
+  .pill .d{width:9px;height:9px;border-radius:50%}
+  .pill.y .d{background:var(--yellow)}
+  .pill.b .d{background:var(--blue)}
+
+  /* ===== Hero ===== */
+  .hero{text-align:center;padding:22px 0 30px}
+  .hero .kicker{font-size:13px;font-weight:800;color:var(--red);letter-spacing:.08em;margin-bottom:12px}
+  .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.16;letter-spacing:-.02em}
+  .hero h1 em{font-style:normal;background:var(--yellow);padding:0 9px;border-radius:12px;
+    box-shadow:0 4px 0 var(--yellow-d)}
+  .hero .sub{font-size:16px;color:var(--mute);margin-top:16px;max-width:640px;margin-left:auto;margin-right:auto}
+  .hero .sub b{color:var(--ink)}
+  .btns{display:flex;gap:13px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+  .btn{border:none;cursor:pointer;font-family:var(--round);font-weight:800;font-size:16px;
+    padding:15px 30px;border-radius:16px;color:#fff;transition:transform .12s,box-shadow .12s;
+    display:inline-flex;align-items:center;gap:8px}
+  .btn:active{transform:translateY(4px);box-shadow:none!important}
+  .btn.red{background:var(--red);box-shadow:0 5px 0 var(--red-d)}
+  .btn.yellow{background:var(--yellow);color:var(--ink);box-shadow:0 5px 0 var(--yellow-d)}
+  .btn.blue{background:var(--blue);box-shadow:0 5px 0 var(--blue-d)}
+  .btn.ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line);border:2px solid var(--line)}
+
+  /* ===== 统计三卡 ===== */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 30px}
+  .stat{background:#fff;border:2px solid var(--line);border-radius:22px;padding:20px 18px;text-align:center;
+    box-shadow:0 4px 0 rgba(0,0,0,.04)}
+  .stat .n{font-size:38px;font-weight:900;letter-spacing:-.03em;line-height:1}
+  .stat .n.red{color:var(--red)} .stat .n.y{color:#E0A000} .stat .n.b{color:var(--blue)}
+  .stat .l{font-size:13px;font-weight:700;color:var(--mute);margin-top:7px}
+  .stat .s{font-size:11.5px;color:#B5A99B;margin-top:3px}
+
+  /* ===== 区块标题 ===== */
+  .sec-hd{display:flex;align-items:center;justify-content:space-between;margin:0 0 16px;flex-wrap:wrap;gap:12px}
+  .sec-hd h2{font-size:24px;font-weight:900;letter-spacing:-.015em;display:flex;align-items:center;gap:10px}
+  .sec-hd h2 .em{background:var(--ink);color:var(--yellow);font-size:13px;padding:3px 10px;border-radius:999px;font-weight:800}
+  .sec-hd .note{font-size:13px;color:var(--mute);font-weight:600}
+
+  /* ===== 商品选择器 ===== */
+  .picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:13px;margin-bottom:26px}
+  .chip-card{background:#fff;border:2.5px solid var(--line);border-radius:20px;padding:15px 12px;
+    cursor:pointer;transition:transform .14s,border-color .14s,box-shadow .14s;text-align:center;
+    box-shadow:0 4px 0 rgba(0,0,0,.04);position:relative}
+  .chip-card:hover{transform:translateY(-3px);box-shadow:0 7px 0 rgba(0,0,0,.05)}
+  .chip-card.on{border-color:var(--red);box-shadow:0 5px 0 var(--red-d);background:#FFF9F7}
+  .chip-card .pic{height:64px;display:grid;place-items:center;margin-bottom:9px}
+  .chip-card .pic img{max-width:60px;max-height:60px;object-fit:contain}
+  .chip-card .nm{font-size:14.5px;font-weight:800;line-height:1.3}
+  .chip-card .sc{font-size:26px;font-weight:900;margin-top:6px;letter-spacing:-.02em}
+  .chip-card .sc.lo{color:var(--red)} .chip-card .sc.hi{color:var(--green)} .chip-card .sc.mid{color:#E0A000}
+  .chip-card .meta{font-size:11px;color:var(--mute);font-weight:600;margin-top:2px}
+  .chip-card .flag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);
+    background:var(--red);color:#fff;font-size:10.5px;font-weight:800;padding:2px 9px;border-radius:999px;white-space:nowrap}
+
+  /* ===== 详情面板 ===== */
+  .panel{background:#fff;border:2.5px solid var(--line);border-radius:26px;padding:26px;margin-bottom:26px;
+    box-shadow:0 5px 0 rgba(0,0,0,.04)}
+  .panel .ph{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
+  .panel .ttl{font-size:26px;font-weight:900;letter-spacing:-.02em}
+  .panel .badges{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
+  .bg{font-size:12.5px;font-weight:800;padding:5px 12px;border-radius:999px;background:var(--cream);border:2px solid var(--line)}
+  .bg.o{background:var(--red);color:#fff;border-color:var(--red-d)}
+  .bg.r{background:#FFEDEA;color:var(--red);border-color:#FFD0C9}
+  .bg.g{background:#E9F9E9;color:#1F7A1F;border-color:#BFE9BF}
+  .scorebox{text-align:center;background:var(--cream);border:2.5px solid var(--line);border-radius:22px;padding:14px 20px;min-width:150px}
+  .scorebox .n{font-size:46px;font-weight:900;letter-spacing:-.035em;line-height:1}
+  .scorebox .n.lo{color:var(--red)} .scorebox .n.hi{color:var(--green)} .scorebox .n.mid{color:#E0A000}
+  .scorebox .l{font-size:12px;font-weight:700;color:var(--mute);margin-top:4px}
+
+  /* 分歧条 */
+  .spread{margin-top:22px;background:var(--cream);border:2.5px solid var(--line);border-radius:20px;padding:16px 18px}
+  .spread .sh{font-size:13px;font-weight:800;margin-bottom:11px;display:flex;justify-content:space-between}
+  .spread .sh span{color:var(--mute);font-weight:700;font-family:var(--mono);font-size:12px}
+  .track{height:30px;background:#fff;border-radius:15px;position:relative;border:2px solid var(--line)}
+  .track .rng{position:absolute;top:0;bottom:0;background:var(--yellow);border-radius:15px;opacity:.55}
+  .track .mk{position:absolute;top:-5px;width:16px;height:36px;border-radius:8px;background:var(--red);
+    border:3px solid #fff;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+  .track .tk{position:absolute;top:38px;font-family:var(--mono);font-size:11px;color:var(--mute);transform:translateX(-50%)}
+  .spread .sf{margin-top:20px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--mute);font-weight:700}
+
+  /* 对账 */
+  .vs{display:grid;grid-template-columns:1fr 62px 1fr;gap:0;margin-top:22px;
+    border:2.5px solid var(--line);border-radius:22px;overflow:hidden}
+  .vs .side{padding:18px;min-width:0}
+  .vs .side .h{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--mute);margin-bottom:10px}
+  .vs .side.o{background:#FFF3F1}
+  .vs .side.c{background:#FFFBEC}
+  .vs .mid{background:var(--ink);color:var(--yellow);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:3px;font-weight:900}
+  .vs .mid .vs{font-size:17px}
+  .vs .mid .m{font-size:10px;font-weight:700;opacity:.8;text-align:center;line-height:1.3}
+  .vs .side .q{font-size:16.5px;font-weight:900;line-height:1.45;letter-spacing:-.01em}
+  .vs .side.o .q{color:var(--red)}
+  .vs .tg{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .vs .tg span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;border:2px solid transparent;
+    white-space:nowrap;max-width:100%}
+  .vs .side.o .tg span{background:#fff;border-color:#FFD0C9;color:var(--red)}
+  .vs .side.c .tg span{background:#fff;border-color:var(--line);color:var(--ink-2,#5A5048)}
+  .vs .tg span.struck{text-decoration:line-through;opacity:.62;background:#F0EDE6!important;border-color:#E2DACB!important;color:#9A9084!important}
+
+  /* ===== 评论区 ===== */
+  .cmt{border-top:2.5px dashed var(--line);margin-top:26px;padding-top:22px}
+  .cmt .ch{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:15px}
+  .cmt .ch h3{font-size:20px;font-weight:900;display:flex;align-items:center;gap:9px}
+  .filters{display:flex;gap:8px}
+  .fb{font-family:var(--round);font-size:13px;font-weight:800;padding:7px 15px;border-radius:12px;
+    border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--mute);transition:all .13s}
+  .fb:hover{border-color:var(--yellow)}
+  .fb.on{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
+  .fb:active{transform:translateY(2px)}
+  .clist{display:grid;gap:11px}
+  .ci{display:grid;grid-template-columns:56px 1fr;gap:14px;background:#fff;border:2px solid var(--line);
+    border-radius:18px;padding:15px 17px}
+  .ci .badge{text-align:center;align-self:start}
+  .ci .badge .s{font-size:21px;font-weight:900;line-height:1}
+  .ci .badge .s.hi{color:var(--green)} .ci .badge .s.mid{color:#E0A000} .ci .badge .s.lo{color:var(--red)}
+  .ci .badge .w{font-size:10px;color:var(--mute);font-weight:700;margin-top:2px}
+  .ci .q{font-size:14.5px;line-height:1.75}
+  .ci .q em{font-style:normal;background:#FFF1B8;padding:0 3px;border-radius:3px;font-weight:800;color:var(--ink)}
+  .ci .src{font-size:11.5px;color:var(--mute);font-weight:700;margin-top:7px;font-family:var(--mono)}
+  .ci .side{font-size:11.5px;color:var(--mute);font-weight:700;margin-top:7px}
+
+  .foot{margin-top:34px;padding-top:18px;border-top:2px solid var(--line);font-size:12px;color:var(--mute);line-height:1.9}
+  .foot b{color:var(--ink)}
+  .foot code{font-family:var(--mono);background:var(--cream);padding:1px 6px;border-radius:5px;font-size:11.5px}
+
+  @media(max-width:860px){
+    .stats{grid-template-columns:1fr}
+    .vs{grid-template-columns:1fr}
+    .vs .mid{padding:9px;flex-direction:row;gap:9px}
+    .ci{grid-template-columns:46px 1fr}
+    .panel{padding:19px}
+    .hero h1{font-size:33px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 顶栏 -->
+  <div class="top">
+    <div class="logo"><span class="mk">香</span>麦门真香榜</div>
+    <div class="pills">
+      <span class="pill y"><span class="d"></span>22 篇真实评价</span>
+      <span class="pill b"><span class="d"></span>6 个在售商品</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="kicker">MCD FLAVOR INDEX · 民间口碑审计</div>
+    <h1>今天想吃麦当劳<br>先看<em>真实口碑</em></h1>
+    <p class="sub">
+      麦当劳菜单接口给「龙焰芝士棒鸡腿堡」打的是<b>「浓郁奶香拉丝芝士」「趁热拉丝」</b>。<br>
+      而 22 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。我们把两边的账摊开给你看。
+    </p>
+    <div class="btns">
+      <button class="btn red" onclick="pickTop()">🔍 查最值得吃的</button>
+      <button class="btn yellow" onclick="document.getElementById('cmt').scrollIntoView({behavior:'smooth'})">💬 看评论区</button>
+      <button class="btn ghost" onclick="document.getElementById('src').scrollIntoView({behavior:'smooth'})">📎 看数据来源</button>
+    </div>
+  </div>
+
+  <!-- 统计 -->
+  <div class="stats">
+    <div class="stat"><div class="n red">3.4</div><div class="l">最低真香分</div><div class="s">龙焰芝士棒鸡腿堡 · 区间 2.0–5.0</div></div>
+    <div class="stat"><div class="n y">22</div><div class="l">真实评价样本</div><div class="s">6 个商品全覆盖 · 采集 2026-10-25</div></div>
+    <div class="stat"><div class="n b">5</div><div class="l">官方标签落差</div><div class="s">声称的效果未被真实口碑证实</div></div>
+  </div>
+
+  <!-- 商品选择 -->
+  <div class="sec-hd">
+    <h2>选一个商品 <span class="em">点一下</span></h2>
+    <div class="note">红黄蓝三色分别代表：≤3 星 / 4 星 / 5 星</div>
+  </div>
+  <div class="picker" id="picker"></div>
+
+  <!-- 详情 -->
+  <div class="panel" id="panel"></div>
+
+  <!-- 评论区 -->
+  <div class="cmt" id="cmt">
+    <div class="ch">
+      <h3>💬 评论区 · 原文摘录</h3>
+      <div class="filters" id="filters">
+        <button class="fb on" data-f="all">全部</button>
+        <button class="fb" data-f="hi">👍 好评 5 星</button>
+        <button class="fb" data-f="lo">👎 差评 ≤3 星</button>
+      </div>
+    </div>
+    <div class="clist" id="clist"></div>
+  </div>
+
+  <!-- 数据来源 -->
+  <div class="foot" id="src">
+    <b>方法与边界：</b>真香指数 = 该商品全部真实评价评分的算术平均，样本量与评分区间随商品一并公开，样本少则可信度低。<br>
+    官方风味标签取自麦当劳 MCP <code>query-meals</code> 接口返回的 <code>tags</code> 字段，为麦当劳官方自行标注；
+    价格取自 <code>calculate-price</code> 官方核价接口。<br>
+    <b>数据来源：</b>小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研，均为公开可访问内容，采集于 2026-10-25。<br>
+    <b>本作品为民间口碑整理，非麦当劳官方产品。</b>评价内容版权归原作者所有，此处仅作短引用与统计；不构成对任何商品的评价或推荐。
+  </div>
+</div>
+
+<script>window.__FLAVOR_DATA__ = [
+  {
+    "name": "龙焰芝士棒鸡腿堡",
+    "official_tags": [
+      "浓郁奶香拉丝芝士",
+      "韩式辣椒黄油风味",
+      "上新"
+    ],
+    "official_price_yuan": 29.9,
+    "price_note": "麦金卡四件套 29 元起",
+    "ugc": [
+      {
+        "score": 5,
+        "text": "大块原切鸡腿排，咬下去咔嚓一声特别解压。酱是韩式辣酱，上下两层都刷了，入味很足。重点是个头里还塞了芝士棒，一口下去脆、辣、奶香全撞在一起，层次感拉满。",
+        "source": "微信公众号测评"
+      },
+      {
+        "score": 4,
+        "text": "芝士味比较浓但没拉丝、也没爆浆感，没和鸡腿排、辣酱碰撞出特别的效果。这个韩式龙焰酱挺好吃的，韩式甜酱的发酵味、甜辣味和鸡腿排特别搭。基础款的龙焰鸡腿堡就很好吃了，没必要加钱吃芝士棒款。",
+        "source": "小红书测评"
+      },
+      {
+        "score": 2,
+        "text": "宣传图的拉丝完全是诈骗来的，实物根本没有拉丝，甚至第一口咬下去，芝士棒是空心的只有面粉皮子。芝士味也完全尝不出来。",
+        "source": "微信公众号测评"
+      },
+      {
+        "score": 3,
+        "text": "可能是我吃过的麦当劳最照骗的一次新品。里面的芝士棒是满满的拉丝状，恨不得隔着屏幕都能闻到马苏里拉芝士的咸香味。然而实际真实吃到的，芝士棒里面是中空的，甚至挑出来单独吃，也没有尝出任何奶酪的香味。",
+        "source": "今日头条"
+      },
+      {
+        "score": 3,
+        "text": "韩式甜辣酱的解腻功效不错，鸡排也足够汁水丰盈。但芝士棒去掉后，感觉就是一个甜辣版本的爆脆星星堡。两根没有奶酪的芝士棒在麦当劳值三块钱。",
+        "source": "今日头条"
+      }
+    ],
+    "cat": "新品类",
+    "real": [
+      "没拉丝",
+      "芝士棒空心",
+      "像炸糕",
+      "酱好吃"
+    ],
+    "n": 5,
+    "avg": 3.4,
+    "min": 2,
+    "max": 5,
+    "spread": 3,
+    "distribution": {
+      "5": 1,
+      "4": 1,
+      "2": 1,
+      "3": 2
+    },
+    "negative": 3
+  },
+  {
+    "name": "巨无霸",
+    "official_tags": [
+      "100%纯牛肉",
+      "人气",
+      "爆款"
+    ],
+    "official_price_yuan": 25.5,
+    "ugc": [
+      {
+        "score": 5,
+        "text": "经典中的经典，麦当劳亲儿子。双层牛肉饼+酸黄瓜+生菜+芝士+经典酱。不知道点什么就选它，永远不会错。",
+        "source": "小红书测评"
+      },
+      {
+        "score": 5,
+        "text": "牛肉巨无霸，双层牛肉口感好厚实，肉质鲜嫩。加上松软的面包胚，还有酸黄瓜和洋葱的灵魂搭配，大口大口好香。隐藏吃法：牛肉巨无霸+蒜蓉酱+辣椒粉。",
+        "source": "大众点评"
+      },
+      {
+        "score": 4,
+        "text": "酱味偏重，不爱酸黄瓜慎入。吃多了可能觉得腻，但搭配可乐可以缓解这种感觉。",
+        "source": "小红书测评"
+      },
+      {
+        "score": 3,
+        "text": "实物与广告图片存在差距，常被吐槽缩水，视觉上不如预期。近一年来网友一直在说麦麦汉堡缩水了，确实比之前的 size 小。",
+        "source": "什么值得买"
+      },
+      {
+        "score": 4,
+        "text": "肉饼煎得香嫩多汁，两片面包松软不噎人，酸黄瓜和生菜解腻，一口下去咸香适口。薯条刚出锅时金黄酥脆，蘸着番茄酱，怎么吃都不腻。",
+        "source": "什么值得买"
+      }
+    ],
+    "cat": "招牌类",
+    "real": [
+      "经典不翻车",
+      "酱味偏重",
+      "被吐槽缩水"
+    ],
+    "n": 5,
+    "avg": 4.2,
+    "min": 3,
+    "max": 5,
+    "spread": 2,
+    "distribution": {
+      "5": 2,
+      "4": 2,
+      "3": 1
+    },
+    "negative": 1
+  },
+  {
+    "name": "板烧鸡腿堡",
+    "official_tags": [
+      "板烧滋滋",
+      "多汁惹味",
+      "新升级"
+    ],
+    "official_price_yuan": 23.5,
+    "ugc": [
+      {
+        "score": 5,
+        "text": "清爽担当，不那么罪恶的汉堡。煎烤鸡肉，油腻感比麦辣低不少。想吃汉堡又怕太油就选它。",
+        "source": "小红书测评"
+      },
+      {
+        "score": 4,
+        "text": "酱汁微甜咸口，鸡腿肉嫩滑带有胡椒辣味，面包带有奶香。",
+        "source": "什么值得买"
+      },
+      {
+        "score": 3,
+        "text": "必须趁热食用，放久后肉变柴、面包吸油，体验断崖式下跌。",
+        "source": "什么值得买"
+      },
+      {
+        "score": 4,
+        "text": "口感嫩滑，但特制酱汁提升了整体味道，酱汁较多可能导致最后几口有些腻。",
+        "source": "什么值得买"
+      }
+    ],
+    "cat": "口味类",
+    "real": [
+      "清爽不油腻",
+      "必须趁热吃",
+      "酱汁偏多"
+    ],
+    "n": 4,
+    "avg": 4.0,
+    "min": 3,
+    "max": 5,
+    "spread": 2,
+    "distribution": {
+      "5": 1,
+      "4": 2,
+      "3": 1
+    },
+    "negative": 1
+  },
+  {
+    "name": "麦辣鸡腿堡",
+    "official_tags": [
+      "人气",
+      "人气经典"
+    ],
+    "official_price_yuan": 22.5,
+    "ugc": [
+      {
+        "score": 5,
+        "text": "满足感天花板，全场MVP。鸡腿肉厚实，外皮酥脆，辣味开胃。一口下去治愈所有不开心。",
+        "source": "小红书测评"
+      },
+      {
+        "score": 4,
+        "text": "外酥里嫩，辣度适中，非常适合喜欢吃辣的朋友。建议搭配冰饮一起享用。",
+        "source": "什么值得买"
+      },
+      {
+        "score": 4,
+        "text": "辣度适中，与麦辣鸡翅做法一致，夹入酱汁和生菜，辣味过瘾。",
+        "source": "什么值得买"
+      },
+      {
+        "score": 3,
+        "text": "热量油脂明显，减脂期控制频率。",
+        "source": "小红书测评"
+      }
+    ],
+    "cat": "口味类",
+    "real": [
+      "满足感天花板",
+      "减脂期控制"
+    ],
+    "n": 4,
+    "avg": 4.0,
+    "min": 3,
+    "max": 5,
+    "spread": 2,
+    "distribution": {
+      "5": 1,
+      "4": 2,
+      "3": 1
+    },
+    "negative": 1
+  },
+  {
+    "name": "双层吉士汉堡",
+    "official_tags": [
+      "100%纯牛肉",
+      "人气"
+    ],
+    "official_price_yuan": 23.0,
+    "ugc": [
+      {
+        "score": 5,
+        "text": "性价比之王，简单粗暴美式风。芝士味明显，牛肉香突出。芝士控和牛肉控的快乐老家。",
+        "source": "小红书测评"
+      },
+      {
+        "score": 5,
+        "text": "双层吉士汉堡真的绝了，芝士控必备！双层牛肉饼加上双层芝士，每一口都充满浓郁的芝士香味。",
+        "source": "什么值得买"
+      }
+    ],
+    "cat": "招牌类",
+    "real": [
+      "芝士控最爱"
+    ],
+    "n": 2,
+    "avg": 5.0,
+    "min": 5,
+    "max": 5,
+    "spread": 0,
+    "distribution": {
+      "5": 2
+    },
+    "negative": 0
+  },
+  {
+    "name": "麦香鸡汉堡",
+    "official_tags": [
+      "人气",
+      "单炸鸡类"
+    ],
+    "official_price_yuan": 17.0,
+    "ugc": [
+      {
+        "score": 3,
+        "text": "存在感超低的汉堡。麦香鸡和麦乐鸡块很像，但味道重一些，可惜依然没有什么口感可言，就只是一个鸡肉饼而已。整体表现中规中矩，缺乏惊艳感。",
+        "source": "现食研测评"
+      },
+      {
+        "score": 3,
+        "text": "清爽口感，适合清淡口味爱好者。对于重口味爱好者来说，这款汉堡可能略显平淡。",
+        "source": "什么值得买"
+      }
+    ],
+    "cat": "新品类",
+    "real": [
+      "中规中矩",
+      "略显平淡"
+    ],
+    "n": 2,
+    "avg": 3.0,
+    "min": 3,
+    "max": 3,
+    "spread": 0,
+    "distribution": {
+      "3": 2
+    },
+    "negative": 2
+  }
+];</script>
+<script>
+const IMG={
+  "龙焰芝士棒鸡腿堡":"assets/mcd-brand/food-521953.png",
+  "巨无霸":"assets/mcd-brand/food-1100.png",
+  "板烧鸡腿堡":"assets/mcd-brand/food-1406.png",
+  "麦辣鸡腿堡":"assets/mcd-brand/food-1440.png",
+  "双层吉士汉堡":"assets/mcd-brand/food-1120.png",
+  "麦香鸡汉堡":"assets/mcd-brand/food-9900005453.png"
+};
+/* ===== 数据加载 =====
+   优先读取同目录的 data_ugc.json（唯一权威数据源）；
+   若不可用（例如 file:// 下 fetch 被拦截），回退到渲染时注入的 window.__FLAVOR_DATA__。 */
+let DATA = [];
+let byId = {};
+let current = '';
+let filter = 'all';
+
+function normalize(items){
+  return items.map(it=>{
+    const ugc = it.ugc || [];
+    const scores = ugc.map(u=>u.score);
+    const n = scores.length;
+    const avg = n ? scores.reduce((a,b)=>a+b,0)/n : 0;
+    const min = n ? Math.min(...scores) : 0;
+    const max = n ? Math.max(...scores) : 0;
+    return {
+      ...it,
+      ugc,
+      n,
+      avg: Number(avg.toFixed(2)),
+      min, max,
+      spread: max - min,
+      official_price_yuan: it.official_price_yuan ?? null,
+      official_tags: it.official_tags || [],
+      price_note: it.price_note || null,
+      cat: it.cat || '在售',
+      real: it.real || []
+    };
+  });
+}
+
+function boot(items){
+  DATA = normalize(items);
+  if(!DATA.length){ return; }
+  byId = Object.fromEntries(DATA.map(d=>[d.name,d]));
+  current = DATA[0].name;
+  renderPicker(); renderPanel(); renderComments();
+}
+
+function scoreCls(s){ return s>=5?'hi':(s<=3?'lo':'mid'); }
+
+function renderPicker(){
+  const maxSpread=Math.max(...DATA.map(d=>d.spread));
+  document.getElementById('picker').innerHTML=DATA.map(d=>{
+    const cls=scoreCls(d.avg>=4.5?5:(d.avg>=3.8?4:3));
+    const flag = (d.spread)===maxSpread && maxSpread>=2 ? '<span class="flag">分歧最大</span>' : '';
+    return `<div class="chip-card ${d.name===current?'on':''}" onclick="select('${d.name}')">
+      ${flag}
+      <div class="pic"><img src="${IMG[d.name]||''}" alt=""></div>
+      <div class="nm">${d.name}</div>
+      <div class="sc ${cls}">${d.avg.toFixed(1)}</div>
+      <div class="meta">n=${d.n} · ¥${d.official_price_yuan}</div>
+    </div>`;
+  }).join('');
+}
+
+function select(n){ current=n; renderPicker(); renderPanel(); }
+
+function pickTop(){
+  const best=[...DATA].sort((a,b)=>b.avg-a.avg)[0];
+  select(best.name);
+  document.getElementById('panel').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function renderPanel(){
+  const d=byId[current];
+  const cls=scoreCls(d.avg>=4.5?5:(d.avg>=3.8?4:3));
+  const lo=((d.min-2)/3)*100, hi=((d.max-2)/3)*100;
+  const mk=((d.avg-2)/3)*100;
+  const struck = d.real.some(r=>/没拉丝|空心|缩水|趁热/.test(r));
+  document.getElementById('panel').innerHTML=`
+    <div class="ph">
+      <div>
+        <div class="ttl">${d.n}</div>
+        <div class="badges">
+          <span class="bg ${d.cat==='新品类'?'r':(d.cat==='招牌类'?'o':'g')}">${d.cat}</span>
+          <span class="bg">官方核价 ¥${d.official_price_yuan}</span>
+          ${d.price_note?`<span class="bg">${d.price_note}</span>`:''}
+          <span class="bg">样本 ${d.n} 篇</span>
+          ${(d.spread)>=2?'<span class="bg r">口碑分歧大</span>':''}
+        </div>
+      </div>
+      <div class="scorebox">
+        <div class="n ${cls}">${d.avg.toFixed(1)}</div>
+        <div class="l">真香指数 / 5</div>
+      </div>
+    </div>
+
+    <div class="spread">
+      <div class="sh">评分离散度 <span>区间 ${d.min.toFixed(1)} – ${d.max.toFixed(1)} · ${d.n} 篇</span></div>
+      <div class="track">
+        <span class="rng" style="left:${lo}%;width:${hi-lo}%"></span>
+        <span class="mk" style="left:calc(${mk}% - 8px)"></span>
+        <span class="tk" style="left:${mk}%">均值 ${d.avg.toFixed(1)}</span>
+        <span class="tk" style="left:0">2★</span>
+        <span class="tk" style="left:100%">5★</span>
+      </div>
+      <div class="sf"><span>最高 ${d.max.toFixed(1)} ★</span><span>最低 ${d.min.toFixed(1)} ★</span></div>
+    </div>
+
+    <div class="vs">
+      <div class="side o">
+        <div class="h">OFFICIAL · 麦当劳菜单接口</div>
+        <div class="q">${d.official_tags.map(t=>`「${t}」`).join('<br>')}</div>
+        <div class="tg">${d.official_tags.map(t=>`<span>${t}</span>`).join('')}</div>
+      </div>
+      <div class="mid"><span class="vs">VS</span><span class="m">官方声称<br>vs 真实共识</span></div>
+      <div class="side c">
+        <div class="h">COMMUNITY · ${d.n} 篇真实评价</div>
+        <div class="q">${d.real.map(r=>`「${r}」`).join(' ')}</div>
+        <div class="tg">${d.real.map(r=>`<span>${r}</span>`).join('')}</div>
+        ${struck?`<div class="tg" style="margin-top:8px">${d.official_tags.map(t=>`<span class="struck">${t}</span>`).join('')}</div>`:''}
+      </div>
+    </div>`;
+}
+
+function renderComments(){
+  const d=byId[current];
+  let list=d.ugc;
+  if(filter==='hi') list=list.filter(u=>u.s>=5);
+  if(filter==='lo') list=list.filter(u=>u.s<=3);
+  document.getElementById('clist').innerHTML = list.length? list.map(u=>`
+    <div class="ci">
+      <div class="badge"><div class="s ${scoreCls(u.s)}">${u.s}.0</div><div class="w">★</div></div>
+      <div><div class="q">${u.t}</div><div class="src">— ${u.src}</div></div>
+    </div>`).join('') : '<div style="padding:22px;text-align:center;color:#8A7F73;font-weight:700">这个商品没有符合筛选条件的评价</div>';
+}
+
+document.querySelectorAll('#filters .fb').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('#filters .fb').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); filter=b.dataset.f; renderComments();
+  });
+});
+
+/* 启动：优先 fetch 同目录 data_ugc.json，失败回退到注入数据 */
+(function(){
+  const injected = window.__FLAVOR_DATA__ || null;
+  fetch('data_ugc.json', {cache:'no-store'})
+    .then(r=>r.ok?r.json():Promise.reject(new Error('http '+r.status)))
+    .then(j=>boot(j.items || []))
+    .catch(()=>{ if(injected){ boot(injected); } else {
+      document.getElementById('picker').innerHTML =
+        '<div style="padding:22px;text-align:center;color:#8A7F73;font-weight:700">未能加载 data_ugc.json，请运行 flavor_index.py --render 生成单文件版本</div>';
+    }});
+})();
+</script>
+</body>
+</html>
