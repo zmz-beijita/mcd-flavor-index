@@ -55,7 +55,7 @@
 |---|---|
 | 官方风味标签 44 种 | `query-meals` 的 `tags` 字段 |
 | 营养库 158 条，含钠 | `list-nutrition-foods` |
-| 真实评价严重分裂 | 同一商品 5 星与 2 星并存（22 篇样本） |
+| 真实评价严重分裂 | 同一商品 5 星与 2 星并存（34 篇样本） |
 | `roundList.round` 必须传 id | 传中文名 → 服务端 500 |
 | `searchType` 必须为 2 | 默认 1 → 「收藏餐厅列表为空」 |
 | 价格单位是分 | `calculate-price` 返回 `price: 3400` = ¥34.00 |
@@ -91,7 +91,7 @@
 ### 4. 交付物
 
 - `index.html` —— 单文件交互式真香榜，免 Token 双击即玩
-- `data_ugc.json` —— 22 篇真实评价原始数据，可 diff 可复核
+- `data_ugc.json` —— 34 篇真实评价原始数据，可 diff 可复核
 - `skills/mcd-flavor-index/` —— SKILL.md、MCP_INTEGRATION.md、CONTEST_DECLARATION.md、
   mcp-config.example.json、references/、scripts/
 - `README.md` —— 含真实案例、竞品对比表、方法与边界
