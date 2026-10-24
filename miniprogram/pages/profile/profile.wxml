@@ -1,0 +1,57 @@
+<view class="page">
+    <view class="head">
+        <view class="avatar">{{avatarText}}</view>
+        <text class="title">我的麦门记录</text>
+        <text class="subtitle">投票只存在这台设备上，不上传</text>
+    </view>
+
+    <view class="block" wx:if="{{votes.length > 0}}">
+        <view class="block-hd">
+            <text class="block-t">我投过的票</text>
+            <text class="block-n">{{votes.length}} 个</text>
+        </view>
+        <view class="vrow" wx:for="{{votes}}" wx:key="name">
+            <view class="vbadge {{item.vote}}">{{item.voteLabel}}</view>
+            <view class="vbody">
+                <text class="vname">{{item.name}}</text>
+                <text class="vreason" wx:if="{{item.reason}}">「{{item.reason}}」</text>
+                <text class="vreason empty-reason" wx:else>（没写理由）</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="block" wx:else>
+        <view class="empty">
+            <text class="empty-t">还没投过票</text>
+            <text class="empty-d">去真香榜给一个商品投票，写句理由，它会出现在麦门广场</text>
+            <button class="btn-red" bindtap="goIndex">去投票</button>
+        </view>
+    </view>
+
+    <view class="block about">
+        <view class="block-hd">
+            <text class="block-t">关于</text>
+        </view>
+        <view class="about-row">
+            <text class="about-k">真香指数</text>
+            <text class="about-v">该商品全部真实评价评分的算术平均（5 分制）</text>
+        </view>
+        <view class="about-row">
+            <text class="about-k">评分离散度</text>
+            <text class="about-v">最高星 − 最低星，越大说明口碑越分裂</text>
+        </view>
+        <view class="about-row">
+            <text class="about-k">官方标签</text>
+            <text class="about-v">来自麦当劳 MCP query-meals 接口的 tags 字段</text>
+        </view>
+        <view class="about-row">
+            <text class="about-k">价格</text>
+            <text class="about-v">来自 calculate-price 官方核价接口，单位分</text>
+        </view>
+    </view>
+
+    <view class="foot">
+        <text class="foot-t">麦门真香榜 · 麦当劳程序员创意开发大赛参赛作品</text>
+        <text class="foot-t">非麦当劳官方产品 · 评价版权归原作者所有，仅作短引用与统计</text>
+    </view>
+</view>
