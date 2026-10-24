@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/square/square",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "麦门真香榜",
+    "navigationBarBackgroundColor": "#fff6e9",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff6e9",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#b9ada0",
+    "selectedColor": "#e8342a",
+    "backgroundColor": "#fffdf8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "真香榜",
+        "iconPath": "assets/icons/tab-rank.png",
+        "selectedIconPath": "assets/icons/tab-rank.png"
+      },
+      {
+        "pagePath": "pages/square/square",
+        "text": "麦门广场",
+        "iconPath": "assets/icons/tab-square.png",
+        "selectedIconPath": "assets/icons/tab-square.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "assets/icons/tab-profile.png",
+        "selectedIconPath": "assets/icons/tab-profile.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
