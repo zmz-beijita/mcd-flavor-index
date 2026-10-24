@@ -174,29 +174,34 @@ def cmd_sync(args):
 def cmd_render(args):
     """生成单文件交互式真香榜 HTML。
 
-    产物把 data_ugc.json 内联为 window.__FLAVOR_DATA__，
+    产物把 data/home.json 内联为 window.__FLAVOR_HOME__，
     页面在 file:// 下 fetch 失败时回退到它，保证双击即开。
     """
-    data = load_data(args.data)
-    items = enrich(data["items"])
+    home_path = os.path.join(ROOT, "data", "home.json")
+    if not os.path.exists(home_path):
+        raise SystemExit(f"找不到 {home_path}，先运行 scripts/build_home_data.py")
+    with open(home_path, encoding="utf-8") as f:
+        home = json.load(f)
+
     tpl_path = os.path.join(ROOT, "templates", "index.template.html")
     if not os.path.exists(tpl_path):
         raise SystemExit(f"找不到模板 {tpl_path}")
     with open(tpl_path, encoding="utf-8") as f:
         tpl = f.read()
-    payload = json.dumps(items, ensure_ascii=False, indent=2)
-    inject = ("<script>window.__FLAVOR_DATA__ = " + payload + ";</script>")
-    marker = "<script>\n/* ===== 数据加载"
+
+    payload = json.dumps(home, ensure_ascii=False, indent=2)
+    inject = "<script>window.__FLAVOR_HOME__ = " + payload + ";</script>"
+    marker = "<script>\n/* ================= 数据 ================="
     if marker not in tpl:
-        marker = "<script>"
-    idx = tpl.find(marker)
-    if idx < 0:
         raise SystemExit("模板结构变化：找不到注入点")
-    tpl = tpl[:idx] + inject + "\n" + tpl[idx:]
+    tpl = tpl.replace(marker, inject + "\n<script>\n/* ================= 数据 =================", 1)
+
     out = args.out or os.path.join(ROOT, "index.html")
     with open(out, "w", encoding="utf-8") as f:
         f.write(tpl)
-    print(f"已生成 {out}（{len(items)} 个商品，{sum(d['n'] for d in items)} 篇评价）")
+    n_truth = len(home.get("truth", []))
+    n_hot = len(home.get("hot", []))
+    print(f"已生成 {out}（真香榜 {n_truth} 个 · 人气榜 {n_hot} 个）")
     return out
 
 
