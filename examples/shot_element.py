@@ -130,6 +130,7 @@ class CDP:
 def main():
     html, elem_id, out = sys.argv[1], sys.argv[2], sys.argv[3]
     click_filter = sys.argv[4] if len(sys.argv) > 4 else None
+    click_selector = sys.argv[5] if len(sys.argv) > 5 else None
     url = "file://" + os.path.abspath(html)
     cdp = CDP(url)
     try:
@@ -138,6 +139,9 @@ def main():
             cdp.evaluate(
                 f'document.querySelector(\'[data-f="{click_filter}"]\').click()')
             time.sleep(0.6)
+        if click_selector:
+            cdp.evaluate(f'document.querySelector(\'{click_selector}\').click()')
+            time.sleep(0.8)
         box = json.loads(cdp.evaluate(
             f'(()=>{{const e=document.getElementById("{elem_id}");'
             f'const r=e.getBoundingClientRect();'
