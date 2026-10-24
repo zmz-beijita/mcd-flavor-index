@@ -399,3 +399,33 @@
     font-size: 20rpx;
     line-height: 1.9;
 }
+
+/* ===== 官方配料 / 官方介绍 ===== */
+.d-ings {
+    margin-top: 14rpx;
+    padding-top: 12rpx;
+    border-top: 2rpx dashed #f0e4ce;
+}
+
+.d-ings-t {
+    display: block;
+    color: #b9ada0;
+    font-size: 19rpx;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.d-ings-v {
+    display: block;
+    margin-top: 5rpx;
+    color: #5a5048;
+    font-size: 23rpx;
+    line-height: 1.7;
+}
+
+.official-desc {
+    display: block;
+    color: #3d362f;
+    font-size: 26rpx;
+    line-height: 1.8;
+}
