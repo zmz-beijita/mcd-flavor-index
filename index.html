@@ -107,7 +107,8 @@
   .track .mk{position:absolute;top:-5px;width:16px;height:36px;border-radius:8px;background:var(--red);
     border:3px solid #fff;box-shadow:0 2px 0 rgba(0,0,0,.15)}
   .track .tk{position:absolute;top:38px;font-family:var(--mono);font-size:11px;color:var(--mute);transform:translateX(-50%)}
-  .spread .sf{margin-top:20px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--mute);font-weight:700}
+  .track .tk-mid{top:36px;color:var(--ink);font-weight:700;background:var(--paper);padding:1px 6px;border-radius:4px;border:1px solid var(--line)}
+  .spread .sf{margin-top:26px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--mute);font-weight:700}
 
   /* 对账 */
   .vs{display:grid;grid-template-columns:1fr 62px 1fr;gap:0;margin-top:22px;
@@ -118,7 +119,7 @@
   .vs .side.c{background:#FFFBEC}
   .vs .mid{background:var(--ink);color:var(--yellow);display:flex;flex-direction:column;
     align-items:center;justify-content:center;gap:3px;font-weight:900}
-  .vs .mid .vs{font-size:17px}
+  .vs .mid .vs-word{font-size:17px;display:block}
   .vs .mid .m{font-size:10px;font-weight:700;opacity:.8;text-align:center;line-height:1.3}
   .vs .side .q{font-size:16.5px;font-weight:900;line-height:1.45;letter-spacing:-.01em}
   .vs .side.o .q{color:var(--red)}
@@ -667,11 +668,19 @@ function renderPanel(){
   const cls=scoreCls(d.avg>=4.5?5:(d.avg>=3.8?4:3));
   const lo=((d.min-2)/3)*100, hi=((d.max-2)/3)*100;
   const mk=((d.avg-2)/3)*100;
-  const struck = d.real.some(r=>/没拉丝|空心|缩水|趁热/.test(r));
+  // 只划掉真正被真实口碑否定的那个官方标签，而不是全部重复一遍
+  const DENY = [
+    { re: /拉丝/, neg: /没拉丝|没有拉丝|空心|中空/ },
+    { re: /趁热/, neg: /趁热/ },
+    { re: /人气|爆款|经典/, neg: /缩水/ },
+  ];
+  const struckTags = d.official_tags.filter(t =>
+    DENY.some(x => x.re.test(t) && d.real.some(r => x.neg.test(r)))
+  );
   document.getElementById('panel').innerHTML=`
     <div class="ph">
       <div>
-        <div class="ttl">${d.n}</div>
+        <div class="ttl">${d.name}</div>
         <div class="badges">
           <span class="bg ${d.cat==='新品类'?'r':(d.cat==='招牌类'?'o':'g')}">${d.cat}</span>
           <span class="bg">官方核价 ¥${d.official_price_yuan}</span>
@@ -691,11 +700,9 @@ function renderPanel(){
       <div class="track">
         <span class="rng" style="left:${lo}%;width:${hi-lo}%"></span>
         <span class="mk" style="left:calc(${mk}% - 8px)"></span>
-        <span class="tk" style="left:${mk}%">均值 ${d.avg.toFixed(1)}</span>
-        <span class="tk" style="left:0">2★</span>
-        <span class="tk" style="left:100%">5★</span>
+        <span class="tk tk-mid" style="left:${mk}%">均值 ${d.avg.toFixed(1)}</span>
       </div>
-      <div class="sf"><span>最高 ${d.max.toFixed(1)} ★</span><span>最低 ${d.min.toFixed(1)} ★</span></div>
+      <div class="sf"><span>最低 ${d.min.toFixed(1)} ★</span><span>最高 ${d.max.toFixed(1)} ★</span></div>
     </div>
 
     <div class="vs">
@@ -704,12 +711,12 @@ function renderPanel(){
         <div class="q">${d.official_tags.map(t=>`「${t}」`).join('<br>')}</div>
         <div class="tg">${d.official_tags.map(t=>`<span>${t}</span>`).join('')}</div>
       </div>
-      <div class="mid"><span class="vs">VS</span><span class="m">官方声称<br>vs 真实共识</span></div>
+      <div class="mid"><span class="vs-word">VS</span><span class="m">官方声称<br>vs 真实共识</span></div>
       <div class="side c">
         <div class="h">COMMUNITY · ${d.n} 篇真实评价</div>
         <div class="q">${d.real.map(r=>`「${r}」`).join(' ')}</div>
         <div class="tg">${d.real.map(r=>`<span>${r}</span>`).join('')}</div>
-        ${struck?`<div class="tg" style="margin-top:8px">${d.official_tags.map(t=>`<span class="struck">${t}</span>`).join('')}</div>`:''}
+        ${struckTags.length?`<div class="tg" style="margin-top:8px">${struckTags.map(t=>`<span class="struck">${t}</span>`).join('')}</div>`:''}
       </div>
     </div>`;
 }
