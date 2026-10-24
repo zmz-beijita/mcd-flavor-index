@@ -1,0 +1,192 @@
+.page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 28rpx 28rpx 64rpx;
+}
+
+/* ===== 头部 ===== */
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24rpx 0 34rpx;
+}
+
+.avatar {
+    width: 112rpx;
+    height: 112rpx;
+    border-radius: 36rpx;
+    background: #e8342a;
+    color: #ffffff;
+    font-size: 48rpx;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6rpx 0 #b32018;
+}
+
+.title {
+    margin-top: 22rpx;
+    font-size: 38rpx;
+    font-weight: 900;
+}
+
+.subtitle {
+    margin-top: 8rpx;
+    color: #8a7f73;
+    font-size: 23rpx;
+}
+
+/* ===== 块 ===== */
+.block {
+    margin-bottom: 22rpx;
+    padding: 24rpx 26rpx;
+    border: 3rpx solid #f0e4ce;
+    border-radius: 26rpx;
+    background: #ffffff;
+    box-shadow: 0 5rpx 0 rgba(0, 0, 0, 0.04);
+}
+
+.block-hd {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 16rpx;
+}
+
+.block-t {
+    font-size: 28rpx;
+    font-weight: 800;
+}
+
+.block-n {
+    color: #b9ada0;
+    font-size: 22rpx;
+    font-weight: 700;
+}
+
+/* ===== 投票记录 ===== */
+.vrow {
+    display: flex;
+    align-items: flex-start;
+    padding: 18rpx 0;
+    border-top: 2rpx solid #f7f1e6;
+}
+
+.vrow:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.vbadge {
+    flex-shrink: 0;
+    padding: 5rpx 16rpx;
+    border-radius: 999rpx;
+    font-size: 21rpx;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.vbadge.good { background: #3cc93c; }
+.vbadge.mid { background: #ffc72c; color: #2b2520; }
+.vbadge.bad { background: #e8342a; }
+
+.vbody {
+    flex: 1;
+    min-width: 0;
+    margin-left: 16rpx;
+}
+
+.vname {
+    display: block;
+    font-size: 27rpx;
+    font-weight: 800;
+}
+
+.vreason {
+    display: block;
+    margin-top: 6rpx;
+    color: #6b6259;
+    font-size: 23rpx;
+    line-height: 1.6;
+}
+
+.empty-reason {
+    color: #b9ada0;
+}
+
+/* ===== 空态 ===== */
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50rpx 30rpx;
+    text-align: center;
+}
+
+.empty-t {
+    font-size: 29rpx;
+    font-weight: 800;
+}
+
+.empty-d {
+    margin-top: 10rpx;
+    color: #8a7f73;
+    font-size: 23rpx;
+    line-height: 1.7;
+}
+
+.btn-red {
+    margin-top: 26rpx;
+    padding: 0 40rpx;
+    background: #e8342a;
+    color: #ffffff;
+    font-size: 26rpx;
+    font-weight: 800;
+    line-height: 72rpx;
+    box-shadow: 0 5rpx 0 #b32018;
+}
+
+.btn-red:active {
+    transform: translateY(4rpx);
+    box-shadow: none;
+}
+
+/* ===== 关于 ===== */
+.about-row {
+    padding: 16rpx 0;
+    border-top: 2rpx solid #f7f1e6;
+}
+
+.about-row:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.about-k {
+    display: block;
+    font-size: 25rpx;
+    font-weight: 800;
+}
+
+.about-v {
+    display: block;
+    margin-top: 4rpx;
+    color: #8a7f73;
+    font-size: 22rpx;
+    line-height: 1.6;
+}
+
+/* ===== 页脚 ===== */
+.foot {
+    margin-top: 10rpx;
+    padding: 16rpx 8rpx;
+}
+
+.foot-t {
+    display: block;
+    color: #b9ada0;
+    font-size: 20rpx;
+    line-height: 1.9;
+}
