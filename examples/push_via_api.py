@@ -88,9 +88,15 @@ def main():
                 return rel
             except SystemExit as e:
                 last = str(e)
-                # 409 = sha 竞态，重取 sha 重试
-                if "409" in last and attempt < 3:
-                    time.sleep(0.6 * (attempt + 1))
+                # 409 = sha 竞态（并发写同一路径或上次重试已写入），重取 sha 重试
+                if ("409" in last or "Tunnel" in last) and attempt < 3:
+                    time.sleep(1.2 * (attempt + 1))
+                    continue
+                raise
+            except Exception as e:
+                last = str(e)
+                if "Tunnel" in last and attempt < 3:
+                    time.sleep(1.2 * (attempt + 1))
                     continue
                 raise
         raise SystemExit(last or "unknown")
