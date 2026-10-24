@@ -72,7 +72,19 @@
 - **点评论区筛选** → 全部 / 👍 好评 5 星 / 👎 差评 ≤3 星
 - **点顶部按钮** → 跳到最值得吃的、看评论区、看数据来源
 
-<img src="docs/screenshot-hero.png" width="860" alt="麦门真香榜首页">
+<img src="docs/screenshot-hero.png" width="100%" alt="麦门真香榜首页：糖果色界面，顶部三枚凸起按钮，下方是可点击的商品卡片">
+
+### 官方标签 vs 真实口碑（点任意商品卡切换）
+
+<img src="docs/screenshot-detail.png" width="100%" alt="商品详情：真香指数 3.4，评分离散度条，官方菜单标签与 22 篇真实评价的对账双栏">
+
+### 评论区（可按好评/差评筛选，冲突词高亮）
+
+<img src="docs/screenshot-comments.png" width="100%" alt="评论区原文摘录：评分徽章按星级配色，'诈骗''空心''中空'等与官方标签冲突的表述用黄色高亮，每条标注来源">
+
+点「👎 差评 ≤3 星」只看被吐槽的：
+
+<img src="docs/screenshot-comments-negative.png" width="100%" alt="差评筛选后的评论区">
 
 ## 🚀 免 Token 打开即玩
 
