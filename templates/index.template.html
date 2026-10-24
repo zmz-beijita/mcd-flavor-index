@@ -3,416 +3,546 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>麦门真香榜 · 今天想吃麦当劳，先看真实口碑</title>
+<title>麦门真香榜 · 麦当劳真实口碑排行榜</title>
 <style>
   :root{
     --red:#E8342A; --red-d:#B32018;
     --yellow:#FFC72C; --yellow-d:#DFA000;
     --blue:#1CB0F6; --blue-d:#0E8ACC;
     --green:#3CC93C; --green-d:#2AA02A;
-    --cream:#FFF6E9; --paper:#FFFDF8; --ink:#2B2520; --mute:#8A7F73;
-    --line:#F0E4CE;
+    --cream:#FFF6E9; --paper:#FFFDF8; --ink:#2B2520; --mute:#8A7F73; --line:#F0E4CE;
     --round:"Baloo 2","Nunito","PingFang SC","Microsoft YaHei",sans-serif;
-    --mono:"JetBrains Mono",Consolas,monospace;
+    --mono:"JetBrains Mono","SF Mono",Consolas,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--cream);color:var(--ink);font-family:var(--round);
-    -webkit-font-smoothing:antialiased;line-height:1.6}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+  body{background:var(--cream);color:var(--ink);font-family:var(--round);-webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 70px}
 
   /* ===== 顶栏 ===== */
-  .top{display:flex;align-items:center;justify-content:space-between;padding:16px 0;
-    border-bottom:2px solid var(--line);margin-bottom:26px}
-  .logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:800;letter-spacing:-.01em}
-  .logo .mk{width:34px;height:34px;border-radius:11px;background:var(--red);
-    color:#fff;display:grid;place-items:center;font-size:18px;font-weight:900;
-    box-shadow:0 3px 0 var(--red-d)}
+  .top{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:2px solid var(--line);margin-bottom:26px}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo .mk{width:34px;height:34px;border-radius:11px;background:var(--red);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:900;box-shadow:0 3px 0 var(--red-d)}
+  .logo .nm{font-size:19px;font-weight:800}
   .pills{display:flex;gap:8px}
-  .pill{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;
-    padding:6px 13px;border-radius:999px;background:#fff;border:2px solid var(--line)}
+  .pill{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:6px 13px;border-radius:999px;background:#fff;border:2px solid var(--line)}
   .pill .d{width:9px;height:9px;border-radius:50%}
-  .pill.y .d{background:var(--yellow)}
-  .pill.b .d{background:var(--blue)}
+  .pill.y .d{background:var(--yellow)} .pill.b .d{background:var(--blue)}
 
   /* ===== Hero ===== */
-  .hero{text-align:center;padding:22px 0 30px}
-  .hero .kicker{font-size:13px;font-weight:800;color:var(--red);letter-spacing:.08em;margin-bottom:12px}
-  .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.16;letter-spacing:-.02em}
-  .hero h1 em{font-style:normal;background:var(--yellow);padding:0 9px;border-radius:12px;
-    box-shadow:0 4px 0 var(--yellow-d)}
-  .hero .sub{font-size:16px;color:var(--mute);margin-top:16px;max-width:640px;margin-left:auto;margin-right:auto}
+  .hero{text-align:center;padding:10px 0 26px}
+  .hero .kicker{display:block;color:var(--red);font-size:12.5px;font-weight:800;letter-spacing:.16em}
+  .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.16;letter-spacing:-.02em;margin-top:12px}
+  .hero h1 em{font-style:normal;background:var(--yellow);padding:0 10px;border-radius:12px;box-shadow:0 4px 0 var(--yellow-d)}
+  .hero .sub{font-size:15.5px;color:var(--mute);max-width:640px;margin:16px auto 0}
   .hero .sub b{color:var(--ink)}
   .btns{display:flex;gap:13px;justify-content:center;margin-top:26px;flex-wrap:wrap}
-  .btn{border:none;cursor:pointer;font-family:var(--round);font-weight:800;font-size:16px;
-    padding:15px 30px;border-radius:16px;color:#fff;transition:transform .12s,box-shadow .12s;
-    display:inline-flex;align-items:center;gap:8px}
+  .btn{border:none;cursor:pointer;font-family:var(--round);font-weight:800;font-size:16px;padding:15px 28px;border-radius:16px;color:#fff;transition:transform .12s,box-shadow .12s}
   .btn:active{transform:translateY(4px);box-shadow:none!important}
   .btn.red{background:var(--red);box-shadow:0 5px 0 var(--red-d)}
   .btn.yellow{background:var(--yellow);color:var(--ink);box-shadow:0 5px 0 var(--yellow-d)}
-  .btn.blue{background:var(--blue);box-shadow:0 5px 0 var(--blue-d)}
   .btn.ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line);border:2px solid var(--line)}
 
-  /* ===== 统计三卡 ===== */
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 30px}
-  .stat{background:#fff;border:2px solid var(--line);border-radius:22px;padding:20px 18px;text-align:center;
-    box-shadow:0 4px 0 rgba(0,0,0,.04)}
-  .stat .n{font-size:38px;font-weight:900;letter-spacing:-.03em;line-height:1}
-  .stat .n.red{color:var(--red)} .stat .n.y{color:#E0A000} .stat .n.b{color:var(--blue)}
-  .stat .l{font-size:13px;font-weight:700;color:var(--mute);margin-top:7px}
-  .stat .s{font-size:11.5px;color:#B5A99B;margin-top:3px}
+  /* ===== 统计 ===== */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--line);border-radius:22px;background:#fff;overflow:hidden;margin-bottom:34px}
+  .stat{padding:18px 12px;text-align:center}
+  .stat + .stat{border-left:2px solid var(--line)}
+  .stat .n{font-size:34px;font-weight:900;line-height:1;letter-spacing:-.02em}
+  .stat .n.red{color:var(--red)} .stat .n.y{color:var(--yellow-d)} .stat .n.b{color:var(--blue)} .stat .n.g{color:var(--green)}
+  .stat .l{display:block;font-size:12.5px;font-weight:700;color:var(--mute);margin-top:6px}
+  .stat .s{display:block;font-size:11px;color:#B9ADA0;margin-top:2px}
 
-  /* ===== 区块标题 ===== */
-  .sec-hd{display:flex;align-items:center;justify-content:space-between;margin:0 0 16px;flex-wrap:wrap;gap:12px}
-  .sec-hd h2{font-size:24px;font-weight:900;letter-spacing:-.015em;display:flex;align-items:center;gap:10px}
-  .sec-hd h2 .em{background:var(--ink);color:var(--yellow);font-size:13px;padding:3px 10px;border-radius:999px;font-weight:800}
-  .sec-hd .note{font-size:13px;color:var(--mute);font-weight:600}
+  /* ===== 榜单区块 ===== */
+  .rank-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+  .rank-hd h2{font-size:25px;font-weight:900;letter-spacing:-.015em;display:flex;align-items:center;gap:10px}
+  .rank-hd h2 .em{background:var(--ink);color:var(--yellow);font-size:12.5px;padding:3px 11px;border-radius:999px;font-weight:800}
+  .rank-hd .note{font-size:12.5px;color:var(--mute);font-weight:600}
+  .rank-hd .note b{color:var(--ink)}
 
-  /* ===== 商品选择器 ===== */
-  .picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:13px;margin-bottom:26px}
-  .chip-card{background:#fff;border:2.5px solid var(--line);border-radius:20px;padding:15px 12px;
-    cursor:pointer;transition:transform .14s,border-color .14s,box-shadow .14s;text-align:center;
-    box-shadow:0 4px 0 rgba(0,0,0,.04);position:relative}
-  .chip-card:hover{transform:translateY(-3px);box-shadow:0 7px 0 rgba(0,0,0,.05)}
-  .chip-card.on{border-color:var(--red);box-shadow:0 5px 0 var(--red-d);background:#FFF9F7}
-  .chip-card .pic{height:64px;display:grid;place-items:center;margin-bottom:9px}
-  .chip-card .pic img{max-width:60px;max-height:60px;object-fit:contain}
-  .chip-card .nm{font-size:14.5px;font-weight:800;line-height:1.3}
-  .chip-card .sc{font-size:26px;font-weight:900;margin-top:6px;letter-spacing:-.02em}
-  .chip-card .sc.lo{color:var(--red)} .chip-card .sc.hi{color:var(--green)} .chip-card .sc.mid{color:#E0A000}
-  .chip-card .meta{font-size:11px;color:var(--mute);font-weight:600;margin-top:2px}
-  .chip-card .flag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);
-    background:var(--red);color:#fff;font-size:10.5px;font-weight:800;padding:2px 9px;border-radius:999px;white-space:nowrap}
+  /* ===== 排行榜条目 ===== */
+  .rank-list{display:flex;flex-direction:column;gap:10px}
+  .rank-item{background:#fff;border:2.5px solid var(--line);border-radius:22px;overflow:hidden;transition:border-color .15s,box-shadow .15s}
+  .rank-item:hover{border-color:#E3D3B4}
+  .rank-item.open{border-color:var(--red);box-shadow:0 5px 0 var(--red-d)}
+  .rank-row{display:grid;grid-template-columns:52px 60px 1fr auto;gap:14px;align-items:center;padding:13px 46px 13px 18px;cursor:pointer;position:relative}
+  .rank-no{font-family:var(--mono);font-size:20px;font-weight:700;color:#B9ADA0;text-align:center}
+  .rank-item:nth-child(1) .rank-no{color:var(--yellow-d)}
+  .rank-item:nth-child(2) .rank-no{color:#C9C0B2}
+  .rank-item:nth-child(3) .rank-no{color:#C08552}
+  .rank-pic{width:60px;height:60px;border-radius:14px;background:var(--cream);display:grid;place-items:center}
+  .rank-pic img{max-width:52px;max-height:52px;object-fit:contain}
+  .rank-pic.none{font-size:11px;color:#C9C0B2;font-weight:700;text-align:center;line-height:1.3}
+  .rank-main{min-width:0}
+  .rank-name{font-size:16.5px;font-weight:800;line-height:1.3}
+  .rank-meta{font-size:12px;color:var(--mute);margin-top:3px;font-weight:600}
+  .rank-flavor{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+  .ftag{font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--cream);border:1.5px solid var(--line);color:#6B6259}
+  .ftag.hot{background:var(--yellow);border-color:var(--yellow-d);color:var(--ink)}
+  .ftag.new{background:var(--blue);color:#fff;border-color:var(--blue-d)}
+  .rank-right{text-align:right;flex-shrink:0}
+  .rank-score{font-size:32px;font-weight:900;line-height:1;letter-spacing:-.02em}
+  .rank-score.hi{color:var(--green)} .rank-score.mid{color:var(--yellow-d)} .rank-score.lo{color:var(--red)}
+  .rank-score.none{color:#C9C0B2;font-size:20px}
+  .rank-sub{font-size:11px;color:var(--mute);margin-top:3px;font-weight:600}
+  .rank-flag{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+  .rank-flag.div{background:var(--red);color:#fff}
+  .rank-flag.same{background:#F2EDE4;color:var(--mute)}
+  .rank-flag.none{background:var(--cream);color:var(--mute);border:1.5px dashed var(--line)}
+  .rank-toggle{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:19px;color:#D8CBB8;transition:transform .2s}
+  .rank-item.open .rank-toggle{transform:translateY(-50%) rotate(180deg)}
 
-  /* ===== 详情面板 ===== */
-  .panel{background:#fff;border:2.5px solid var(--line);border-radius:26px;padding:26px;margin-bottom:26px;
-    box-shadow:0 5px 0 rgba(0,0,0,.04)}
-  .panel .ph{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
-  .panel .ttl{font-size:26px;font-weight:900;letter-spacing:-.02em}
-  .panel .badges{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
-  .bg{font-size:12.5px;font-weight:800;padding:5px 12px;border-radius:999px;background:var(--cream);border:2px solid var(--line)}
-  .bg.o{background:var(--red);color:#fff;border-color:var(--red-d)}
-  .bg.r{background:#FFEDEA;color:var(--red);border-color:#FFD0C9}
-  .bg.g{background:#E9F9E9;color:#1F7A1F;border-color:#BFE9BF}
-  .scorebox{text-align:center;background:var(--cream);border:2.5px solid var(--line);border-radius:22px;padding:14px 20px;min-width:150px}
-  .scorebox .n{font-size:46px;font-weight:900;letter-spacing:-.035em;line-height:1}
-  .scorebox .n.lo{color:var(--red)} .scorebox .n.hi{color:var(--green)} .scorebox .n.mid{color:#E0A000}
-  .scorebox .l{font-size:12px;font-weight:700;color:var(--mute);margin-top:4px}
+  /* ===== 展开详情 ===== */
+  .detail{border-top:2px dashed var(--line);padding:20px 22px 22px;background:#FFFCF6}
+  .d-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .d-box{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px}
+  .d-box .dh{font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--mute);margin-bottom:9px}
+  .d-official{background:#FFF3F1;border-color:#FFD8D1}
+  .d-official .dh{color:var(--red)}
+  .d-real{background:#FFFBEC}
+  .d-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .d-tag{font-size:13px;font-weight:700;padding:4px 11px;border-radius:999px;border:2px solid transparent}
+  .d-official .d-tag{background:#fff;border-color:#FFD0C9;color:var(--red)}
+  .d-real .d-tag{background:#fff;border-color:var(--line);color:#5A5048}
+  .d-tag.struck{text-decoration:line-through;opacity:.6;background:#F0EDE6!important;border-color:#E2DACB!important;color:#9A9084!important}
+  .d-ings{font-size:12.5px;color:var(--mute);line-height:1.9;margin-top:10px}
+  .d-ings b{color:var(--ink)}
+  .d-desc{font-size:13.5px;line-height:1.8;color:var(--ink);font-style:normal}
+  .d-desc .src{display:block;font-size:11px;color:#B9ADA0;margin-top:5px;font-style:normal}
 
-  /* 分歧条 */
-  .spread{margin-top:22px;background:var(--cream);border:2.5px solid var(--line);border-radius:20px;padding:16px 18px}
-  .spread .sh{font-size:13px;font-weight:800;margin-bottom:11px;display:flex;justify-content:space-between}
-  .spread .sh span{color:var(--mute);font-weight:700;font-family:var(--mono);font-size:12px}
-  .track{height:30px;background:#fff;border-radius:15px;position:relative;border:2px solid var(--line)}
-  .track .rng{position:absolute;top:0;bottom:0;background:var(--yellow);border-radius:15px;opacity:.55}
-  .track .mk{position:absolute;top:-5px;width:16px;height:36px;border-radius:8px;background:var(--red);
-    border:3px solid #fff;box-shadow:0 2px 0 rgba(0,0,0,.15)}
-  .track .tk{position:absolute;top:38px;font-family:var(--mono);font-size:11px;color:var(--mute);transform:translateX(-50%)}
-  .track .tk-mid{top:36px;color:var(--ink);font-weight:700;background:var(--paper);padding:1px 6px;border-radius:4px;border:1px solid var(--line)}
-  .spread .sf{margin-top:26px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--mute);font-weight:700}
+  /* 离散度 */
+  .d-spread{margin-top:16px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:15px 18px}
+  .d-spread .sh{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:12px}
+  .d-spread .sh span{color:var(--mute);font-weight:700;font-family:var(--mono);font-size:12px}
+  .d-track{position:relative;height:28px;background:#fff;border:2px solid var(--line);border-radius:14px}
+  .d-track .rng{position:absolute;top:0;bottom:0;background:rgba(255,199,44,.55);border-radius:14px}
+  .d-track .mk{position:absolute;top:-4px;width:15px;height:32px;border-radius:8px;background:var(--red);border:3px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.15)}
+  .d-track .tk{position:absolute;top:32px;font-family:var(--mono);font-size:10.5px;color:var(--ink);font-weight:700;transform:translateX(-50%);background:#fff;padding:0 5px;border-radius:4px;border:1px solid var(--line)}
+  .d-spread .sf{display:flex;justify-content:space-between;margin-top:22px;font-size:11.5px;color:var(--mute);font-weight:700}
 
-  /* 对账 */
-  .vs{display:grid;grid-template-columns:1fr 62px 1fr;gap:0;margin-top:22px;
-    border:2.5px solid var(--line);border-radius:22px;overflow:hidden}
-  .vs .side{padding:18px;min-width:0}
-  .vs .side .h{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--mute);margin-bottom:10px}
-  .vs .side.o{background:#FFF3F1}
-  .vs .side.c{background:#FFFBEC}
-  .vs .mid{background:var(--ink);color:var(--yellow);display:flex;flex-direction:column;
-    align-items:center;justify-content:center;gap:3px;font-weight:900}
-  .vs .mid .vs-word{font-size:17px;display:block}
-  .vs .mid .m{font-size:10px;font-weight:700;opacity:.8;text-align:center;line-height:1.3}
-  .vs .side .q{font-size:16.5px;font-weight:900;line-height:1.45;letter-spacing:-.01em}
-  .vs .side.o .q{color:var(--red)}
-  .vs .tg{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-  .vs .tg span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;border:2px solid transparent;
-    white-space:nowrap;max-width:100%}
-  .vs .side.o .tg span{background:#fff;border-color:#FFD0C9;color:var(--red)}
-  .vs .side.c .tg span{background:#fff;border-color:var(--line);color:var(--ink-2,#5A5048)}
-  .vs .tg span.struck{text-decoration:line-through;opacity:.62;background:#F0EDE6!important;border-color:#E2DACB!important;color:#9A9084!important}
+  /* 投票 */
+  .d-vote{margin-top:16px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px}
+  .d-vote .vh{font-size:15px;font-weight:800;display:flex;align-items:center;gap:9px;margin-bottom:12px}
+  .d-vote .vh .cnt{margin-left:auto;font-size:11.5px;color:var(--mute);font-weight:700}
+  .vbtns{display:flex;gap:10px}
+  .vb{flex:1;border:3px solid var(--line);border-radius:16px;background:var(--paper);padding:12px 4px;cursor:pointer;text-align:center;transition:all .13s}
+  .vb:hover{border-color:var(--yellow)}
+  .vb .vt{display:block;font-size:15px;font-weight:900}
+  .vb .vs{display:block;font-size:11px;color:var(--mute);margin-top:2px}
+  .vb.on.good{border-color:var(--green);background:#E9F9E9} .vb.on.good .vt{color:var(--green-d)}
+  .vb.on.mid{border-color:var(--yellow);background:#FFFBEC} .vb.on.mid .vt{color:var(--yellow-d)}
+  .vb.on.bad{border-color:var(--red);background:#FFF3F1} .vb.on.bad .vt{color:var(--red)}
+  .vform{display:flex;gap:10px;margin-top:12px}
+  .vform textarea{flex:1;min-height:44px;border:2px solid var(--line);border-radius:14px;padding:11px 13px;font-family:var(--round);font-size:14px;resize:vertical;background:var(--paper)}
+  .vform textarea:focus{outline:none;border-color:var(--yellow)}
+  .vform button{border:none;cursor:pointer;font-family:var(--round);font-weight:800;font-size:14px;padding:0 20px;border-radius:14px;background:var(--yellow);color:var(--ink);box-shadow:0 4px 0 var(--yellow-d);white-space:nowrap}
+  .vform button:active{transform:translateY(3px);box-shadow:none}
+  .vform button:disabled{opacity:.45;cursor:not-allowed}
+  .vtip{font-size:12px;color:var(--yellow-d);margin-top:9px;font-weight:700}
+  .vtip.err{color:var(--red)}
 
-  /* ===== 评论区 ===== */
-  .cmt{border-top:2.5px dashed var(--line);margin-top:26px;padding-top:22px}
-  .cmt .ch{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:15px}
-  .cmt .ch h3{font-size:20px;font-weight:900;display:flex;align-items:center;gap:9px}
+  /* 评价原文 */
+  .d-ugc{margin-top:16px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px}
+  .d-ugc .uh{font-size:13px;font-weight:800;margin-bottom:11px;display:flex;justify-content:space-between;align-items:baseline}
+  .d-ugc .uh span{font-size:11.5px;color:var(--mute);font-weight:700}
+  .urow{display:grid;grid-template-columns:54px 1fr;gap:13px;padding:12px 0;border-top:1.5px solid #F7F1E6}
+  .urow:first-of-type{border-top:none;padding-top:0}
+  .ubadge{text-align:center}
+  .ubadge .s{font-size:19px;font-weight:900;line-height:1}
+  .ubadge .s.hi{color:var(--green)} .ubadge .s.mid{color:var(--yellow-d)} .ubadge .s.lo{color:var(--red)}
+  .ubadge .w{font-size:10px;color:#B9ADA0}
+  .utext{font-size:13.5px;line-height:1.78;color:#3D362F}
+  .utext em{font-style:normal;background:#FFF1B8;padding:0 3px;border-radius:3px;font-weight:700}
+  .usrc{font-size:11px;color:#B9ADA0;margin-top:5px}
+
+  /* ===== 通用评论区 ===== */
+  .cmt{margin-top:34px;padding-top:22px;border-top:2.5px dashed var(--line)}
+  .cmt .ch{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+  .cmt .ch h3{font-size:19px;font-weight:900;display:flex;align-items:center;gap:9px}
   .filters{display:flex;gap:8px}
-  .fb{font-family:var(--round);font-size:13px;font-weight:800;padding:7px 15px;border-radius:12px;
-    border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--mute);transition:all .13s}
+  .fb{font-family:var(--round);font-size:12.5px;font-weight:800;padding:7px 15px;border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--mute);transition:all .13s}
   .fb:hover{border-color:var(--yellow)}
   .fb.on{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
-  .fb:active{transform:translateY(2px)}
-  .clist{display:grid;gap:11px}
-  .ci{display:grid;grid-template-columns:56px 1fr;gap:14px;background:#fff;border:2px solid var(--line);
-    border-radius:18px;padding:15px 17px}
-  .ci .badge{text-align:center;align-self:start}
-  .ci .badge .s{font-size:21px;font-weight:900;line-height:1}
-  .ci .badge .s.hi{color:var(--green)} .ci .badge .s.mid{color:#E0A000} .ci .badge .s.lo{color:var(--red)}
-  .ci .badge .w{font-size:10px;color:var(--mute);font-weight:700;margin-top:2px}
-  .ci .q{font-size:14.5px;line-height:1.75}
-  .ci .q em{font-style:normal;background:#FFF1B8;padding:0 3px;border-radius:3px;font-weight:800;color:var(--ink)}
-  .ci .src{font-size:11.5px;color:var(--mute);font-weight:700;margin-top:7px;font-family:var(--mono)}
-  .ci .side{font-size:11.5px;color:var(--mute);font-weight:700;margin-top:7px}
+  .clist{display:flex;flex-direction:column;gap:10px}
+  .ci{display:grid;grid-template-columns:54px 1fr;gap:13px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 16px}
+  .ci.mine{border-color:var(--red);background:#FFF9F7}
+  .ci .q{font-size:13.5px;line-height:1.75}
+  .ci .q em{font-style:normal;background:#FFF1B8;padding:0 3px;border-radius:3px;font-weight:700}
+  .ci .src{font-size:11.5px;color:var(--mute);margin-top:6px;font-weight:600}
+  .ci .item{font-size:11px;color:var(--mute);margin-top:3px}
 
-  .foot{margin-top:34px;padding-top:18px;border-top:2px solid var(--line);font-size:12px;color:var(--mute);line-height:1.9}
+  .foot{margin-top:30px;padding:20px 18px;background:#FFFDF8;border:2px solid var(--line);border-radius:20px;font-size:12.5px;color:var(--mute);line-height:1.95}
   .foot b{color:var(--ink)}
   .foot code{font-family:var(--mono);background:var(--cream);padding:1px 6px;border-radius:5px;font-size:11.5px}
 
-  @media(max-width:860px){
-    .stats{grid-template-columns:1fr}
-    .vs{grid-template-columns:1fr}
-    .vs .mid{padding:9px;flex-direction:row;gap:9px}
-    .ci{grid-template-columns:46px 1fr}
-    .panel{padding:19px}
-    .hero h1{font-size:33px}
+  @media(max-width:900px){
+    .stats{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-left:none}
+    .stat:nth-child(1),.stat:nth-child(2){border-bottom:2px solid var(--line)}
+    .d-grid{grid-template-columns:1fr}
+    .rank-row{grid-template-columns:42px 52px 1fr auto;gap:10px;padding:11px 13px}
+    .rank-pic{width:52px;height:52px}
+    .rank-pic img{max-width:46px;max-height:46px}
+    .rank-score{font-size:26px}
+    .vbtns{flex-wrap:wrap}
+    .vb{min-width:calc(33% - 7px)}
+    .vform{flex-direction:column}
+    .vform button{padding:11px 20px;box-shadow:0 4px 0 var(--yellow-d)}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- 顶栏 -->
   <div class="top">
-    <div class="logo"><span class="mk">香</span>麦门真香榜</div>
+    <div class="logo"><span class="mk">香</span><span class="nm">麦门真香榜</span></div>
     <div class="pills">
       <span class="pill y"><span class="d"></span><span id="pillN">—</span> 篇真实评价</span>
-      <span class="pill b"><span class="d"></span>6 个在售商品</span>
+      <span class="pill b"><span class="d"></span><span id="pillAll">—</span> 个在售商品</span>
     </div>
   </div>
 
-  <!-- Hero -->
   <div class="hero">
-    <div class="kicker">MCD FLAVOR INDEX · 民间口碑审计</div>
-    <h1>今天想吃麦当劳<br>先看<em>真实口碑</em></h1>
+    <span class="kicker">MCD FLAVOR RANKING · 麦当劳真实口碑排行榜</span>
+    <h1>麦当劳真香榜<br>官方说的 <em>vs</em> 大家说的</h1>
     <p class="sub">
       麦当劳菜单接口给「龙焰芝士棒鸡腿堡」打的是<b>「浓郁奶香拉丝芝士」「趁热拉丝」</b>。<br>
-      而 <span id="heroN">—</span> 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。我们把两边的账摊开给你看。
+      而 <span id="heroN">—</span> 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。我们把两边的账摊开，给你排个座次。
     </p>
     <div class="btns">
-      <button class="btn red" onclick="pickTop()">🔍 查最值得吃的</button>
-      <button class="btn yellow" onclick="document.getElementById('cmt').scrollIntoView({behavior:'smooth'})">💬 看评论区</button>
-      <button class="btn ghost" onclick="document.getElementById('src').scrollIntoView({behavior:'smooth'})">📎 看数据来源</button>
+      <button class="btn red" onclick="jumpTop()">🏆 看真香榜第 1 名</button>
+      <button class="btn yellow" onclick="jumpHot()">📋 看人气榜全量</button>
+      <button class="btn ghost" onclick="jumpVote()">✍️ 我要投票</button>
     </div>
   </div>
 
-  <!-- 统计 -->
   <div class="stats">
     <div class="stat"><div class="n red" id="statLow">—</div><div class="l">最低真香分</div><div class="s" id="statLowSub">—</div></div>
     <div class="stat"><div class="n y" id="statN">—</div><div class="l">真实评价样本</div><div class="s" id="statNSub">—</div></div>
-    <div class="stat"><div class="n b" id="statGap">—</div><div class="l">官方标签落差</div><div class="s">声称的效果未被真实口碑证实</div></div>
+    <div class="stat"><div class="n b" id="statAll">—</div><div class="l">在售商品</div><div class="s">门店菜单接口全量</div></div>
+    <div class="stat"><div class="n g" id="statGap">—</div><div class="l">官方标签落差</div><div class="s">声称效果未被口碑证实</div></div>
   </div>
 
-  <!-- 商品选择 -->
-  <div class="sec-hd">
-    <h2>选一个商品 <span class="em">点一下</span></h2>
-    <div class="note">红黄蓝三色分别代表：≤3 星 / 4 星 / 5 星</div>
+  <!-- 真香榜 -->
+  <div class="rank-hd">
+    <h2>🏆 真香榜 <span class="em" id="truthCount">—</span></h2>
+    <div class="note">按<b>真实评价均分</b>排序 · 点条目展开详情与投票 · 分数色：<span style="color:var(--green)">绿 ≥4.3</span> / <span style="color:var(--yellow-d)">黄 3.8–4.2</span> / <span style="color:var(--red)">红 &lt;3.8</span></div>
   </div>
-  <div class="picker" id="picker"></div>
+  <div class="rank-list" id="truthList"></div>
 
-  <!-- 详情 -->
-  <div class="panel" id="panel"></div>
+  <!-- 人气榜 -->
+  <div class="rank-hd" style="margin-top:38px">
+    <h2>📋 人气榜 <span class="em" id="hotCount">—</span></h2>
+    <div class="note">门店<b>全部在售商品</b>，按麦当劳官方标签里的销量信号排序（人气/爆款/上新/粉丝之选）· 有真实评价的显示真香分</div>
+  </div>
+  <div class="rank-list" id="hotList"></div>
 
   <!-- 评论区 -->
   <div class="cmt" id="cmt">
     <div class="ch">
-      <h3>💬 评论区 · 原文摘录</h3>
+      <h3>💬 麦门广场 · 大家的评价</h3>
       <div class="filters" id="filters">
         <button class="fb on" data-f="all">全部</button>
-        <button class="fb" data-f="hi">👍 好评 5 星</button>
-        <button class="fb" data-f="lo">👎 差评 ≤3 星</button>
+        <button class="fb" data-f="good">👍 好评 5 星</button>
+        <button class="fb" data-f="bad">👎 差评 ≤3 星</button>
       </div>
     </div>
     <div class="clist" id="clist"></div>
   </div>
 
-  <!-- 数据来源 -->
   <div class="foot" id="src">
     <b>方法与边界：</b>真香指数 = 该商品全部真实评价评分的算术平均，样本量与评分区间随商品一并公开，样本少则可信度低。<br>
-    官方风味标签取自麦当劳 MCP <code>query-meals</code> 接口返回的 <code>tags</code> 字段，为麦当劳官方自行标注；
-    价格取自 <code>calculate-price</code> 官方核价接口。<br>
-    <b>数据来源：</b>小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研，均为公开可访问内容，采集于 2026-10-25。<br>
+    <b>官方风味标签</b>取自麦当劳 MCP <code>query-meals</code> 接口返回的 <code>tags</code> 字段；<b>官方配料清单</b>取自 <code>query-meal-detail</code> 的 <code>modification</code> 字段；价格取自 <code>calculate-price</code> 官方核价接口。<br>
+    <b>数据来源：</b>小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研 / 新厨房 / 中华网，采集于 2026-10-25。<br>
     <b>本作品为民间口碑整理，非麦当劳官方产品。</b>评价内容版权归原作者所有，此处仅作短引用与统计；不构成对任何商品的评价或推荐。
   </div>
 </div>
+</body>
+</html>
 
 <script>
+/* ================= 数据 ================= */
 const IMG={
   "龙焰芝士棒鸡腿堡":"assets/mcd-brand/food-521953.png",
+  "龙焰鸡腿堡":"assets/mcd-brand/food-521952.png",
+  "龙焰芝士棒鸡腿堡三件套":"assets/mcd-brand/food-9900016075.png",
+  "龙焰鸡腿堡三件套":"assets/mcd-brand/food-9900016073.png",
   "巨无霸":"assets/mcd-brand/food-1100.png",
+  "巨无霸三件套":"assets/mcd-brand/food-9900004064.png",
+  "巨无霸四件套":"assets/mcd-brand/food-9900004064.png",
   "板烧鸡腿堡":"assets/mcd-brand/food-1406.png",
+  "板烧鸡腿堡三件套":"assets/mcd-brand/food-9900004064.png",
+  "板烧鸡腿堡四件套":"assets/mcd-brand/food-9900004064.png",
   "麦辣鸡腿堡":"assets/mcd-brand/food-1440.png",
+  "麦辣鸡腿堡三件套":"assets/mcd-brand/food-9900004064.png",
+  "麦辣鸡腿堡四件套":"assets/mcd-brand/food-9900004064.png",
   "双层吉士汉堡":"assets/mcd-brand/food-1120.png",
-  "麦香鸡汉堡":"assets/mcd-brand/food-9900005453.png"
+  "双层吉士汉堡四件套":"assets/mcd-brand/food-9900004064.png",
+  "麦香鸡":"assets/mcd-brand/food-1450.png",
+  "麦香鸡中套餐":"assets/mcd-brand/food-9900005453.png",
+  "麦香鱼":"assets/mcd-brand/food-1450.png",
+  "高达吉士双牛堡":"assets/mcd-brand/food-521316.png",
+  "马苏里拉拉丝芝士条":"assets/mcd-brand/food-521986.png",
+  "麦香鸡堡":"assets/mcd-brand/food-9900005453.png",
+  "精选单人餐三件套":"assets/mcd-brand/food-9900004064.png",
+  "人气经典随心配":"assets/mcd-brand/food-9900013304.png",
+  "精选超值随心配":"assets/mcd-brand/food-9900015187.png",
+  "中薯条":"assets/mcd-brand/food-4810.png",
+  "小杯玉米杯":"assets/mcd-brand/food-4437.png",
+  "可乐中杯":"assets/mcd-brand/food-3050.png",
+  "无糖可口可乐中杯":"assets/mcd-brand/food-3071.png"
 };
-/* ===== 数据加载 =====
-   优先读取同目录的 data_ugc.json（唯一权威数据源）；
-   若不可用（例如 file:// 下 fetch 被拦截），回退到渲染时注入的 window.__FLAVOR_DATA__。 */
-let DATA = [];
-let byId = {};
-let current = '';
-let filter = 'all';
+const VOTE_OPTS=[
+  {key:'good',label:'真香',score:5},
+  {key:'mid', label:'一般',score:3},
+  {key:'bad', label:'踩雷',score:2}
+];
+const DENY=[
+  {re:/拉丝/,neg:/没拉丝|没有拉丝|空心|中空/},
+  {re:/趁热/,neg:/趁热/},
+  {re:/人气|爆款|经典/,neg:/缩水/}
+];
+const VOTE_KEY='mcd_flavor_votes_v1', POST_KEY='mcd_flavor_posts_v1';
 
-function normalize(items){
-  return items.map(it=>{
-    const ugc = it.ugc || [];
-    const scores = ugc.map(u=>u.score);
-    const n = scores.length;
-    const avg = n ? scores.reduce((a,b)=>a+b,0)/n : 0;
-    const min = n ? Math.min(...scores) : 0;
-    const max = n ? Math.max(...scores) : 0;
-    return {
-      ...it,
-      ugc,
-      n,
-      avg: Number(avg.toFixed(2)),
-      min, max,
-      spread: max - min,
-      official_price_yuan: it.official_price_yuan ?? null,
-      official_tags: it.official_tags || [],
-      price_note: it.price_note || null,
-      cat: it.cat || '在售',
-      real: it.real || []
-    };
-  });
-}
+let DATA=null, openName='', hotLimit=12, filter='all';
+const drafts={};   // 各商品的未提交理由草稿
+const readLS=(k,f)=>{try{const v=JSON.parse(localStorage.getItem(k));return v||f;}catch(e){return f;}};
+const writeLS=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
 
-function boot(items){
-  DATA = normalize(items);
-  if(!DATA.length){ return; }
-  byId = Object.fromEntries(DATA.map(d=>[d.name,d]));
-  current = DATA[0].name;
-  renderStats();
-  renderPicker(); renderPanel(); renderComments();
-}
+function scoreCls(s){return s>=5?'hi':(s<=3?'lo':'mid');}
+function loadVotes(){return readLS(VOTE_KEY,{});}
+function loadPosts(){const a=readLS(POST_KEY,[]);return Array.isArray(a)?a:[];}
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-/* 顶部统计：全部由数据算出，改数据即变 */
+/* ================= 渲染 ================= */
 function renderStats(){
-  const total = DATA.reduce((s,d)=>s+d.n,0);
-  const low = DATA.reduce((a,d)=>d.avg<a.avg?d:a);
-  const maxSpread = Math.max(...DATA.map(d=>d.spread));
-  const gapCount = DATA.filter(d=>d.real.some(r=>/没拉丝|空心|缩水|趁热|平淡|惊艳|腻/.test(r))).length;
-
-  const set=(id,v)=>{const e=document.getElementById(id); if(e) e.textContent=v;};
-  set('pillN', total);
-  set('heroN', total);
-  set('statN', total);
-  set('statNSub', `${DATA.length} 个商品全覆盖 · 采集 2026-10-25`);
-  set('statLow', low.avg.toFixed(1));
-  set('statLowSub', `${low.name} · 区间 ${low.min.toFixed(1)}–${low.max.toFixed(1)}`);
-  set('statGap', gapCount);
+  const total=DATA.truth.reduce((s,x)=>s+x.n,0);
+  const low=DATA.truth.reduce((a,b)=>b.avg<a.avg?b:a);
+  const gap=DATA.truth.filter(x=>x.official_tags.some(t=>
+    DENY.some(d=>d.re.test(t)&&(x.real||[]).some(r=>d.neg.test(r))))).length;
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('pillN',total); set('heroN',total); set('statN',total);
+  set('statAll',DATA.hot.length); set('pillAll',DATA.hot.length);
+  set('statLow',low.avg.toFixed(1));
+  set('statLowSub',low.name+' · 区间 '+low.min+'–'+low.max);
+  set('statNSub',DATA.truth.length+' 个商品已评价');
+  set('statGap',gap);
+  set('truthCount',DATA.truth.length);
+  set('hotCount',DATA.hot.length);
 }
 
-function scoreCls(s){ return s>=5?'hi':(s<=3?'lo':'mid'); }
-
-function renderPicker(){
-  const maxSpread=Math.max(...DATA.map(d=>d.spread));
-  document.getElementById('picker').innerHTML=DATA.map(d=>{
-    const cls=scoreCls(d.avg>=4.5?5:(d.avg>=3.8?4:3));
-    const flag = (d.spread)===maxSpread && maxSpread>=2 ? '<span class="flag">分歧最大</span>' : '';
-    return `<div class="chip-card ${d.name===current?'on':''}" onclick="select('${d.name}')">
-      ${flag}
-      <div class="pic"><img src="${IMG[d.name]||''}" alt=""></div>
-      <div class="nm">${d.name}</div>
-      <div class="sc ${cls}">${d.avg.toFixed(1)}</div>
-      <div class="meta">n=${d.n} · ¥${d.official_price_yuan}</div>
-    </div>`;
+function rankItem(it,idx,isHot){
+  const has=it.has_review;
+  const sc=has?it.avg:null;
+  const scCls=has?scoreCls(it.avg>=4.3?5:(it.avg>=3.8?4:3)):'none';
+  const fl=it.flavor_tags||[];
+  const flag=!has?'<span class="rank-flag none">待评价</span>'
+    :(it.spread>=3?'<span class="rank-flag div">分歧最大</span>'
+    :(it.spread<=1?'<span class="rank-flag same">口碑一致</span>':''));
+  const img=IMG[it.name];
+  const pic=img?`<div class="rank-pic"><img src="${img}" alt=""></div>`
+    :`<div class="rank-pic none">${esc((it.cat||'').slice(0,4))}</div>`;
+  const hotTags=fl.filter(t=>['上新','新升级','限时特惠','限定特惠','爆款','人气'].includes(t));
+  // 风味标签不足时，用官方配料清单补足信息量
+  let tags=fl.slice(0,3);
+  if(tags.length<2 && it.ingredients && it.ingredients.length){
+    it.ingredients.slice(0,2-tags.length).forEach(x=>{ if(!tags.includes(x)) tags.push(x); });
+  }
+  const tagHtml=tags.map(t=>{
+    const cls=hotTags.includes(t)?'hot':'';
+    return `<span class="ftag ${cls}">${esc(t)}</span>`;
   }).join('');
-}
-
-function select(n){ current=n; renderPicker(); renderPanel(); }
-
-function pickTop(){
-  const best=[...DATA].sort((a,b)=>b.avg-a.avg)[0];
-  select(best.name);
-  document.getElementById('panel').scrollIntoView({behavior:'smooth',block:'center'});
-}
-
-function renderPanel(){
-  const d=byId[current];
-  const cls=scoreCls(d.avg>=4.5?5:(d.avg>=3.8?4:3));
-  const lo=((d.min-2)/3)*100, hi=((d.max-2)/3)*100;
-  const mk=((d.avg-2)/3)*100;
-  // 只划掉真正被真实口碑否定的那个官方标签，而不是全部重复一遍
-  const DENY = [
-    { re: /拉丝/, neg: /没拉丝|没有拉丝|空心|中空/ },
-    { re: /趁热/, neg: /趁热/ },
-    { re: /人气|爆款|经典/, neg: /缩水/ },
-  ];
-  const struckTags = d.official_tags.filter(t =>
-    DENY.some(x => x.re.test(t) && d.real.some(r => x.neg.test(r)))
-  );
-  document.getElementById('panel').innerHTML=`
-    <div class="ph">
-      <div>
-        <div class="ttl">${d.name}</div>
-        <div class="badges">
-          <span class="bg ${d.cat==='新品类'?'r':(d.cat==='招牌类'?'o':'g')}">${d.cat}</span>
-          <span class="bg">官方核价 ¥${d.official_price_yuan}</span>
-          ${d.price_note?`<span class="bg">${d.price_note}</span>`:''}
-          <span class="bg">样本 ${d.n} 篇</span>
-          ${(d.spread)>=2?'<span class="bg r">口碑分歧大</span>':''}
-        </div>
+  const score=has?`<div class="rank-score ${scCls}">${sc.toFixed(1)}</div>
+      <div class="rank-sub">n=${it.n} 篇 · ${it.min}–${it.max}★${flag}</div>`
+    :`<div class="rank-score none">—</div>
+      <div class="rank-sub">官方价 ¥${it.price==null?'-':it.price}${it.signal?' · 官方推荐':''}</div>`;
+  const meta=has?`${esc(it.cat)} · 官方核价 ¥${it.price==null?'-':it.price}`
+    :`${esc(it.cat)} · ${it.signal?'麦当劳官方推荐':'在售'}`;
+  return `<div class="rank-item ${openName===it.name?'open':''}" id="row-${encodeURIComponent(it.name)}" data-name="${esc(it.name)}">
+    <div class="rank-row" onclick="toggleItem('${esc(it.name).replace(/'/g,"\\'")}')">
+      <div class="rank-no">${String(idx+1).padStart(2,'0')}</div>
+      ${pic}
+      <div class="rank-main">
+        <div class="rank-name">${esc(it.name)}</div>
+        <div class="rank-meta">${meta}</div>
+        ${tagHtml?`<div class="rank-flavor">${tagHtml}</div>`:''}
       </div>
-      <div class="scorebox">
-        <div class="n ${cls}">${d.avg.toFixed(1)}</div>
-        <div class="l">真香指数 / 5</div>
+      <div class="rank-right">${score}</div>
+      <div class="rank-toggle">⌄</div>
+    </div>
+    ${openName===it.name?detailHtml(it):''}
+  </div>`;
+}
+
+function detailHtml(it){
+  const votes=loadVotes();
+  const mine=votes[it.name];
+  const myCls=mine?('on '+mine.vote):'';
+  const vt=VOTE_OPTS.map(o=>`<div class="vb ${myCls===('on '+o.key)?'on '+o.key:''}" data-vk="${o.key}" onclick="doVote('${esc(it.name).replace(/'/g,"\\'")}','${o.key}')">
+      <span class="vt">${o.label}</span><span class="vs">${o.score} 分</span></div>`).join('');
+  const reason=(mine&&mine.reason)||'';
+  if(drafts[it.name]===undefined && reason) drafts[it.name]=reason;
+  const struckTags=(it.official_tags||[]).filter(t=>
+    DENY.some(d=>d.re.test(t)&&(it.real||[]).some(r=>d.neg.test(r))));
+  const ing=it.ingredients&&it.ingredients.length?`<div class="d-ings"><b>官方配料：</b>${it.ingredients.map(esc).join('、')}</div>`:'';
+  const desc=it.official_desc?`<div class="d-box"><div class="dh">麦当劳官方介绍</div><div class="d-desc">${esc(it.official_desc)}</div></div>`:'';
+  const ugc=(it.ugc&&it.ugc.length)?`<div class="d-ugc"><div class="uh">真实评价原文<span>${it.ugc.length} 条</span></div>
+    ${it.ugc.map(u=>`<div class="urow"><div class="ubadge"><div class="s ${scoreCls(u.score)}">${u.score}.0</div><div class="w">★</div></div>
+      <div><div class="utext">${u.text}</div><div class="usrc">— ${esc(u.source)}</div></div></div>`).join('')}</div>`:'';
+  const spread=it.has_review?`<div class="d-spread">
+      <div class="sh">评分离散度<span>区间 ${it.min} – ${it.max} · ${it.n} 篇</span></div>
+      <div class="d-track">
+        <span class="rng" style="left:${((it.min-2)/3*100).toFixed(1)}%;width:${((it.max-it.min)/3*100).toFixed(1)}%"></span>
+        <span class="mk" style="left:calc(${((it.avg-2)/3*100).toFixed(1)}% - 7.5px)"></span>
+        <span class="tk" style="left:${((it.avg-2)/3*100).toFixed(1)}%">均值 ${it.avg.toFixed(1)}</span>
+      </div>
+      <div class="sf"><span>最低 ${it.min} ★</span><span>最高 ${it.max} ★</span></div>
+    </div>`:'';
+  return `<div class="detail">
+    <div class="d-grid">
+      <div class="d-box d-official">
+        <div class="dh">麦当劳官方风味标签</div>
+        <div class="d-tags">${(it.official_tags||[]).map(t=>`<span class="d-tag">${esc(t)}</span>`).join('')||'<span class="d-tag">官方未标注</span>'}</div>
+        ${ing}
+      </div>
+      <div class="d-box d-real">
+        <div class="dh">${it.n||0} 篇真实评价的共识</div>
+        <div class="d-tags">${(it.real||[]).map(r=>`<span class="d-tag">${esc(r)}</span>`).join('')||'<span class="d-tag">暂无</span>'}</div>
       </div>
     </div>
-
-    <div class="spread">
-      <div class="sh">评分离散度 <span>区间 ${d.min.toFixed(1)} – ${d.max.toFixed(1)} · ${d.n} 篇</span></div>
-      <div class="track">
-        <span class="rng" style="left:${lo}%;width:${hi-lo}%"></span>
-        <span class="mk" style="left:calc(${mk}% - 8px)"></span>
-        <span class="tk tk-mid" style="left:${mk}%">均值 ${d.avg.toFixed(1)}</span>
+    ${desc}
+    ${spread}
+    <div class="d-vote">
+      <div class="vh">这顿你觉得值不值？<span class="cnt" id="vc-${encodeURIComponent(it.name)}">${mine?'已投票':'还没投'}</span></div>
+      <div class="vbtns">${vt}</div>
+      <div class="vform">
+        <textarea id="rs-${encodeURIComponent(it.name)}" placeholder="写一句理由，别的食客就靠你这句话了" maxlength="60" oninput="drafts[${JSON.stringify(it.name)}]=this.value">${esc(drafts[it.name]!==undefined?drafts[it.name]:reason)}</textarea>
+        <button onclick="submitReason('${esc(it.name).replace(/'/g,"\\'")}')">发到麦门广场</button>
       </div>
-      <div class="sf"><span>最低 ${d.min.toFixed(1)} ★</span><span>最高 ${d.max.toFixed(1)} ★</span></div>
+      <div class="vtip" id="tip-${encodeURIComponent(it.name)}"></div>
     </div>
-
-    <div class="vs">
-      <div class="side o">
-        <div class="h">OFFICIAL · 麦当劳菜单接口</div>
-        <div class="q">${d.official_tags.map(t=>`「${t}」`).join('<br>')}</div>
-        <div class="tg">${d.official_tags.map(t=>`<span>${t}</span>`).join('')}</div>
-      </div>
-      <div class="mid"><span class="vs-word">VS</span><span class="m">官方声称<br>vs 真实共识</span></div>
-      <div class="side c">
-        <div class="h">COMMUNITY · ${d.n} 篇真实评价</div>
-        <div class="q">${d.real.map(r=>`「${r}」`).join(' ')}</div>
-        <div class="tg">${d.real.map(r=>`<span>${r}</span>`).join('')}</div>
-        ${struckTags.length?`<div class="tg" style="margin-top:8px">${struckTags.map(t=>`<span class="struck">${t}</span>`).join('')}</div>`:''}
-      </div>
-    </div>`;
+    ${ugc}
+  </div>`;
 }
 
-function renderComments(){
-  const d=byId[current];
-  let list=d.ugc;
-  if(filter==='hi') list=list.filter(u=>u.score>=5);
-  if(filter==='lo') list=list.filter(u=>u.score<=3);
-  document.getElementById('clist').innerHTML = list.length? list.map(u=>`
-    <div class="ci">
-      <div class="badge"><div class="s ${scoreCls(u.score)}">${u.score}.0</div><div class="w">★</div></div>
-      <div><div class="q">${u.text}</div><div class="src">— ${u.source}</div></div>
-    </div>`).join('') : '<div style="padding:22px;text-align:center;color:#8A7F73;font-weight:700">这个商品没有符合筛选条件的评价</div>';
+function renderTruth(){
+  document.getElementById('truthList').innerHTML=DATA.truth.map((it,i)=>rankItem(it,i,false)).join('');
+}
+function renderHot(){
+  const show=DATA.hot.slice(0,hotLimit);
+  document.getElementById('hotList').innerHTML=show.map((it,i)=>rankItem(it,i,true)).join('')+
+    (DATA.hot.length>hotLimit?`<button class="btn ghost" style="margin-top:14px;width:100%;justify-content:center" onclick="hotLimit+=20;renderHot()">展开更多（还有 ${DATA.hot.length-hotLimit} 个）</button>`:'');
 }
 
+function toggleItem(name){
+  openName = openName===name ? '' : name;
+  renderTruth(); renderHot();
+  if(openName){
+    const el=document.getElementById('row-'+encodeURIComponent(name));
+    if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+
+/* ================= 投票 ================= */
+function doVote(name,key){
+  const votes=loadVotes();
+  const reasonEl=document.getElementById('rs-'+encodeURIComponent(name));
+  const reason=reasonEl?(reasonEl.value||'').trim():'';
+  votes[name]={vote:key,reason:reason,at:Date.now()};
+  writeLS(VOTE_KEY,votes);
+  // 不重建列表：重建会让 textarea 失焦、草稿丢失。
+  // 只更新按钮高亮与计数，避免打断用户输入。
+  const row=document.getElementById('row-'+encodeURIComponent(name));
+  if(row){
+    row.querySelectorAll('.vb').forEach(v=>{
+      const on=v.getAttribute('data-vk')===key;
+      v.className='vb'+(on?' on '+key:'');
+    });
+    const cnt=document.getElementById('vc-'+encodeURIComponent(name));
+    if(cnt) cnt.textContent='已投票';
+  }
+  const tip=document.getElementById('tip-'+encodeURIComponent(name));
+  if(tip){ tip.textContent = reason ? '票已记下' : '票已记上。补一句理由，别人才知道你站哪边'; tip.className='vtip'; }
+}
+function submitReason(name){
+  const el=document.getElementById('rs-'+encodeURIComponent(name));
+  const tip=document.getElementById('tip-'+encodeURIComponent(name));
+  const reason=el?(el.value||'').trim():'';
+  if(!reason){ if(tip){tip.textContent='写一句理由才有人看得懂你的票';tip.className='vtip err';} return; }
+  const votes=loadVotes();
+  const key=votes[name]?votes[name].vote:'mid';
+  votes[name]={vote:key,reason:reason,at:Date.now()};
+  writeLS(VOTE_KEY,votes);
+  const posts=loadPosts();
+  posts.unshift({id:'p'+Date.now(),item:name,vote:key,text:reason,at:Date.now(),mine:true});
+  writeLS(POST_KEY,posts.slice(0,50));
+  // 只刷新广场，不动当前展开的详情（避免 textarea 失焦）
+  renderSquare();
+  const t2=document.getElementById('tip-'+encodeURIComponent(name));
+  if(t2){t2.textContent='已发到麦门广场';t2.className='vtip';}
+}
+function jumpTop(){
+  const el=document.getElementById('truthList');
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  const first=DATA.truth[0];
+  if(first && openName!==first.name) setTimeout(()=>toggleItem(first.name),420);
+}
+function jumpHot(){
+  const el=document.getElementById('hotList');
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function jumpVote(){
+  const first=DATA.truth[0];
+  if(first){ openName=first.name; renderTruth(); renderHot();
+    setTimeout(()=>{const el=document.getElementById('row-'+encodeURIComponent(first.name));
+      if(el){el.scrollIntoView({behavior:'smooth',block:'center'});
+        const ta=document.querySelector('#row-'+encodeURIComponent(first.name)+' textarea');
+        if(ta) ta.focus();}},200);
+  }
+}
+
+/* ================= 广场 ================= */
+function renderSquare(){
+  const all=[];
+  DATA.truth.forEach(it=>{
+    (it.ugc||[]).forEach((u,i)=>{
+      all.push({id:'s'+it.name+i,vote:u.score>=5?'good':(u.score>=4?'mid':'bad'),
+        score:u.score,item:it.name,text:u.text,source:u.source,mine:false,at:0});
+    });
+  });
+  const posts=loadPosts().map(p=>({...p,score:p.vote==='good'?5:(p.vote==='mid'?3:2),mine:true,source:''}));
+  const flow=posts.concat(all).sort((a,b)=>{
+    if(a.mine&&!b.mine)return -1; if(!a.mine&&b.mine)return 1;
+    if(a.mine&&b.mine)return b.at-a.at; return 0;
+  });
+  let list=flow;
+  if(filter!=='all') list=flow.filter(p=>p.vote===filter);
+  const VLABEL={good:'真香',mid:'一般',bad:'踩雷'};
+  document.getElementById('clist').innerHTML=list.map(p=>`
+    <div class="ci ${p.mine?'mine':''}">
+      <div class="ubadge"><div class="s ${scoreCls(p.score)}">${p.score}.0</div><div class="w">★</div></div>
+      <div><div class="q">${p.text}</div><div class="src">— ${esc(p.source||'我的投票')}</div><div class="item">${esc(p.item)} · ${VLABEL[p.vote]||''}</div></div>
+    </div>`).join('');
+}
 document.querySelectorAll('#filters .fb').forEach(b=>{
   b.addEventListener('click',()=>{
     document.querySelectorAll('#filters .fb').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on'); filter=b.dataset.f; renderComments();
+    b.classList.add('on'); filter=b.dataset.f; renderSquare();
   });
 });
 
-/* 启动：优先 fetch 同目录 data_ugc.json，失败回退到注入数据 */
-(function(){
-  const injected = window.__FLAVOR_DATA__ || null;
-  fetch('data_ugc.json', {cache:'no-store'})
-    .then(r=>r.ok?r.json():Promise.reject(new Error('http '+r.status)))
-    .then(j=>boot(j.items || []))
-    .catch(()=>{ if(injected){ boot(injected); } else {
-      document.getElementById('picker').innerHTML =
-        '<div style="padding:22px;text-align:center;color:#8A7F73;font-weight:700">未能加载 data_ugc.json，请运行 flavor_index.py --render 生成单文件版本</div>';
-    }});
-})();
+/* ================= 启动 ================= */
+function boot(data){
+  DATA=data;
+  renderStats(); renderTruth(); renderHot(); renderSquare();
+}
+fetch('data/home.json',{cache:'no-store'})
+  .then(r=>r.ok?r.json():Promise.reject(new Error('http '+r.status)))
+  .then(j=>boot(j))
+  .catch(()=>{
+    const injected=window.__FLAVOR_HOME__;
+    if(injected) boot(injected);
+    else document.getElementById('truthList').innerHTML=
+      '<div style="padding:30px;text-align:center;color:#8A7F73;font-weight:700">未能加载 data/home.json，请运行 flavor_index.py --render 生成单文件版本</div>';
+  });
 </script>
 </body>
 </html>
