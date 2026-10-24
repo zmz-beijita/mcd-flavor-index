@@ -1,0 +1,105 @@
+<view class="page" wx:if="{{item}}">
+    <!-- 头部 -->
+    <view class="hero">
+        <text class="cat">{{item.cat}}</text>
+        <text class="name">{{item.name}}</text>
+        <view class="hero-meta">
+            <text class="meta-i">官方核价 ¥{{item.price}}</text>
+            <text class="meta-i">样本 {{item.n}} 篇</text>
+            <text class="meta-i">区间 {{item.min}}–{{item.max}}</text>
+        </view>
+        <view class="score-big">
+            <text class="sb-n {{item.scoreClass}}">{{item.avg}}</text>
+            <text class="sb-l">真香指数 / 5</text>
+        </view>
+    </view>
+
+    <!-- 评分离散度 -->
+    <view class="block">
+        <view class="block-hd">
+            <text class="block-t">评分离散度</text>
+            <text class="block-n">{{item.min}} – {{item.max}}</text>
+        </view>
+        <view class="track">
+            <view class="rng" style="left:{{item.rangeLeft}}%;width:{{item.rangeWidth}}%"></view>
+            <view class="mk" style="left:{{item.markerLeft}}%"></view>
+        </view>
+        <view class="track-ax">
+            <text class="ax-l">2★</text>
+            <text class="ax-r">5★</text>
+        </view>
+    </view>
+
+    <!-- 官方 vs 真实 -->
+    <view class="block">
+        <view class="block-hd">
+            <text class="block-t">官方标签 vs 真实共识</text>
+        </view>
+        <view class="vs">
+            <view class="vs-side vs-official">
+                <text class="vs-h">官方菜单接口</text>
+                <text class="vs-q" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">「{{tg}}」</text>
+                <view class="vs-tags">
+                    <text class="vt vt-o" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">{{tg}}</text>
+                </view>
+            </view>
+            <view class="vs-mid">
+                <text class="vs-vs">VS</text>
+            </view>
+            <view class="vs-side vs-real">
+                <text class="vs-h">{{item.n}} 篇真实评价</text>
+                <text class="vs-q" wx:for="{{item.real}}" wx:for-item="rl" wx:key="*this">「{{rl}}」</text>
+                <view class="vs-tags">
+                    <text class="vt vt-r" wx:for="{{item.real}}" wx:for-item="rl" wx:key="*this">{{rl}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 投票 -->
+    <view class="block vote-block">
+        <view class="block-hd">
+            <text class="block-t">这顿你觉得值不值？</text>
+            <text class="block-n" wx:if="{{myVote}}">已投票</text>
+        </view>
+        <view class="votes">
+            <view class="vbtn {{opt.on}}" wx:for="{{voteBtns}}" wx:for-item="opt" wx:key="key" bindtap="doVote" data-key="{{opt.key}}">
+                <text class="vbtn-t">{{opt.label}}</text>
+                <text class="vbtn-s">{{opt.score}} 分</text>
+            </view>
+        </view>
+        <view class="reason-box">
+            <textarea class="reason" placeholder="写一句理由，别的食客就靠你这句话了" maxlength="60" value="{{reasonDraft}}" bindinput="onReason" auto-height></textarea>
+            <view class="reason-foot">
+                <text class="counter">{{reasonDraft.length}}/60</text>
+                <button class="btn-yellow submit" bindtap="submitVote" disabled="{{submitting}}">发到麦门广场</button>
+            </view>
+        </view>
+        <view class="tip" wx:if="{{tip}}">{{tip}}</view>
+    </view>
+
+    <!-- 评价原文 -->
+    <view class="block">
+        <view class="block-hd">
+            <text class="block-t">评价原文摘录</text>
+            <text class="block-n">{{item.ugc.length}} 条</text>
+        </view>
+        <view class="ugc-list">
+            <view class="ugc" wx:for="{{item.ugc}}" wx:key="idx">
+                <view class="ugc-badge">
+                    <text class="ugc-s {{item.scoreClass}}">{{item.score}}.0</text>
+                    <text class="ugc-w">★</text>
+                </view>
+                <view class="ugc-body">
+                    <text class="ugc-t">{{item.text}}</text>
+                    <text class="ugc-src">— {{item.source}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="foot">
+        <text class="foot-t">评价版权归原作者所有，此处仅作短引用与统计。</text>
+        <text class="foot-t">本作品为民间口碑整理，非麦当劳官方产品。</text>
+    </view>
+</view>
