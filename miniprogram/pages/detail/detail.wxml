@@ -42,6 +42,10 @@
                 <view class="vs-tags">
                     <text class="vt vt-o" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">{{tg}}</text>
                 </view>
+                <view class="d-ings" wx:if="{{item.ingredients.length}}">
+                    <text class="d-ings-t">官方配料</text>
+                    <text class="d-ings-v">{{item.ingredients}}</text>
+                </view>
             </view>
             <view class="vs-mid">
                 <text class="vs-vs">VS</text>
@@ -54,6 +58,14 @@
                 </view>
             </view>
         </view>
+    </view>
+
+    <!-- 麦当劳官方介绍 -->
+    <view class="block" wx:if="{{item.officialDesc}}">
+        <view class="block-hd">
+            <text class="block-t">麦当劳官方介绍</text>
+        </view>
+        <text class="official-desc">{{item.officialDesc}}</text>
     </view>
 
     <!-- 投票 -->
