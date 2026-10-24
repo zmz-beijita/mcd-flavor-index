@@ -633,12 +633,12 @@ function renderPanel(){
 function renderComments(){
   const d=byId[current];
   let list=d.ugc;
-  if(filter==='hi') list=list.filter(u=>u.s>=5);
-  if(filter==='lo') list=list.filter(u=>u.s<=3);
+  if(filter==='hi') list=list.filter(u=>u.score>=5);
+  if(filter==='lo') list=list.filter(u=>u.score<=3);
   document.getElementById('clist').innerHTML = list.length? list.map(u=>`
     <div class="ci">
-      <div class="badge"><div class="s ${scoreCls(u.s)}">${u.s}.0</div><div class="w">★</div></div>
-      <div><div class="q">${u.t}</div><div class="src">— ${u.src}</div></div>
+      <div class="badge"><div class="s ${scoreCls(u.score)}">${u.score}.0</div><div class="w">★</div></div>
+      <div><div class="q">${u.text}</div><div class="src">— ${u.source}</div></div>
     </div>`).join('') : '<div style="padding:22px;text-align:center;color:#8A7F73;font-weight:700">这个商品没有符合筛选条件的评价</div>';
 }
 
