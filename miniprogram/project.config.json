@@ -1,0 +1,23 @@
+{
+  "description": "WorkBuddy 原生微信小程序基础模板",
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "folder",
+        "value": ".workbuddy"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "bundle": false,
+    "es6": true,
+    "minified": true,
+    "postcss": true,
+    "urlCheck": true
+  },
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "workbuddy-native-basic",
+  "miniprogramRoot": "./"
+}
