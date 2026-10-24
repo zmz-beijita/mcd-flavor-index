@@ -5,8 +5,8 @@
             <view class="logo">香</view>
             <text class="brand-name">麦门真香榜</text>
         </view>
-        <text class="kicker">官方标签 vs 真实口碑</text>
-        <text class="title">今天想吃麦当劳，先看真实口碑</text>
+        <text class="kicker">官方说的 vs 大家说的</text>
+        <text class="title">麦当劳真香榜</text>
         <view class="stats">
             <view class="stat">
                 <text class="stat-n red">{{stat.low}}</text>
@@ -14,10 +14,10 @@
             </view>
             <view class="stat">
                 <text class="stat-n yellow">{{stat.total}}</text>
-                <text class="stat-l">真实评价样本</text>
+                <text class="stat-l">真实评价</text>
             </view>
             <view class="stat">
-                <text class="stat-n blue">{{stat.items}}</text>
+                <text class="stat-n blue">{{stat.all}}</text>
                 <text class="stat-l">在售商品</text>
             </view>
         </view>
@@ -36,32 +36,53 @@
         <button class="btn-red retry" bindtap="handleRetry">重新加载</button>
     </view>
 
-    <!-- 榜单 -->
     <block wx:if="{{viewState === 'ready'}}">
-        <view class="list">
-            <view class="card" wx:for="{{items}}" wx:key="name" bindtap="goDetail" data-name="{{item.name}}">
-                <view class="card-top">
-                    <text class="rank">NO.{{index + 1}}</text>
-                    <text class="flag" wx:if="{{item.spread >= 3}}">分歧最大</text>
-                    <text class="flag flag-grey" wx:if="{{item.spread <= 1}}">口碑一致</text>
-                </view>
-                <view class="card-main">
-                    <image class="pic" src="{{item.img}}" mode="aspectFit"></image>
-                    <view class="card-info">
-                        <text class="name">{{item.name}}</text>
-                        <text class="meta">n={{item.n}} 篇 · 区间 {{item.min}}–{{item.max}} · ¥{{item.price}}</text>
-                        <view class="tags">
-                            <text class="tag" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">{{tg}}</text>
-                        </view>
-                    </view>
-                    <view class="score-box">
-                        <text class="score {{item.scoreClass}}">{{item.avg}}</text>
-                        <text class="score-l">真香/5</text>
+        <!-- 真香榜 -->
+        <view class="rank-hd">
+            <text class="rank-t">🏆 真香榜</text>
+            <text class="rank-n">{{items.length}} 个有真实评价</text>
+        </view>
+        <view class="rank-list">
+            <view class="rk" wx:for="{{items}}" wx:key="name" bindtap="goDetail" data-name="{{item.name}}">
+                <text class="rk-no">{{index + 1}}</text>
+                <image class="rk-pic" src="{{item.img}}" mode="aspectFit"></image>
+                <view class="rk-main">
+                    <text class="rk-name">{{item.name}}</text>
+                    <text class="rk-meta">n={{item.n}} 篇 · {{item.min}}–{{item.max}}★ · ¥{{item.price}}</text>
+                    <view class="rk-tags">
+                        <text class="rk-tag" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">{{tg}}</text>
                     </view>
                 </view>
-                <view class="card-foot">
-                    <text class="real">真实共识：{{item.realText}}</text>
-                    <text class="go">›</text>
+                <view class="rk-right">
+                    <text class="rk-score {{item.scoreClass}}">{{item.avg}}</text>
+                    <text class="rk-flag" wx:if="{{item.spread >= 3}}">分歧大</text>
+                </view>
+            </view>
+        </view>
+
+        <!-- 人气榜 -->
+        <view class="rank-hd" style="margin-top:36rpx">
+            <text class="rank-t">📋 人气榜</text>
+            <text class="rank-n">{{hot.length}} 个在售</text>
+        </view>
+        <view class="rank-list">
+            <view class="rk" wx:for="{{hot}}" wx:key="name" bindtap="goDetail" data-name="{{item.name}}">
+                <text class="rk-no">{{index + 1}}</text>
+                <image class="rk-pic" wx:if="{{item.img}}" src="{{item.img}}" mode="aspectFit"></image>
+                <view class="rk-pic rk-pic-none" wx:else>
+                    <text>{{item.catShort}}</text>
+                </view>
+                <view class="rk-main">
+                    <text class="rk-name">{{item.name}}</text>
+                    <text class="rk-meta">{{item.cat}} · ¥{{item.price}}</text>
+                    <view class="rk-tags" wx:if="{{item.tags.length}}">
+                        <text class="rk-tag rk-tag-hot" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">{{tg}}</text>
+                    </view>
+                </view>
+                <view class="rk-right">
+                    <text class="rk-score rk-score-none" wx:if="{{!item.hasReview}}">—</text>
+                    <text class="rk-score {{item.scoreClass}}" wx:else>{{item.avg}}</text>
+                    <text class="rk-flag rk-flag-grey" wx:if="{{!item.hasReview}}">待评价</text>
                 </view>
             </view>
         </view>
