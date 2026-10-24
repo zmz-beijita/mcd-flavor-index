@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 本地环境
+.env
+.env.local
+.venv/
+venv/
+
+# 渲染产物（由 scripts/flavor_index.py --render 生成，仓库内已有 index.html）
+flavor-index.html
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
