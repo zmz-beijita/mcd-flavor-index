@@ -1,0 +1,38 @@
+<view class="page">
+    <view class="head">
+        <text class="kicker">麦门广场</text>
+        <text class="title">大家都在说</text>
+        <view class="filters">
+            <view class="f {{filter === 'all' ? 'on' : ''}}" data-f="all" bindtap="setFilter">全部</view>
+            <view class="f {{filter === 'good' ? 'on' : ''}}" data-f="good" bindtap="setFilter">真香</view>
+            <view class="f {{filter === 'bad' ? 'on' : ''}}" data-f="bad" bindtap="setFilter">踩雷</view>
+        </view>
+    </view>
+
+    <view class="feed">
+        <view class="post" wx:for="{{flow}}" wx:key="id">
+            <view class="post-hd">
+                <view class="badge {{item.vote}}">{{item.voteLabel}}</view>
+                <text class="post-item">{{item.item}}</text>
+                <text class="post-mine" wx:if="{{item.mine}}">我</text>
+            </view>
+            <text class="post-text">{{item.text}}</text>
+            <view class="post-ft">
+                <text class="post-src" wx:if="{{item.source}}">— {{item.source}}</text>
+                <text class="post-src" wx:else>— 我的投票</text>
+                <text class="post-num" wx:if="{{item.n}}">n={{item.n}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="empty" wx:if="{{flow.length === 0}}">
+        <text class="empty-t">还没有人投票</text>
+        <text class="empty-d">去榜单里给一个商品投上票，你的理由会出现在这里</text>
+        <button class="btn-red" bindtap="goIndex">去投票</button>
+    </view>
+
+    <view class="foot">
+        <text class="foot-t">种子内容来自 34 篇真实公开评价（含来源标注）；你的投稿只存在本机。</text>
+        <text class="foot-t">非麦当劳官方产品 · 评价版权归原作者所有</text>
+    </view>
+</view>
