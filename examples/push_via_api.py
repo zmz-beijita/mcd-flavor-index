@@ -7,6 +7,7 @@ import base64
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -72,16 +73,27 @@ def main():
         rel, full = item
         with open(full, "rb") as f:
             content = base64.b64encode(f.read()).decode()
-        sha = get_sha(repo, rel)
-        payload = {
-            "message": f"feat: {rel}" if not sha else f"chore: update {rel}",
-            "content": content,
-            "branch": "master",
-        }
-        if sha:
-            payload["sha"] = sha
-        api("PUT", f"/repos/{repo}/contents/{rel}", payload)
-        return rel
+        last = None
+        for attempt in range(4):
+            sha = get_sha(repo, rel)
+            payload = {
+                "message": f"feat: {rel}" if not sha else f"chore: update {rel}",
+                "content": content,
+                "branch": "master",
+            }
+            if sha:
+                payload["sha"] = sha
+            try:
+                api("PUT", f"/repos/{repo}/contents/{rel}", payload)
+                return rel
+            except SystemExit as e:
+                last = str(e)
+                # 409 = sha 竞态，重取 sha 重试
+                if "409" in last and attempt < 3:
+                    time.sleep(0.6 * (attempt + 1))
+                    continue
+                raise
+        raise SystemExit(last or "unknown")
 
     ok = 0
     errors = []
