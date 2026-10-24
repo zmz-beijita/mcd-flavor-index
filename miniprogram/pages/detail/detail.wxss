@@ -1,0 +1,401 @@
+.page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 28rpx 28rpx 64rpx;
+}
+
+/* ===== 头部 ===== */
+.hero {
+    padding: 28rpx 26rpx;
+    border: 3rpx solid #f0e4ce;
+    border-radius: 26rpx;
+    background: #ffffff;
+    box-shadow: 0 5rpx 0 rgba(0, 0, 0, 0.04);
+}
+
+.cat {
+    display: inline-block;
+    padding: 4rpx 14rpx;
+    border-radius: 999rpx;
+    background: #e8342a;
+    color: #ffffff;
+    font-size: 20rpx;
+    font-weight: 800;
+}
+
+.name {
+    display: block;
+    margin-top: 16rpx;
+    font-size: 40rpx;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12rpx;
+}
+
+.meta-i {
+    margin: 0 16rpx 6rpx 0;
+    color: #8a7f73;
+    font-size: 22rpx;
+}
+
+.score-big {
+    margin-top: 22rpx;
+    padding-top: 20rpx;
+    border-top: 2rpx dashed #f0e4ce;
+    text-align: center;
+}
+
+.sb-n {
+    display: block;
+    font-size: 76rpx;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4rpx;
+}
+
+.sb-n.hi { color: #3cc93c; }
+.sb-n.mid { color: #dfa000; }
+.sb-n.lo { color: #e8342a; }
+
+.sb-l {
+    display: block;
+    margin-top: 6rpx;
+    color: #b9ada0;
+    font-size: 22rpx;
+}
+
+/* ===== 通用块 ===== */
+.block {
+    margin-top: 22rpx;
+    padding: 24rpx 26rpx;
+    border: 3rpx solid #f0e4ce;
+    border-radius: 26rpx;
+    background: #ffffff;
+    box-shadow: 0 5rpx 0 rgba(0, 0, 0, 0.04);
+}
+
+.block-hd {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 18rpx;
+}
+
+.block-t {
+    font-size: 28rpx;
+    font-weight: 800;
+}
+
+.block-n {
+    color: #b9ada0;
+    font-size: 22rpx;
+    font-weight: 700;
+}
+
+/* ===== 离散度 ===== */
+.track {
+    position: relative;
+    height: 36rpx;
+    border: 2rpx solid #f0e4ce;
+    border-radius: 18rpx;
+    background: #fffdf8;
+}
+
+.rng {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 18rpx;
+    background: rgba(255, 199, 44, 0.55);
+}
+
+.mk {
+    position: absolute;
+    top: -8rpx;
+    width: 24rpx;
+    height: 52rpx;
+    margin-left: -12rpx;
+    border: 4rpx solid #ffffff;
+    border-radius: 10rpx;
+    background: #e8342a;
+    box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.15);
+}
+
+.track-ax {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rpx;
+}
+
+.ax-l, .ax-r {
+    color: #b9ada0;
+    font-size: 20rpx;
+}
+
+/* ===== 对账 ===== */
+.vs {
+    display: flex;
+    align-items: stretch;
+    border: 2rpx solid #f0e4ce;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.vs-side {
+    flex: 1;
+    min-width: 0;
+    padding: 20rpx 18rpx;
+}
+
+.vs-official {
+    background: #fff3f1;
+}
+
+.vs-real {
+    background: #fffbec;
+}
+
+.vs-mid {
+    width: 56rpx;
+    flex-shrink: 0;
+    background: #2b2520;
+    color: #ffc72c;
+    font-size: 22rpx;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs-h {
+    display: block;
+    color: #b9ada0;
+    font-size: 19rpx;
+    font-weight: 700;
+}
+
+.vs-q {
+    display: block;
+    margin-top: 10rpx;
+    font-size: 25rpx;
+    font-weight: 800;
+    line-height: 1.45;
+    word-break: break-all;
+}
+
+.vs-official .vs-q {
+    color: #e8342a;
+}
+
+.vs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12rpx;
+}
+
+.vt {
+    margin: 0 8rpx 8rpx 0;
+    padding: 3rpx 12rpx;
+    border: 2rpx solid #f0e4ce;
+    border-radius: 999rpx;
+    font-size: 20rpx;
+    font-weight: 700;
+}
+
+.vt-o {
+    border-color: #ffd0c9;
+    background: #ffffff;
+    color: #e8342a;
+}
+
+.vt-r {
+    border-color: #f0e4ce;
+    background: #ffffff;
+    color: #6b6259;
+}
+
+/* ===== 投票 ===== */
+.votes {
+    display: flex;
+}
+
+.vbtn {
+    flex: 1;
+    margin: 0 8rpx 0 0;
+    padding: 22rpx 4rpx;
+    border: 3rpx solid #f0e4ce;
+    border-radius: 20rpx;
+    background: #fffdf8;
+    text-align: center;
+}
+
+.vbtn-t {
+    display: block;
+    font-size: 30rpx;
+    font-weight: 900;
+}
+
+.vbtn-s {
+    display: block;
+    margin-top: 4rpx;
+    color: #b9ada0;
+    font-size: 19rpx;
+}
+
+.vbtn.on.good {
+    border-color: #3cc93c;
+    background: #e9f9e9;
+}
+
+.vbtn.on.good .vbtn-t { color: #2aa02a; }
+
+.vbtn.on.mid {
+    border-color: #ffc72c;
+    background: #fffbec;
+}
+
+.vbtn.on.mid .vbtn-t { color: #dfa000; }
+
+.vbtn.on.bad {
+    border-color: #e8342a;
+    background: #fff3f1;
+}
+
+.vbtn.on.bad .vbtn-t { color: #e8342a; }
+
+.reason-box {
+    margin-top: 18rpx;
+}
+
+.reason {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 130rpx;
+    padding: 20rpx;
+    border: 3rpx solid #f0e4ce;
+    border-radius: 18rpx;
+    background: #fffdf8;
+    font-size: 26rpx;
+    line-height: 1.6;
+}
+
+.reason-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14rpx;
+}
+
+.counter {
+    color: #b9ada0;
+    font-size: 21rpx;
+}
+
+.btn-yellow {
+    margin: 0;
+    padding: 0 30rpx;
+    background: #ffc72c;
+    color: #2b2520;
+    font-size: 26rpx;
+    font-weight: 800;
+    line-height: 70rpx;
+    box-shadow: 0 5rpx 0 #dfa000;
+}
+
+.btn-yellow:active {
+    transform: translateY(4rpx);
+    box-shadow: none;
+}
+
+.btn-yellow[disabled] {
+    opacity: 0.5;
+}
+
+.tip {
+    margin-top: 14rpx;
+    padding: 14rpx 18rpx;
+    border-radius: 14rpx;
+    background: #fffbec;
+    color: #8a6d1a;
+    font-size: 22rpx;
+    font-weight: 600;
+}
+
+/* ===== 评价 ===== */
+.ugc-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ugc {
+    display: flex;
+    padding: 18rpx 0;
+    border-top: 2rpx solid #f7f1e6;
+}
+
+.ugc:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.ugc-badge {
+    width: 76rpx;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.ugc-s {
+    display: block;
+    font-size: 32rpx;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.ugc-s.hi { color: #3cc93c; }
+.ugc-s.mid { color: #dfa000; }
+.ugc-s.lo { color: #e8342a; }
+
+.ugc-w {
+    display: block;
+    margin-top: 2rpx;
+    color: #b9ada0;
+    font-size: 19rpx;
+}
+
+.ugc-body {
+    flex: 1;
+    min-width: 0;
+    margin-left: 16rpx;
+}
+
+.ugc-t {
+    display: block;
+    font-size: 26rpx;
+    line-height: 1.72;
+    color: #3d362f;
+}
+
+.ugc-src {
+    display: block;
+    margin-top: 8rpx;
+    color: #b9ada0;
+    font-size: 20rpx;
+}
+
+/* ===== 页脚 ===== */
+.foot {
+    margin-top: 18rpx;
+    padding: 16rpx 8rpx;
+}
+
+.foot-t {
+    display: block;
+    color: #b9ada0;
+    font-size: 20rpx;
+    line-height: 1.9;
+}
