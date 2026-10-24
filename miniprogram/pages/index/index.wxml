@@ -1,0 +1,75 @@
+<view class="page">
+    <!-- 头部 -->
+    <view class="hero">
+        <view class="brand">
+            <view class="logo">香</view>
+            <text class="brand-name">麦门真香榜</text>
+        </view>
+        <text class="kicker">官方标签 vs 真实口碑</text>
+        <text class="title">今天想吃麦当劳，先看真实口碑</text>
+        <view class="stats">
+            <view class="stat">
+                <text class="stat-n red">{{stat.low}}</text>
+                <text class="stat-l">最低真香分</text>
+            </view>
+            <view class="stat">
+                <text class="stat-n yellow">{{stat.total}}</text>
+                <text class="stat-l">真实评价样本</text>
+            </view>
+            <view class="stat">
+                <text class="stat-n blue">{{stat.items}}</text>
+                <text class="stat-l">在售商品</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 状态 -->
+    <view class="state-card" wx:if="{{viewState === 'loading'}}">
+        <view class="spinner"></view>
+        <text class="state-title">正在加载</text>
+    </view>
+
+    <view class="state-card" wx:if="{{viewState === 'error'}}">
+        <text class="state-icon">!</text>
+        <text class="state-title">加载失败</text>
+        <text class="state-desc">请检查后重试</text>
+        <button class="btn-red retry" bindtap="handleRetry">重新加载</button>
+    </view>
+
+    <!-- 榜单 -->
+    <block wx:if="{{viewState === 'ready'}}">
+        <view class="list">
+            <view class="card" wx:for="{{items}}" wx:key="name" bindtap="goDetail" data-name="{{item.name}}">
+                <view class="card-top">
+                    <text class="rank">NO.{{index + 1}}</text>
+                    <text class="flag" wx:if="{{item.spread >= 3}}">分歧最大</text>
+                    <text class="flag flag-grey" wx:if="{{item.spread <= 1}}">口碑一致</text>
+                </view>
+                <view class="card-main">
+                    <image class="pic" src="{{item.img}}" mode="aspectFit"></image>
+                    <view class="card-info">
+                        <text class="name">{{item.name}}</text>
+                        <text class="meta">n={{item.n}} 篇 · 区间 {{item.min}}–{{item.max}} · ¥{{item.price}}</text>
+                        <view class="tags">
+                            <text class="tag" wx:for="{{item.tags}}" wx:for-item="tg" wx:key="*this">{{tg}}</text>
+                        </view>
+                    </view>
+                    <view class="score-box">
+                        <text class="score {{item.scoreClass}}">{{item.avg}}</text>
+                        <text class="score-l">真香/5</text>
+                    </view>
+                </view>
+                <view class="card-foot">
+                    <text class="real">真实共识：{{item.realText}}</text>
+                    <text class="go">›</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="foot">
+            <text class="foot-t">数据来源：小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研 / 新厨房</text>
+            <text class="foot-t">采集于 {{collectedAt}} · 价格经麦当劳 MCP 官方核价</text>
+            <text class="foot-t">非麦当劳官方产品 · 评价版权归原作者所有</text>
+        </view>
+    </block>
+</view>
