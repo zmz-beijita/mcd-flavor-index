@@ -16,6 +16,7 @@ API = "https://api.github.com"
 
 
 def api(method, path, data=None):
+    """发一个 GitHub API 请求；失败抛 RuntimeError（不 SystemExit，便于重试）。"""
     url = API + path
     body = json.dumps(data).encode() if data is not None else None
     req = urllib.request.Request(url, data=body, method=method)
@@ -30,7 +31,9 @@ def api(method, path, data=None):
             return json.loads(r.read().decode() or "{}")
     except urllib.error.HTTPError as e:
         detail = e.read().decode("utf-8", "replace")[:400]
-        raise SystemExit(f"HTTP {e.code}: {detail}")
+        raise RuntimeError(f"HTTP {e.code}: {detail}")
+    except Exception as e:
+        raise RuntimeError(str(e))
 
 
 def get_sha(repo, path):
@@ -47,7 +50,9 @@ def get_sha(repo, path):
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return None
-        raise SystemExit(f"HTTP {e.code}: {e.read().decode('utf-8','replace')[:300]}")
+        raise RuntimeError(f"HTTP {e.code}: {e.read().decode('utf-8','replace')[:300]}")
+    except Exception as e:
+        raise RuntimeError(str(e))
 
 
 def main():
@@ -74,7 +79,7 @@ def main():
         with open(full, "rb") as f:
             content = base64.b64encode(f.read()).decode()
         last = None
-        for attempt in range(4):
+        for attempt in range(6):
             sha = get_sha(repo, rel)
             payload = {
                 "message": f"feat: {rel}" if not sha else f"chore: update {rel}",
@@ -86,20 +91,13 @@ def main():
             try:
                 api("PUT", f"/repos/{repo}/contents/{rel}", payload)
                 return rel
-            except SystemExit as e:
+            except BaseException as e:      # SystemExit 也是 BaseException
                 last = str(e)
-                # 409 = sha 竞态（并发写同一路径或上次重试已写入），重取 sha 重试
-                if ("409" in last or "Tunnel" in last) and attempt < 3:
-                    time.sleep(1.2 * (attempt + 1))
+                if attempt < 5:
+                    time.sleep(1.0 * (attempt + 1))
                     continue
-                raise
-            except Exception as e:
-                last = str(e)
-                if "Tunnel" in last and attempt < 3:
-                    time.sleep(1.2 * (attempt + 1))
-                    continue
-                raise
-        raise SystemExit(last or "unknown")
+                raise RuntimeError(last)
+        raise RuntimeError(last or "unknown")
 
     ok = 0
     errors = []
