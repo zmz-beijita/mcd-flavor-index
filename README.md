@@ -153,7 +153,10 @@ mcd-flavor-index/
 │   ├── collect_menu.py            # 采集门店菜单全量官方信息
 │   ├── build_home_data.py         # 生成首页双榜数据
 │   ├── build_img_map.py           # 从菜单数据推导「商品名 → 本地图片」映射
-│   └── sync_miniprogram.py        # 同步数据到微信小程序
+│   ├── sync_miniprogram.py        # 同步数据到微信小程序
+│   ├── build_social_preview.py    # 生成 GitHub 社交预览图（数字自动注入）
+│   ├── build_social_card.py       # 生成社媒引流长图 1080×1440
+│   └── check_numbers.py           # 数字一致性自检（13 项，防止各处数字漂移）
 ├── miniprogram/                  # 微信小程序版（原生，零依赖）
 └── skills/mcd-flavor-index/
     ├── SKILL.md                  # Skill 主流程与铁律
@@ -218,9 +221,28 @@ python skills/mcd-flavor-index/scripts/flavor_index.py --render
 
 # 同步到微信小程序（数据 / 图片映射 / 资源文件）
 python scripts/sync_miniprogram.py
+
+# 重新生成社交预览图与引流长图
+python scripts/build_social_preview.py
+python scripts/build_social_card.py
+
+# 数字一致性自检（13 项：落差规则 / 篇数 / 在售数 / 内联数据 / README 数字）
+python scripts/check_numbers.py
 ```
 
 > 全部脚本零第三方依赖，只用 Python 标准库。
+
+### 为什么要有 `check_numbers.py`
+
+这个项目的数据散在 5 个地方：`data_ugc.json` → `data/home.json` → `index.html` 内联数据 →
+微信小程序 `flavor.json` → README 文案。**任何一处数字不同步，评审一眼就能看出来。**
+
+开发中真实踩过：社交预览图脚本把「评分离散度 ≥3 的商品数」（1 个）
+当成了「官方标签落差」（3 个）——两个同名不同义的指标混用，
+预览图和页面显示的数字对不上，肉眼极难发现。
+
+`check_numbers.py` 把这类检查固化成 13 项断言，**包括校验页面模板的 DENY 规则
+与预览图脚本的 DENY 规则语义一致**，任何一处漂移都会被立刻抓出来。
 
 ## 📄 许可证
 
