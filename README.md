@@ -74,7 +74,9 @@
 
 ## ✍️ 麦门广场：你能投票，也能写理由
 
-<img src="docs/screenshot-plaza.png" width="100%" alt="麦门广场：可就地发帖、按商品分组展示 49 条真实评价">
+<img src="docs/screenshot-plaza-top.png" width="100%" alt="麦门广场：可就地发帖、按商品分组展示 49 条真实评价">
+
+> 完整广场见 [`docs/screenshot-plaza.png`](docs/screenshot-plaza.png)（49 条评价全貌）
 
 **两个地方都能评论**——展开商品卡可以投票写理由，广场页顶部也有一张发帖框，
 选商品 → 投票 → 写理由 → 发出，立刻按商品分组出现在广场里。
