@@ -10,6 +10,7 @@
 import base64
 import json
 import os
+import re
 import shutil
 import socket
 import subprocess
@@ -191,6 +192,35 @@ class CDP:
         shutil.rmtree(self.prof, ignore_errors=True)
 
 
+def count_tag_gaps(truth):
+    """统计「官方标签落差」——必须与页面模板的 DENY 规则完全一致。
+
+    页面（templates/index.template.html）的定义是：
+      官方标签命中 DENY 正则，且该商品的真实共识里出现对应的否定表述。
+    判定规则公开在页面里，不做黑箱。改这里必须同步改页面。
+
+    注意：曾误用「评分离散度≥3」当落差数——那是另一个指标
+    （离散度≥3 的只有龙焰芝士棒 1 个，而落差是 3 个）。
+    """
+    DENY = [
+        (re.compile("拉丝"), ("没拉丝", "没有拉丝", "空心", "中空")),
+        (re.compile("趁热"), ("趁热",)),
+        (re.compile("人气|爆款|经典"), ("缩水",)),
+    ]
+    n = 0
+    for x in truth:
+        for tag in x.get("official_tags", []):
+            for pat, negs in DENY:
+                if pat.search(tag) and any(
+                        neg in r for r in (x.get("real") or []) for neg in negs):
+                    n += 1
+                    break
+            else:
+                continue
+            break
+    return n
+
+
 def main():
     with open(os.path.join(ROOT, "data", "home.json"), encoding="utf-8") as f:
         home = json.load(f)
@@ -199,7 +229,7 @@ def main():
 
     n_ugc = sum(len(i.get("ugc", [])) for i in ugc.get("items", []))
     n_hot = len(home.get("hot", []))
-    n_gap = sum(1 for t in home.get("truth", []) if t.get("spread", 0) >= 3)
+    n_gap = count_tag_gaps(home.get("truth", []))
 
     html = (TPL.replace("{N_UGC}", str(n_ugc))
                 .replace("{N_HOT}", str(n_hot))
