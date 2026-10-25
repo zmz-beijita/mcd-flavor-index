@@ -1,8 +1,8 @@
-# 需要手动操作的三件事（API 权限受限）
+# 需要手动操作的事（API 权限受限 / 安全）
 
 > 原因：当前 PAT（fine-grained）在 `M-China` 组织仓库只有 READ 权限，
 > 读到公开 issue 可以，写入被拒（403 `Resource not accessible by personal access token`）。
-> 仓库自身的读写权限是有的（已成功推送 117 个文件）。
+> 仓库自身的读写权限是有的。
 
 ---
 
@@ -27,23 +27,19 @@ GitHub 会把裸 URL 自动转成 `[url](url)`。虽然当前已报名成功，�
 
 ---
 
-## 二、开启 GitHub Pages（拿 Star 的关键）
+## 二、开启 GitHub Pages ✅ 已完成（2026-10-25 核实）
 
-**为什么做**：`mcd-party-planner`（1423 星）这类头部项目都有可点开的在线 demo。
-GitHub 的社交预览图（`docs/social-preview.png`）也要 Pages 开启后才生效。
+**已开启并验证可用**：
 
-**操作**：
-1. 打开仓库 https://github.com/zmz-beijita/mcd-flavor-index
-2. 顶部菜单 **Settings** → 左侧 **Pages**
-3. Source 选 **Deploy from a branch**
-4. Branch 选 **master**，目录选 **/ (root)**
-5. 点 **Save**
+| 项 | 值 |
+|---|---|
+| 状态 | `built` |
+| 地址 | https://zmz-beijita.github.io/mcd-flavor-index/ |
+| 分支 / 目录 | `master` / `/ (root)` |
+| HTTP | 200 |
 
-开启后：
-- 主页：https://zmz-beijita.github.io/mcd-flavor-index/
-- 社交预览图会显示在 Star 按钮右侧（社交分享到微信/微博时显示这张图）
-
-**注意**：`index.html` 用 `fetch('data/home.json')`，Pages 上是 http 环境，fetch 正常。
+**无需再操作。** 若将来要重置：
+Settings → Pages → Source 选 `Deploy from a branch` → Branch `master` → 目录 `/ (root)` → Save。
 
 ---
 
@@ -53,5 +49,10 @@ GitHub 的社交预览图（`docs/social-preview.png`）也要 Pages 开启后�
 - 麦当劳 MCP Token：`wG9FZ2...`
 - GitHub PAT：`github_pat_57CZ...`
 
-本仓库内已扫描确认：**零 Token 泄露**（`mcp-config.example.json` 用的是
-`${MCD_MCP_TOKEN}` 环境变量占位符）。
+**本仓库内已扫描确认：零 Token 泄露。**
+- `mcp-config.example.json` 用的是 `${MCD_MCP_TOKEN}` 环境变量占位符
+- 本地凭据写在 `.env.local`，已被 `.gitignore` 忽略；推送脚本 `examples/push_via_api.py`
+  显式跳过 `.env` / `.env.local`，不会误传
+
+> 赛后请同时轮换：GitHub PAT（Settings → Developer settings → Personal access tokens）
+> 与麦当劳 MCP Token（赛事官方渠道）。
