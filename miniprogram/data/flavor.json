@@ -19,9 +19,16 @@
    "flavor_tags": [
     "100%纯牛肉"
    ],
-   "ingredients": [],
+   "ingredients": [
+    "吉士",
+    "酸黄瓜",
+    "洋葱粒",
+    "番茄酱",
+    "芥末酱"
+   ],
    "official_desc": null,
    "official_rounds": [],
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_1120_600.png",
    "real": [
     "芝士控最爱",
     "争议大看个人口味",
@@ -65,9 +72,13 @@
     "板烧滋滋",
     "多汁惹味"
    ],
-   "ingredients": [],
+   "ingredients": [
+    "烤味酱",
+    "切块生菜"
+   ],
    "official_desc": null,
    "official_rounds": [],
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241008/product/MS_1406_600.png",
    "real": [
     "清爽不油腻",
     "必须趁热吃",
@@ -110,6 +121,7 @@
    "ingredients": [],
    "official_desc": null,
    "official_rounds": [],
+   "image": "",
    "real": [
     "满足感天花板",
     "减脂期控制"
@@ -155,6 +167,7 @@
    "ingredients": [],
    "official_desc": null,
    "official_rounds": [],
+   "image": "",
    "real": [
     "肉感升级",
     "偶尔犒劳自己",
@@ -197,9 +210,16 @@
    "flavor_tags": [
     "100%纯牛肉"
    ],
-   "ingredients": [],
+   "ingredients": [
+    "巨无霸酱",
+    "吉士",
+    "生菜",
+    "酸黄瓜",
+    "洋葱粒"
+   ],
    "official_desc": null,
    "official_rounds": [],
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250611/product/MS_1100_600_1749175370846.png",
    "real": [
     "经典不翻车",
     "酱味偏重",
@@ -240,12 +260,15 @@
     "人气"
    ],
    "flavor_tags": [
-    "100%纯牛肉",
-    "麦香鱼"
+    "麦香鱼系列"
    ],
-   "ingredients": [],
+   "ingredients": [
+    "麦香鱼酱",
+    "吉士"
+   ],
    "official_desc": null,
    "official_rounds": [],
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260520/product/MS_1600_600.png",
    "real": [
     "鱼肉嫩",
     "清爽不腻",
@@ -286,12 +309,15 @@
     "上新"
    ],
    "flavor_tags": [
-    "浓郁奶香拉丝芝士",
-    "韩式辣椒黄油风味"
+    "浓郁奶香拉丝芝士"
    ],
-   "ingredients": [],
+   "ingredients": [
+    "辣椒黄油风味酱",
+    "切块生菜"
+   ],
    "official_desc": null,
    "official_rounds": [],
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521953_600.png",
    "real": [
     "没拉丝",
     "芝士棒空心",
@@ -337,6 +363,7 @@
    "ingredients": [],
    "official_desc": null,
    "official_rounds": [],
+   "image": "",
    "real": [
     "物美价廉",
     "就只是个鸡肉饼",
@@ -377,12 +404,14 @@
     "不素之霸"
    ],
    "flavor_tags": [
-    "100%纯牛肉",
-    "不素之霸"
+    "100%纯牛肉"
    ],
-   "ingredients": [],
+   "ingredients": [
+    "芥末沙拉酱"
+   ],
    "official_desc": null,
    "official_rounds": [],
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250611/product/MS_4648_600_1749175329279.png",
    "real": [
     "高蛋白福音",
     "高脂陷阱",
@@ -410,732 +439,975 @@
  ],
  "hot": [
   {
-   "name": "猪柳蛋麦满分",
-   "cat": "麦满分系列",
-   "price": 18.0,
-   "signal": 100,
-   "flavor_tags": [],
+   "name": "麦辣鸡腿汉堡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 22.5,
+   "signal": 94,
+   "flavor_tags": [
+    "外酥里嫩"
+   ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250420/product/MS_1440_600_0_1744772198163.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "猪柳蛋麦满分组合",
-   "cat": "麦满分系列",
-   "price": 21.0,
-   "signal": 100,
+   "name": "高达吉士双牛堡",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 22.5,
+   "signal": 92,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_521316_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "鸡肉堡单品精选",
+   "cat": "鸡肉汉堡/卷",
+   "price": 23.5,
+   "signal": 92,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260708/product/MS_9900008746_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "龙焰芝士棒鸡腿堡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 27.0,
+   "signal": 82,
+   "flavor_tags": [
+    "浓郁奶香拉丝芝士"
+   ],
+   "has_review": true,
+   "avg": 3.7,
+   "n": 6,
+   "min": 2,
+   "max": 5,
+   "spread": 3,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521953_600.png",
+   "official_rounds": [],
+   "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，"
+  },
+  {
+   "name": "板烧鸡腿堡三件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 34.5,
+   "signal": 72,
+   "flavor_tags": [
+    "更多汁"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005462_600.png",
    "official_rounds": [
     {
-     "name": "选择早餐组合饮料",
-     "count": 34,
+     "name": "板烧鸡腿堡",
+     "count": 1,
      "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "板烧鸡腿堡"
      ]
     },
     {
-     "name": "猪柳蛋麦满分",
-     "count": 1,
+     "name": "选择套餐内小食",
+     "count": 7,
      "options": [
-      "猪柳蛋麦满分"
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "原味板烧鸡腿麦满分套餐",
-   "cat": "麦满分系列",
+   "name": "双层吉士汉堡",
+   "cat": "巨无霸牛鱼肉堡",
    "price": 23.0,
-   "signal": 52,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "原味板烧鸡腿麦满分",
-     "count": 1,
-     "options": [
-      "原味板烧鸡腿麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "巧克力味厚松饼猪柳蛋堡套餐",
-   "cat": "厚松饼堡系列",
-   "price": 29.9,
-   "signal": 52,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "巧克力味厚松饼猪柳蛋堡",
-     "count": 1,
-     "options": [
-      "巧克力味厚松饼猪柳蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "枫糖风味厚松饼猪柳蛋堡套餐",
-   "cat": "厚松饼堡系列",
-   "price": 29.9,
-   "signal": 52,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "枫糖风味厚松饼猪柳蛋堡",
-     "count": 1,
-     "options": [
-      "枫糖风味厚松饼猪柳蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "火腿扒麦满分",
-   "cat": "麦满分系列",
-   "price": 10.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "吉士蛋麦满分",
-   "cat": "麦满分系列",
-   "price": 10.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "大脆鸡扒麦满分",
-   "cat": "麦满分系列",
-   "price": 11.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "火腿扒麦满分组合",
-   "cat": "麦满分系列",
-   "price": 12.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    },
-    {
-     "name": "火腿扒麦满分",
-     "count": 1,
-     "options": [
-      "火腿扒麦满分"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "大脆鸡扒麦满分组合",
-   "cat": "麦满分系列",
-   "price": 13.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "大脆鸡扒麦满分",
-     "count": 1,
-     "options": [
-      "大脆鸡扒麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "猪柳麦满分",
-   "cat": "麦满分系列",
-   "price": 14.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "原味板烧鸡腿麦满分",
-   "cat": "麦满分系列",
-   "price": 15.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "火腿扒麦满分套餐",
-   "cat": "麦满分系列",
-   "price": 17.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "火腿扒麦满分",
-     "count": 1,
-     "options": [
-      "火腿扒麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "吉士蛋麦满分套餐",
-   "cat": "麦满分系列",
-   "price": 17.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "吉士蛋麦满分",
-     "count": 1,
-     "options": [
-      "吉士蛋麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "猪柳麦满分组合",
-   "cat": "麦满分系列",
-   "price": 17.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "猪柳麦满分",
-     "count": 1,
-     "options": [
-      "猪柳麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "巧克力味厚松饼猪柳堡",
-   "cat": "厚松饼堡系列",
-   "price": 18.0,
    "signal": 0,
    "flavor_tags": [
-    "浓郁巧克力"
+    "100%纯牛肉"
+   ],
+   "has_review": true,
+   "avg": 4.4,
+   "n": 5,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_1120_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "板烧鸡腿堡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 23.5,
+   "signal": 0,
+   "flavor_tags": [
+    "板烧滋滋",
+    "多汁惹味"
+   ],
+   "has_review": true,
+   "avg": 4.3,
+   "n": 7,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241008/product/MS_1406_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "麦香鱼",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 22.5,
+   "signal": 0,
+   "flavor_tags": [
+    "麦香鱼系列"
+   ],
+   "has_review": true,
+   "avg": 4.0,
+   "n": 4,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260520/product/MS_1600_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "巨无霸",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 25.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": true,
+   "avg": 4.0,
+   "n": 9,
+   "min": 3,
+   "max": 5,
+   "spread": 2,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250611/product/MS_1100_600_1749175370846.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "不素之霸双层牛堡",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 26.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": true,
+   "avg": 3.2,
+   "n": 4,
+   "min": 2,
+   "max": 4,
+   "spread": 2,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250611/product/MS_4648_600_1749175329279.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "牛肉堡单品精选",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 14.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008747_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "麦香鸡",
+   "cat": "鸡肉汉堡/卷",
+   "price": 17.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260520/product/MS_1450_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
    "name": "枫糖风味厚松饼猪柳堡",
-   "cat": "厚松饼堡系列",
+   "cat": "巨无霸牛鱼肉堡",
    "price": 18.0,
    "signal": 0,
    "flavor_tags": [
-    "咸甜美味"
+    "全球爆款",
+    "全天供应"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "原味板烧鸡腿炒双蛋堡",
-   "cat": "炒双蛋堡系列",
-   "price": 18.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "猪柳炒双蛋堡",
-   "cat": "炒双蛋堡系列",
-   "price": 18.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "双层原味板烧鸡腿麦满分",
-   "cat": "麦满分系列",
-   "price": 19.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "巧克力味厚松饼猪柳堡组合",
-   "cat": "厚松饼堡系列",
-   "price": 21.0,
-   "signal": 0,
-   "flavor_tags": [
-    "浓郁巧克力"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "巧克力味厚松饼猪柳堡",
-     "count": 1,
-     "options": [
-      "巧克力味厚松饼猪柳堡"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "枫糖风味厚松饼猪柳堡组合",
-   "cat": "厚松饼堡系列",
-   "price": 21.0,
-   "signal": 0,
-   "flavor_tags": [
-    "咸甜美味"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "枫糖风味厚松饼猪柳堡",
-     "count": 1,
-     "options": [
-      "枫糖风味厚松饼猪柳堡"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "双层猪柳蛋麦满分",
-   "cat": "麦满分系列",
-   "price": 21.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "猪柳炒双蛋堡组合",
-   "cat": "炒双蛋堡系列",
-   "price": 21.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "猪柳炒双蛋堡",
-     "count": 1,
-     "options": [
-      "猪柳炒双蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "巧克力味厚松饼猪柳蛋堡",
-   "cat": "厚松饼堡系列",
-   "price": 22.0,
-   "signal": 0,
-   "flavor_tags": [
-    "浓郁巧克力"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521731_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
    "name": "枫糖风味厚松饼猪柳蛋堡",
-   "cat": "厚松饼堡系列",
+   "cat": "巨无霸牛鱼肉堡",
    "price": 22.0,
    "signal": 0,
    "flavor_tags": [
-    "咸甜美味"
+    "全球爆款",
+    "全天供应"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521730_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "猪柳麦满分套餐",
-   "cat": "麦满分系列",
-   "price": 22.0,
+   "name": "大堡口福三件套",
+   "cat": "大堡口福单人餐",
+   "price": 22.9,
    "signal": 0,
-   "flavor_tags": [],
+   "flavor_tags": [
+    "大口吃肉好快乐"
+   ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015602_600.png",
    "official_rounds": [
     {
-     "name": "猪柳麦满分",
-     "count": 1,
-     "options": [
-      "猪柳麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
+     "name": "选择主食",
      "count": 3,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "Hold不住鸡排堡（椒盐风味）",
+      "双层脆鸡堡",
+      "培根芝士双牛堡"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "选择小食",
+     "count": 5,
      "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
+      "中薯条",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "大杯玉米杯",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 22,
+     "options": [
+      "可乐中杯",
+      "雪碧中杯",
       "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "香草风味奶昔",
+      "中杯怡泉+C",
+      "无糖可口可乐中杯"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "双层板烧鸡腿麦满分组合",
-   "cat": "麦满分系列",
-   "price": 22.0,
+   "name": "双层深海鳕鱼堡",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 24.0,
+   "signal": 0,
+   "flavor_tags": [
+    "麦香鱼系列"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900003586_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "培根蔬萃双层牛堡",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 24.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250804/product/MS_1106_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "吉士汉堡包中套餐",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 26.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005449_600.png",
+   "official_rounds": [
+    {
+     "name": "吉士汉堡包",
+     "count": 1,
+     "options": [
+      "吉士汉堡包"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "麦香鸡中套餐",
+   "cat": "鸡肉汉堡/卷",
+   "price": 28.0,
+   "signal": 0,
+   "flavor_tags": [
+    "立省10.5元起"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005453_600.png",
+   "official_rounds": [
+    {
+     "name": "麦香鸡",
+     "count": 1,
+     "options": [
+      "麦香鸡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "芝士安格斯厚牛堡",
+   "cat": "安格斯MAX厚牛堡",
+   "price": 31.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%安格斯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20251022/product/MS_511782_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "麦辣鸡腿汉堡三件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 33.5,
+   "signal": 0,
+   "flavor_tags": [
+    "立省10.5元起"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005456_600.png",
+   "official_rounds": [
+    {
+     "name": "麦辣鸡腿汉堡",
+     "count": 1,
+     "options": [
+      "麦辣鸡腿汉堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "麦香鱼中套餐",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 33.5,
+   "signal": 0,
+   "flavor_tags": [
+    "麦香鱼系列"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005460_600.png",
+   "official_rounds": [
+    {
+     "name": "麦香鱼",
+     "count": 1,
+     "options": [
+      "麦香鱼"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "双层吉士汉堡中套餐",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 34.0,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005464_600.png",
+   "official_rounds": [
+    {
+     "name": "双层吉士汉堡",
+     "count": 1,
+     "options": [
+      "双层吉士汉堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "培根安格斯厚牛堡",
+   "cat": "安格斯MAX厚牛堡",
+   "price": 34.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%安格斯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20251022/product/MS_511781_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "双层深海鳕鱼堡三件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 35.0,
+   "signal": 0,
+   "flavor_tags": [
+    "麦香鱼系列"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005413_600.png",
+   "official_rounds": [
+    {
+     "name": "选择双层深海鳕鱼堡",
+     "count": 2,
+     "options": [
+      "原味双层深海鳕鱼堡",
+      "风味双层深海鳕鱼堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "培根蔬萃双层牛堡三件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 35.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005468_600.png",
+   "official_rounds": [
+    {
+     "name": "培根蔬萃双层牛堡",
+     "count": 1,
+     "options": [
+      "培根蔬萃双层牛堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "巨无霸三件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 36.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005466_600.png",
+   "official_rounds": [
+    {
+     "name": "新升级巨无霸",
+     "count": 1,
+     "options": [
+      "巨无霸"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "不素之霸双层牛堡三件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 37.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%纯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005411_600.png",
+   "official_rounds": [
+    {
+     "name": "不素之霸双层牛堡",
+     "count": 1,
+     "options": [
+      "不素之霸双层牛堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "芝士安格斯厚牛堡三件套",
+   "cat": "安格斯MAX厚牛堡",
+   "price": 42.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%安格斯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005430_600.png",
+   "official_rounds": [
+    {
+     "name": "芝士安格斯厚牛堡",
+     "count": 1,
+     "options": [
+      "芝士安格斯厚牛堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "培根安格斯厚牛堡三件套",
+   "cat": "安格斯MAX厚牛堡",
+   "price": 45.5,
+   "signal": 0,
+   "flavor_tags": [
+    "100%安格斯牛肉"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005428_600.png",
+   "official_rounds": [
+    {
+     "name": "培根安格斯厚牛堡",
+     "count": 1,
+     "options": [
+      "培根安格斯厚牛堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "枫糖风味厚松饼猪柳蛋堡四件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 52.0,
    "signal": 0,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    },
-    {
-     "name": "双层原味板烧鸡腿麦满分",
-     "count": 1,
-     "options": [
-      "双层原味板烧鸡腿麦满分"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "巧克力味厚松饼猪柳蛋堡组合",
-   "cat": "厚松饼堡系列",
-   "price": 25.0,
-   "signal": 0,
-   "flavor_tags": [
-    "浓郁巧克力"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "巧克力味厚松饼猪柳蛋堡",
-     "count": 1,
-     "options": [
-      "巧克力味厚松饼猪柳蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "枫糖风味厚松饼猪柳蛋堡组合",
-   "cat": "厚松饼堡系列",
-   "price": 25.0,
-   "signal": 0,
-   "flavor_tags": [
-    "咸甜美味"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016301_600.png",
    "official_rounds": [
     {
      "name": "枫糖风味厚松饼猪柳蛋堡",
@@ -1145,74 +1417,750 @@
      ]
     },
     {
-     "name": "选择早餐组合饮料",
-     "count": 34,
+     "name": "小食",
+     "count": 7,
      "options": [
-      "小杯鲜萃咖啡",
+      "中薯条",
+      "脆薯饼",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条",
+      "奥利奥麦旋风",
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
       "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "巧克力味厚松饼猪柳堡套餐",
-   "cat": "厚松饼堡系列",
-   "price": 25.9,
+   "name": "龙焰芝士棒鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
    "signal": 0,
-   "flavor_tags": [
-    "浓郁巧克力"
-   ],
+   "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016310_600.png",
    "official_rounds": [
     {
-     "name": "巧克力味厚松饼猪柳堡",
+     "name": "龙焰芝士棒鸡腿堡",
      "count": 1,
      "options": [
-      "巧克力味厚松饼猪柳堡"
+      "龙焰芝士棒鸡腿堡"
      ]
     },
     {
-     "name": "选择早餐小食",
-     "count": 3,
+     "name": "小食",
+     "count": 9,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "小食",
+     "count": 5,
      "options": [
-      "大杯鲜萃咖啡",
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
       "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "大杯鲜萃咖啡"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "枫糖风味厚松饼猪柳堡套餐",
-   "cat": "厚松饼堡系列",
-   "price": 25.9,
+   "name": "龙焰鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
    "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016309_600.png",
+   "official_rounds": [
+    {
+     "name": "龙焰鸡腿堡",
+     "count": 1,
+     "options": [
+      "龙焰鸡腿堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "麦辣鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000891_600.png",
+   "official_rounds": [
+    {
+     "name": "麦辣鸡腿汉堡",
+     "count": 1,
+     "options": [
+      "麦辣鸡腿汉堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "板烧鸡腿堡四件套",
+   "cat": "鸡肉汉堡/卷",
+   "price": 57.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000890_600.png",
+   "official_rounds": [
+    {
+     "name": "板烧鸡腿堡",
+     "count": 1,
+     "options": [
+      "板烧鸡腿堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "巨无霸四件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 58.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000888_600.png",
+   "official_rounds": [
+    {
+     "name": "巨无霸",
+     "count": 1,
+     "options": [
+      "巨无霸"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "不素之霸双层牛堡四件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 58.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000886_600.png",
+   "official_rounds": [
+    {
+     "name": "不素之霸双层牛堡",
+     "count": 1,
+     "options": [
+      "不素之霸双层牛堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "培根蔬萃双层牛堡四件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 58.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000885_600.png",
+   "official_rounds": [
+    {
+     "name": "培根蔬萃双层牛堡",
+     "count": 1,
+     "options": [
+      "培根蔬萃双层牛堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "双层深海鳕鱼堡四件套",
+   "cat": "巨无霸牛鱼肉堡",
+   "price": 58.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000893_600.png",
+   "official_rounds": [
+    {
+     "name": "选择双层深海鳕鱼堡",
+     "count": 2,
+     "options": [
+      "原味双层深海鳕鱼堡",
+      "风味双层深海鳕鱼堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "培根安格斯厚牛堡四件套",
+   "cat": "安格斯MAX厚牛堡",
+   "price": 66.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000881_600.png",
+   "official_rounds": [
+    {
+     "name": "培根安格斯厚牛堡",
+     "count": 1,
+     "options": [
+      "培根安格斯厚牛堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "芝士安格斯厚牛堡四件套",
+   "cat": "安格斯MAX厚牛堡",
+   "price": 66.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000882_600.png",
+   "official_rounds": [
+    {
+     "name": "芝士安格斯厚牛堡",
+     "count": 1,
+     "options": [
+      "芝士安格斯厚牛堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "“堡”你欢乐套餐",
+   "cat": "500大卡套餐",
+   "price": 28.0,
+   "signal": 88,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011128_600.png",
+   "official_rounds": [
+    {
+     "name": "汉堡包",
+     "count": 1,
+     "options": [
+      "汉堡包"
+     ]
+    },
+    {
+     "name": "麦乐鸡4块",
+     "count": 1,
+     "options": [
+      "麦乐鸡4块"
+     ]
+    },
+    {
+     "name": "苹果片一袋(60g)",
+     "count": 1,
+     "options": [
+      "苹果片一袋(60g)"
+     ]
+    },
+    {
+     "name": "选择饮料",
+     "count": 7,
+     "options": [
+      "无糖可口可乐中杯",
+      "无糖可口可乐小杯",
+      "无糖可口可乐大杯",
+      "锡兰红茶",
+      "纯悦",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "“苹”水相“鱼”套餐",
+   "cat": "500大卡套餐",
+   "price": 36.0,
+   "signal": 88,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011121_600.png",
+   "official_rounds": [
+    {
+     "name": "麦香鱼",
+     "count": 1,
+     "options": [
+      "麦香鱼"
+     ]
+    },
+    {
+     "name": "小杯玉米杯",
+     "count": 1,
+     "options": [
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "苹果片一袋(60g)",
+     "count": 1,
+     "options": [
+      "苹果片一袋(60g)"
+     ]
+    },
+    {
+     "name": "选择饮料",
+     "count": 7,
+     "options": [
+      "锡兰红茶",
+      "无糖可口可乐中杯",
+      "无糖可口可乐小杯",
+      "无糖可口可乐大杯",
+      "纯悦",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "枫糖风味厚松饼猪柳堡三件套",
+   "cat": "精选单人餐",
+   "price": 23.9,
+   "signal": 72,
    "flavor_tags": [
-    "咸甜美味"
+    "全球爆款",
+    "全天供应"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014974_600.png",
    "official_rounds": [
     {
      "name": "枫糖风味厚松饼猪柳堡",
@@ -1222,408 +2170,458 @@
      ]
     },
     {
-     "name": "选择早餐小食",
-     "count": 3,
+     "name": "选择套餐内小食",
+     "count": 7,
      "options": [
+      "中薯条",
       "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "选择套餐内饮料",
+     "count": 27,
      "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "猪柳蛋麦满分套餐",
-   "cat": "麦满分系列",
-   "price": 26.0,
-   "signal": 0,
-   "flavor_tags": [
-    "麦金卡同享"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "猪柳蛋麦满分",
-     "count": 1,
-     "options": [
-      "猪柳蛋麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "原味板烧鸡腿炒双蛋堡套餐",
-   "cat": "炒双蛋堡系列",
-   "price": 26.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "原味板烧鸡腿炒双蛋堡",
-     "count": 1,
-     "options": [
-      "原味板烧鸡腿炒双蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "猪柳炒双蛋堡套餐",
-   "cat": "炒双蛋堡系列",
-   "price": 26.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "猪柳炒双蛋堡",
-     "count": 1,
-     "options": [
-      "猪柳炒双蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "双层原味板烧鸡腿麦满分套餐",
-   "cat": "麦满分系列",
-   "price": 27.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "双层原味板烧鸡腿麦满分",
-     "count": 1,
-     "options": [
-      "双层原味板烧鸡腿麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "雪菜脆笋鸡肉粥",
-   "cat": "粥王系列",
-   "price": 7.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "雪菜脆笋鸡肉粥组合",
-   "cat": "粥王系列",
-   "price": 12.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "雪菜脆笋鸡肉粥",
-     "count": 1,
-     "options": [
-      "雪菜脆笋鸡肉粥"
-     ]
-    },
-    {
-     "name": "选择小食",
-     "count": 3,
-     "options": [
-      "脆香油条",
-      "脆薯饼",
-      "德式图林根香肠"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "雪菜脆笋鸡肉粥套餐",
-   "cat": "粥王系列",
-   "price": 15.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "雪菜脆笋鸡肉粥",
-     "count": 1,
-     "options": [
-      "雪菜脆笋鸡肉粥"
-     ]
-    },
-    {
-     "name": "脆香油条",
-     "count": 1,
-     "options": [
-      "脆香油条"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "火腿扒早安营养卷",
-   "cat": "早安营养卷",
-   "price": 15.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "图林根香肠早安营养卷",
-   "cat": "早安营养卷",
-   "price": 16.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "图林根香肠早安营养卷组合",
-   "cat": "早安营养卷",
-   "price": 19.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "图林根香肠早安营养卷",
-     "count": 1,
-     "options": [
-      "图林根香肠早安营养卷"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
+      "可乐中杯",
       "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
+      "【美汁源】“多汁柠柠”",
       "香草风味奶昔",
       "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "热浓浓黑巧中杯"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "火腿扒早安营养卷套餐",
-   "cat": "早安营养卷",
-   "price": 23.5,
+   "name": "枫糖风味厚松饼猪柳蛋堡三件套",
+   "cat": "精选单人餐",
+   "price": 27.9,
+   "signal": 72,
+   "flavor_tags": [
+    "全球爆款",
+    "全天供应"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014837_600.png",
+   "official_rounds": [
+    {
+     "name": "枫糖风味厚松饼猪柳蛋堡",
+     "count": 1,
+     "options": [
+      "枫糖风味厚松饼猪柳蛋堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "脆薯饼",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 27,
+     "options": [
+      "可乐中杯",
+      "小杯鲜萃咖啡",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "酥脆无双套餐",
+   "cat": "500大卡套餐",
+   "price": 20.0,
    "signal": 0,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260701/product/MS_9900011126_600.png",
    "official_rounds": [
     {
-     "name": "火腿扒早安营养卷",
+     "name": "选择炸鸡",
      "count": 1,
      "options": [
-      "火腿扒早安营养卷"
+      "麦麦脆汁鸡-琵琶腿"
      ]
     },
     {
-     "name": "选择早餐小食",
-     "count": 3,
+     "name": "迷你薯条",
+     "count": 1,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "迷你薯条"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "选择饮料",
+     "count": 7,
      "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "无糖可口可乐中杯",
+      "无糖可口可乐小杯",
+      "无糖可口可乐大杯",
+      "锡兰红茶",
+      "纯悦",
+      "麦咖啡™热美式中杯"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "图林根香肠早安营养卷套餐",
-   "cat": "早安营养卷",
+   "name": "“辣”么快乐套餐",
+   "cat": "500大卡套餐",
    "price": 24.0,
    "signal": 0,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011123_600.png",
    "official_rounds": [
     {
-     "name": "图林根香肠早安营养卷",
+     "name": "麦辣鸡翅-2块",
      "count": 1,
      "options": [
-      "图林根香肠早安营养卷"
+      "麦辣鸡翅2块"
      ]
     },
     {
-     "name": "选择早餐小食",
-     "count": 3,
+     "name": "麦乐鸡4块",
+     "count": 1,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "麦乐鸡4块"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "选择饮料",
+     "count": 7,
      "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "无糖可口可乐中杯",
+      "无糖可口可乐小杯",
+      "无糖可口可乐大杯",
+      "锡兰红茶",
+      "纯悦",
+      "麦咖啡™热美式中杯"
      ]
     }
    ],
+   "official_desc": null
+  },
+  {
+   "name": "牛气满满套餐",
+   "cat": "500大卡套餐",
+   "price": 35.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900009245_600.png",
+   "official_rounds": [
+    {
+     "name": "培根蔬萃双层牛堡",
+     "count": 1,
+     "options": [
+      "培根蔬萃双层牛堡"
+     ]
+    },
+    {
+     "name": "小杯玉米杯",
+     "count": 1,
+     "options": [
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择饮料",
+     "count": 4,
+     "options": [
+      "无糖可口可乐中杯",
+      "无糖可口可乐小杯",
+      "锡兰红茶",
+      "纯悦"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "“苹板”支撑Pro套餐",
+   "cat": "500大卡套餐",
+   "price": 39.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900009242_600.png",
+   "official_rounds": [
+    {
+     "name": "新升级板烧鸡腿堡",
+     "count": 1,
+     "options": [
+      "板烧鸡腿堡"
+     ]
+    },
+    {
+     "name": "小杯玉米杯",
+     "count": 1,
+     "options": [
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "苹果片一袋(60g)",
+     "count": 1,
+     "options": [
+      "苹果片一袋(60g)"
+     ]
+    },
+    {
+     "name": "选择饮料",
+     "count": 4,
+     "options": [
+      "无糖可口可乐中杯",
+      "无糖可口可乐小杯",
+      "锡兰红茶",
+      "纯悦"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "人气超值四件套随心选",
+   "cat": "精选单人餐",
+   "price": 57.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004236_600.png",
+   "official_rounds": [
+    {
+     "name": "选择汉堡",
+     "count": 5,
+     "options": [
+      "麦辣鸡腿汉堡",
+      "龙焰鸡腿堡",
+      "龙焰芝士棒鸡腿堡",
+      "双层脆鸡堡",
+      "板烧鸡腿堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "鱼牛汉堡四件套随心选",
+   "cat": "精选单人餐",
+   "price": 58.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900010110_600.png",
+   "official_rounds": [
+    {
+     "name": "选择汉堡",
+     "count": 5,
+     "options": [
+      "培根蔬萃双层牛堡",
+      "巨无霸",
+      "不素之霸双层牛堡",
+      "风味双层深海鳕鱼堡",
+      "原味双层深海鳕鱼堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "安格斯厚牛堡四件套随心选",
+   "cat": "精选单人餐",
+   "price": 66.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900006957_600.gif",
+   "official_rounds": [
+    {
+     "name": "选择安格斯厚牛堡",
+     "count": 2,
+     "options": [
+      "芝士安格斯厚牛堡",
+      "培根安格斯厚牛堡"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 9,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "麦乐鸡5块",
+   "cat": "炸鸡",
+   "price": 14.0,
+   "signal": 92,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260529/product/MS_1401_600.png",
+   "official_rounds": [],
    "official_desc": null
   },
   {
@@ -1637,22 +2635,68 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521951_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "蓝莓爆爆珠麦旋风",
+   "name": "马苏里拉拉丝芝士条",
    "cat": "小食甜品/其他",
-   "price": 16.5,
+   "price": 11.0,
    "signal": 82,
    "flavor_tags": [
-    "蓝莓"
+    "趁热拉丝",
+    "奶香醇厚"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521986_600.png",
    "official_rounds": [],
-   "official_desc": "🫐蓝莓爆爆珠麦旋风上新"
+   "official_desc": "两根马苏里拉拉丝芝士条，热时双倍拉丝更过瘾🧀"
+  },
+  {
+   "name": "“葱不求人“按摩捶痒痒挠",
+   "cat": "小食甜品/其他",
+   "price": 14.9,
+   "signal": 82,
+   "flavor_tags": [
+    "既可捶背",
+    "又可挠痒"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521914_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "马来咖喱风味薄皮肉骨鸡3块",
+   "cat": "炸鸡",
+   "price": 15.5,
+   "signal": 82,
+   "flavor_tags": [
+    "浓郁咖喱飘香"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521881_600.png",
+   "official_rounds": [],
+   "official_desc": null
   },
   {
    "name": "泷愿成真麦旋风——大米风味",
@@ -1665,6 +2709,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521917_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1679,7 +2727,81 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260916/product/MS_521929_600.png",
    "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "薄皮V翅双拼十翅",
+   "cat": "小食拼盘/多人餐",
+   "price": 49.9,
+   "signal": 68,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250423/product/MS_9900006332_600_1745288015452.png",
+   "official_rounds": [
+    {
+     "name": "麦辣鸡翅-2块",
+     "count": 1,
+     "options": [
+      "麦辣鸡翅-2块"
+     ]
+    },
+    {
+     "name": "选择小食",
+     "count": 1,
+     "options": [
+      "薄皮焦香V翅"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "BFF四宫格小食盘",
+   "cat": "小食拼盘/多人餐",
+   "price": 39.8,
+   "signal": 60,
+   "flavor_tags": [
+    "随心拼"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015730_600.png",
+   "official_rounds": [
+    {
+     "name": "选择小食",
+     "count": 5,
+     "options": [
+      "麦辣鸡翅-2块",
+      "麦乐鸡-5块",
+      "麦麦脆汁鸡-琵琶腿",
+      "那么大鸡排（椒盐风味）",
+      "薄皮焦香V翅"
+     ]
+    },
+    {
+     "name": "选择小食",
+     "count": 3,
+     "options": [
+      "小薯条",
+      "中薯条",
+      "大薯条"
+     ]
+    }
+   ],
    "official_desc": null
   },
   {
@@ -1693,6 +2815,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250813/product/MS_515837_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1707,6 +2833,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008752_600.png",
    "official_rounds": [],
    "official_desc": "过家家派对就要开始啦"
   },
@@ -1721,6 +2851,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008745_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1735,6 +2869,44 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008754_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "北美招牌牧场酱",
+   "cat": "蘸酱炸鸡",
+   "price": 3.0,
+   "signal": 0,
+   "flavor_tags": [
+    "使用动物奶油"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_521797_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "苹果片",
+   "cat": "小食甜品/其他",
+   "price": 7.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_6102_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1747,31 +2919,44 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521741_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "脆香油条",
-   "cat": "小食甜品/其他",
-   "price": 8.5,
+   "name": "蘸酱麦麦脆汁鸡",
+   "cat": "蘸酱炸鸡",
+   "price": 11.9,
    "signal": 0,
-   "flavor_tags": [],
+   "flavor_tags": [
+    "韩式芝士风味酱上新"
+   ],
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "德式图林根香肠",
-   "cat": "小食甜品/其他",
-   "price": 9.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016078_600.png",
+   "official_rounds": [
+    {
+     "name": "麦麦脆汁鸡-琵琶腿",
+     "count": 1,
+     "options": [
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择蘸酱",
+     "count": 1,
+     "options": [
+      "北美招牌牧场酱"
+     ]
+    }
+   ],
    "official_desc": null
   },
   {
@@ -1783,36 +2968,283 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_4437_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "脆香油条豆浆组合",
+   "name": "中薯条",
    "cat": "小食甜品/其他",
-   "price": 17.0,
+   "price": 13.5,
    "signal": 0,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250423/product/MS_4810_600_1745199801147.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "麦辣鸡翅2块",
+   "cat": "炸鸡",
+   "price": 15.0,
+   "signal": 0,
+   "flavor_tags": [
+    "黄金酥脆",
+    "鲜嫩多汁"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260219/product/MS_1700_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "麦麦脆汁鸡1块",
+   "cat": "炸鸡",
+   "price": 15.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241204/product/MS_9900005432_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "脆脆薯条",
+   "cat": "小食甜品/其他",
+   "price": 16.0,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_514782_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "麦乐鸡经典中套餐",
+   "cat": "炸鸡",
+   "price": 25.0,
+   "signal": 0,
+   "flavor_tags": [
+    "立省10.5元起"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004835_600.png",
    "official_rounds": [
     {
-     "name": "脆香油条",
+     "name": "麦乐鸡5块",
      "count": 1,
      "options": [
-      "脆香油条"
+      "麦乐鸡5块"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "选择套餐内小食",
+     "count": 7,
      "options": [
-      "优品豆浆大杯",
-      "鲜萃冰咖",
-      "大杯鲜萃咖啡",
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
       "香草风味奶昔",
       "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "麦辣鸡翅4块中套餐",
+   "cat": "炸鸡",
+   "price": 36.5,
+   "signal": 0,
+   "flavor_tags": [
+    "立省10.5元起"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005451_600.png",
+   "official_rounds": [
+    {
+     "name": "麦辣鸡翅-4块",
+     "count": 1,
+     "options": [
+      "麦辣鸡翅4块"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "蘸酱BFF四宫格小食盘",
+   "cat": "蘸酱炸鸡",
+   "price": 42.8,
+   "signal": 0,
+   "flavor_tags": [
+    "蘸酱炸鸡新吃法"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015729_600.png",
+   "official_rounds": [
+    {
+     "name": "选择小食",
+     "count": 5,
+     "options": [
+      "麦辣鸡翅-2块",
+      "麦乐鸡-5块",
+      "麦麦脆汁鸡-琵琶腿",
+      "那么大鸡排（椒盐风味）",
+      "薄皮焦香V翅"
+     ]
+    },
+    {
+     "name": "选择蘸酱",
+     "count": 1,
+     "options": [
+      "北美招牌牧场酱"
+     ]
+    },
+    {
+     "name": "选择小食",
+     "count": 3,
+     "options": [
+      "小薯条",
+      "中薯条",
+      "大薯条"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "BFF四宫格小食盘双人餐",
+   "cat": "小食拼盘/多人餐",
+   "price": 122.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260304/product/MS_9900005321_600.png",
+   "official_rounds": [
+    {
+     "name": "麦辣鸡腿汉堡",
+     "count": 1,
+     "options": [
+      "麦辣鸡腿汉堡"
+     ]
+    },
+    {
+     "name": "板烧鸡腿堡",
+     "count": 1,
+     "options": [
+      "板烧鸡腿堡"
+     ]
+    },
+    {
+     "name": "中薯条",
+     "count": 1,
+     "options": [
+      "中薯条"
+     ]
+    },
+    {
+     "name": "麦乐鸡-5块",
+     "count": 1,
+     "options": [
+      "麦乐鸡-5块"
+     ]
+    },
+    {
+     "name": "选择小食盘随心选",
+     "count": 3,
+     "options": [
+      "薄皮焦香V翅",
+      "麦辣鸡翅-2块",
+      "那么大鸡排（椒盐风味）"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 2,
+     "options": [
+      "可乐中杯",
+      "无糖可口可乐中杯"
      ]
     }
    ],
@@ -1829,6 +3261,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260807/product/MS_521817_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1841,18 +3277,28 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250804/product/MS_507411_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "冰浓浓黑巧中杯",
+   "name": "麦咖啡™冰奶铁中杯",
    "cat": "麦咖啡™",
    "price": 13.9,
    "signal": 76,
-   "flavor_tags": [],
+   "flavor_tags": [
+    "更奶更浓"
+   ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_507409_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1865,6 +3311,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250611/product/MS_515955_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1877,6 +3327,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_3757_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1889,42 +3343,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "优品豆浆小杯",
-   "cat": "饮品",
-   "price": 9.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "阳光柠檬红茶小杯",
-   "cat": "饮品",
-   "price": 9.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "雪碧（小杯）",
-   "cat": "饮品",
-   "price": 9.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_520689_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1937,6 +3359,42 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008751_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "雪碧（小杯）",
+   "cat": "饮品",
+   "price": 9.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_3010_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "阳光柠檬红茶小杯",
+   "cat": "饮品",
+   "price": 9.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_515280_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1949,30 +3407,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "锡兰红茶",
-   "cat": "饮品",
-   "price": 11.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "100% 苹果汁(盒装)",
-   "cat": "饮品",
-   "price": 11.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240731/product/MS_3755_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -1985,18 +3423,42 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_515520_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "麦咖啡™热美式中杯",
+   "name": "100% 苹果汁(盒装)",
    "cat": "饮品",
-   "price": 11.9,
+   "price": 11.5,
    "signal": 0,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250430/product/MS_6362_600_1745552990018.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "锡兰红茶",
+   "cat": "饮品",
+   "price": 11.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_3505_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2009,20 +3471,26 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_2430_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "麦咖啡™热奶铁中杯",
+   "name": "阳光橙麦炫酷",
    "cat": "饮品",
-   "price": 13.9,
+   "price": 13.0,
    "signal": 0,
-   "flavor_tags": [
-    "更奶更浓"
-   ],
+   "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_6352_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2031,12 +3499,14 @@
    "cat": "麦咖啡™",
    "price": 15.0,
    "signal": 0,
-   "flavor_tags": [
-    "冰淇淋"
-   ],
+   "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_514851_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2049,6 +3519,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_507389_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2058,12 +3532,15 @@
    "price": 15.0,
    "signal": 0,
    "flavor_tags": [
-    "其他",
-    "冰淇淋"
+    "其他"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_514850_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2078,18 +3555,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [],
-   "official_desc": null
-  },
-  {
-   "name": "冰牛奶中杯",
-   "cat": "饮品",
-   "price": 19.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_507394_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2102,6 +3571,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_507387_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2116,6 +3589,10 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_510488_600.png",
    "official_rounds": [],
    "official_desc": null
   },
@@ -2128,58 +3605,186 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_510479_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "芝芝火腿扒堡组合",
-   "cat": "超值早餐",
-   "price": 9.9,
-   "signal": 100,
+   "name": "精选超值随心配",
+   "cat": "随心配1+1",
+   "price": 13.9,
+   "signal": 66,
    "flavor_tags": [
-    "超值早餐"
+    "超值百种组合随心配"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015568_600.png",
    "official_rounds": [
     {
-     "name": "芝芝火腿扒堡",
-     "count": 1,
+     "name": "蓝区",
+     "count": 8,
      "options": [
-      "芝芝火腿扒堡"
+      "那么大鸡排（椒盐风味）",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "高达吉士双牛堡",
+      "双层吉士汉堡",
+      "麦香鱼",
+      "麦乐鸡5块"
      ]
     },
     {
-     "name": "选择早餐组合饮料",
-     "count": 34,
+     "name": "粉区",
+     "count": 16,
      "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "怡泉+C麦炫酷",
+      "阳光柠檬红茶中杯",
+      "可乐中杯",
+      "小杯玉米杯",
+      "香芋派",
+      "迷你草莓新地"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "芝芝火腿扒堡",
-   "cat": "超值早餐",
-   "price": 13.0,
-   "signal": 100,
+   "name": "人气经典随心配",
+   "cat": "随心配1+1",
+   "price": 14.9,
+   "signal": 66,
+   "flavor_tags": [
+    "超值百种组合随心配"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900013304_600.png",
+   "official_rounds": [
+    {
+     "name": "蓝区",
+     "count": 8,
+     "options": [
+      "双层吉士汉堡",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "高达吉士双牛堡",
+      "麦香鱼",
+      "那么大鸡排（椒盐风味）",
+      "麦乐鸡5块"
+     ]
+    },
+    {
+     "name": "粉区",
+     "count": 16,
+     "options": [
+      "可乐麦炫酷",
+      "阳光柠檬红茶中杯",
+      "可乐中杯",
+      "怡泉+C麦炫酷",
+      "小杯玉米杯",
+      "香芋派"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "精选单人餐三件套",
+   "cat": "人气热卖",
+   "price": 34.5,
+   "signal": 90,
    "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
-   "official_rounds": [],
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004064_600.png",
+   "official_rounds": [
+    {
+     "name": "主食任意选",
+     "count": 5,
+     "options": [
+      "板烧鸡腿堡",
+      "巨无霸",
+      "麦辣鸡腿汉堡",
+      "培根安格斯厚牛堡",
+      "原味双层深海鳕鱼堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "心形薯饼8块",
+   "cat": "人气热卖",
+   "price": 9.9,
+   "signal": 82,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016566_600.png",
+   "official_rounds": [
+    {
+     "name": "8块心形薯饼",
+     "count": 1,
+     "options": [
+      "8块心形薯饼"
+     ]
+    },
+    {
+     "name": "选择蘸酱",
+     "count": 2,
+     "options": [
+      "韩式辣椒黄油风味酱",
+      "甜酸酱"
+     ]
+    }
+   ],
    "official_desc": null
   },
   {
    "name": "麦当劳奶昔",
-   "cat": "满分假日",
+   "cat": "人气热卖",
    "price": 15.0,
    "signal": 82,
    "flavor_tags": [
@@ -2188,395 +3793,594 @@
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900014092_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "麦咖啡™冰奶铁中杯",
-   "cat": "满分假日",
+   "name": "“我就喜欢”鸡薯双全盒",
+   "cat": "人气热卖",
+   "price": 15.9,
+   "signal": 82,
+   "flavor_tags": [
+    "心形薯饼同款比心"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016076_600.png",
+   "official_rounds": [
+    {
+     "name": "5块心形薯饼(不含酱)",
+     "count": 1,
+     "options": [
+      "5块心形薯饼"
+     ]
+    },
+    {
+     "name": "韩式辣椒黄油风味酱",
+     "count": 1,
+     "options": [
+      "韩式辣椒黄油风味酱"
+     ]
+    },
+    {
+     "name": "5块麦乐鸡",
+     "count": 1,
+     "options": [
+      "5块麦乐鸡"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "龙焰鸡腿堡",
+   "cat": "人气热卖",
+   "price": 15.9,
+   "signal": 82,
+   "flavor_tags": [
+    "韩式辣椒黄油风味"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521952_600.png",
+   "official_rounds": [],
+   "official_desc": "龙焰鸡腿堡三件套 26.9 元起即刻开吃🍔"
+  },
+  {
+   "name": "蓝莓爆爆珠麦旋风",
+   "cat": "人气热卖",
+   "price": 16.5,
+   "signal": 82,
+   "flavor_tags": [
+    "蓝莓"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521950_600.png",
+   "official_rounds": [],
+   "official_desc": "🫐蓝莓爆爆珠麦旋风上新"
+  },
+  {
+   "name": "龙焰鸡腿堡三件套",
+   "cat": "人气热卖",
+   "price": 26.9,
+   "signal": 82,
+   "flavor_tags": [
+    "韩式辣椒黄油风味"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016073_600.png",
+   "official_rounds": [
+    {
+     "name": "龙焰鸡腿堡",
+     "count": 1,
+     "options": [
+      "龙焰鸡腿堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": "龙焰鸡腿堡三件套 26.9 元起即刻开吃🍔"
+  },
+  {
+   "name": "龙焰芝士棒鸡腿堡三件套",
+   "cat": "人气热卖",
+   "price": 29.9,
+   "signal": 82,
+   "flavor_tags": [
+    "浓郁奶香拉丝芝士"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016075_600.png",
+   "official_rounds": [
+    {
+     "name": "龙焰芝士棒鸡腿堡",
+     "count": 1,
+     "options": [
+      "龙焰芝士棒鸡腿堡"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 7,
+     "options": [
+      "中薯条",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 26,
+     "options": [
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
+      "香草风味奶昔",
+      "草莓风味奶昔",
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    }
+   ],
+   "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，"
+  },
+  {
+   "name": "麦当劳限定丝巾",
+   "cat": "人气热卖",
+   "price": 39.9,
+   "signal": 82,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521956_600.png",
+   "official_rounds": [],
+   "official_desc": null
+  },
+  {
+   "name": "冰浓浓黑巧中杯",
+   "cat": "人气热卖",
    "price": 13.9,
    "signal": 76,
-   "flavor_tags": [
-    "更奶更浓"
-   ],
+   "flavor_tags": [],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250611/product/MS_515946_600.png",
    "official_rounds": [],
    "official_desc": null
   },
   {
-   "name": "芝芝火腿扒堡套餐",
-   "cat": "超值早餐",
-   "price": 19.0,
-   "signal": 52,
-   "flavor_tags": [],
+   "name": "蘸酱炸鸡",
+   "cat": "人气热卖",
+   "price": 11.9,
+   "signal": 0,
+   "flavor_tags": [
+    "韩式芝士风味酱上新"
+   ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "",
    "official_rounds": [
     {
-     "name": "芝芝火腿扒堡",
+     "name": "选择小食",
      "count": 1,
      "options": [
-      "芝芝火腿扒堡"
+      "麦麦脆汁鸡-琵琶腿"
      ]
     },
     {
-     "name": "选择早餐小食",
+     "name": "选择蘸酱",
+     "count": 1,
+     "options": [
+      "北美招牌牧场酱"
+     ]
+    }
+   ],
+   "official_desc": "蘸酱炸鸡仅需11.9元起🍗"
+  },
+  {
+   "name": "汉堡开心乐园餐",
+   "cat": "开心乐园",
+   "price": 23.5,
+   "signal": 0,
+   "flavor_tags": [
+    "开心乐园餐",
+    "童年童款"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240828/product/MS_9900005422_600.png",
+   "official_rounds": [
+    {
+     "name": "汉堡包",
+     "count": 1,
+     "options": [
+      "汉堡包"
+     ]
+    },
+    {
+     "name": "迷你薯条",
+     "count": 1,
+     "options": [
+      "迷你薯条"
+     ]
+    },
+    {
+     "name": "选择开心乐园餐小食",
+     "count": 2,
+     "options": [
+      "苹果片一袋(60g)",
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择开心乐园餐饮料",
      "count": 3,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "纯牛奶",
+      "纯悦",
+      "100%苹果汁"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "随机玩具1个",
+     "count": 1,
      "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "随机玩具1个"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "厚松饼猪柳蛋堡三件套",
-   "cat": "满分假日",
-   "price": 29.9,
-   "signal": 52,
-   "flavor_tags": [],
+   "name": "鱼排堡开心乐园餐",
+   "cat": "开心乐园",
+   "price": 24.0,
+   "signal": 0,
+   "flavor_tags": [
+    "开心乐园餐",
+    "童年童款"
+   ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250430/product/MS_9900005421_600_1745810423708.png",
    "official_rounds": [
     {
-     "name": "选择主食",
+     "name": "鱼排堡",
+     "count": 1,
+     "options": [
+      "鱼排堡"
+     ]
+    },
+    {
+     "name": "迷你薯条",
+     "count": 1,
+     "options": [
+      "迷你薯条"
+     ]
+    },
+    {
+     "name": "选择开心乐园餐小食",
      "count": 2,
      "options": [
-      "巧克力味厚松饼猪柳蛋堡",
+      "苹果片一袋(60g)",
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "选择开心乐园餐饮料",
+     "count": 3,
+     "options": [
+      "纯牛奶",
+      "纯悦",
+      "100%苹果汁"
+     ]
+    },
+    {
+     "name": "随机玩具1个",
+     "count": 1,
+     "options": [
+      "随机玩具1个"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "麦麦周末双人餐",
+   "cat": "人气热卖",
+   "price": 49.9,
+   "signal": 0,
+   "flavor_tags": [
+    "全球爆款",
+    "全天供应",
+    "多人餐"
+   ],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015151_600.png",
+   "official_rounds": [
+    {
+     "name": "枫糖风味厚松饼猪柳蛋堡",
+     "count": 1,
+     "options": [
       "枫糖风味厚松饼猪柳蛋堡"
      ]
     },
     {
-     "name": "选择早餐小食",
-     "count": 3,
+     "name": "选择汉堡",
+     "count": 2,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "麦辣鸡腿汉堡",
+      "板烧鸡腿堡"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "脆香油条组合",
-   "cat": "6折起早餐卡专区",
-   "price": 11.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "脆香油条",
-     "count": 1,
-     "options": [
-      "脆香油条"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "吉士蛋麦满分组合",
-   "cat": "6折起早餐卡专区",
-   "price": 12.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "吉士蛋麦满分",
-     "count": 1,
-     "options": [
-      "吉士蛋麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "一早现磨 超值二件套",
-   "cat": "满分假日",
-   "price": 14.9,
-   "signal": 0,
-   "flavor_tags": [
-    "金奖豆",
-    "现磨"
-   ],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "选择早餐主食",
-     "count": 5,
-     "options": [
-      "吉士蛋麦满分",
-      "巧克力味厚松饼猪柳堡",
-      "大脆鸡扒麦满分",
-      "火腿扒麦满分",
-      "原味板烧鸡腿麦满分"
-     ]
-    },
-    {
-     "name": "选择麦咖啡饮品",
+     "name": "选择套餐内小食",
      "count": 6,
      "options": [
-      "麦咖啡™冰美式中杯",
-      "麦咖啡™热美式中杯",
-      "麦咖啡™冰奶铁中杯",
-      "麦咖啡™热奶铁中杯",
-      "冰燕麦奶铁中杯",
-      "热燕麦奶铁中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "原味板烧鸡腿麦满分组合",
-   "cat": "6折起早餐卡专区",
-   "price": 18.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    },
-    {
-     "name": "原味板烧鸡腿麦满分",
-     "count": 1,
-     "options": [
-      "原味板烧鸡腿麦满分"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "大脆鸡扒麦满分套餐",
-   "cat": "6折起早餐卡专区",
-   "price": 18.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "大脆鸡扒麦满分",
-     "count": 1,
-     "options": [
-      "大脆鸡扒麦满分"
-     ]
-    },
-    {
-     "name": "选择早餐套餐小食",
-     "count": 3,
-     "options": [
+      "中薯条",
       "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯",
+      "脆脆薯条"
      ]
     },
     {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
+     "name": "选择套餐内饮料",
+     "count": 27,
      "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "火腿扒早安营养卷组合",
-   "cat": "6折起早餐卡专区",
-   "price": 18.5,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "火腿扒早安营养卷",
-     "count": 1,
-     "options": [
-      "火腿扒早安营养卷"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
+      "可乐中杯",
       "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
+      "【美汁源】“多汁柠柠”",
       "香草风味奶昔",
       "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "热浓浓黑巧中杯"
      ]
     }
    ],
    "official_desc": null
   },
   {
-   "name": "原味板烧鸡腿炒双蛋堡组合",
-   "cat": "6折起早餐卡专区",
-   "price": 21.0,
-   "signal": 0,
-   "flavor_tags": [],
-   "has_review": false,
-   "avg": null,
-   "n": 0,
-   "official_rounds": [
-    {
-     "name": "原味板烧鸡腿炒双蛋堡",
-     "count": 1,
-     "options": [
-      "原味板烧鸡腿炒双蛋堡"
-     ]
-    },
-    {
-     "name": "选择早餐组合饮料",
-     "count": 34,
-     "options": [
-      "小杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆小杯",
-      "香草风味奶昔",
-      "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
-     ]
-    }
-   ],
-   "official_desc": null
-  },
-  {
-   "name": "满分厚松饼堡双人餐",
-   "cat": "满分假日",
-   "price": 39.9,
+   "name": "开心亲子双人餐",
+   "cat": "开心乐园",
+   "price": 59.5,
    "signal": 0,
    "flavor_tags": [
-    "松软香甜"
+    "开心亲子餐",
+    "童年童款"
    ],
    "has_review": false,
    "avg": null,
    "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_9900005439_600.png",
    "official_rounds": [
     {
-     "name": "选择主食",
-     "count": 4,
+     "name": "板烧鸡腿堡",
+     "count": 1,
      "options": [
-      "巧克力味厚松饼猪柳堡",
-      "枫糖风味厚松饼猪柳堡",
-      "巧克力味厚松饼猪柳蛋堡",
-      "枫糖风味厚松饼猪柳蛋堡"
+      "板烧鸡腿堡"
      ]
     },
     {
-     "name": "选择主食",
+     "name": "4麦乐鸡",
+     "count": 1,
+     "options": [
+      "麦乐鸡-4块"
+     ]
+    },
+    {
+     "name": "开心乐园餐小玉米",
+     "count": 1,
+     "options": [
+      "小杯玉米杯"
+     ]
+    },
+    {
+     "name": "开心乐园餐苹果片",
+     "count": 1,
+     "options": [
+      "苹果片一袋(60g)"
+     ]
+    },
+    {
+     "name": "选择套餐内小食",
+     "count": 5,
+     "options": [
+      "中薯条",
+      "大薯条",
+      "小杯玉米杯",
+      "大杯玉米杯",
+      "脆脆薯条"
+     ]
+    },
+    {
+     "name": "选择开心乐园餐饮料",
      "count": 2,
      "options": [
-      "原味板烧鸡腿麦满分",
-      "猪柳蛋麦满分"
+      "纯牛奶",
+      "纯悦"
      ]
     },
     {
-     "name": "选择早餐小食",
-     "count": 3,
+     "name": "选择套餐内饮料",
+     "count": 26,
      "options": [
-      "脆薯饼",
-      "脆香油条",
-      "德式图林根香肠"
-     ]
-    },
-    {
-     "name": "选择早餐套餐饮料",
-     "count": 32,
-     "options": [
-      "大杯鲜萃咖啡",
-      "鲜萃冰咖",
-      "优品豆浆大杯",
+      "可乐中杯",
+      "【美汁源】“多汁柠柠”",
       "香草风味奶昔",
       "草莓风味奶昔",
-      "冰浓浓黑巧中杯"
+      "热浓浓黑巧中杯",
+      "无糖可口可乐中杯"
+     ]
+    },
+    {
+     "name": "随机玩具1个",
+     "count": 1,
+     "options": [
+      "随机玩具1个"
+     ]
+    }
+   ],
+   "official_desc": null
+  },
+  {
+   "name": "全明星双人分享餐八件套",
+   "cat": "人气热卖",
+   "price": 114.5,
+   "signal": 0,
+   "flavor_tags": [],
+   "has_review": false,
+   "avg": null,
+   "n": 0,
+   "min": null,
+   "max": null,
+   "spread": 0,
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900011056_600.png",
+   "official_rounds": [
+    {
+     "name": "选择汉堡",
+     "count": 4,
+     "options": [
+      "麦辣鸡腿汉堡",
+      "枫糖风味厚松饼猪柳蛋堡",
+      "龙焰鸡腿堡",
+      "龙焰芝士棒鸡腿堡"
+     ]
+    },
+    {
+     "name": "选择主食",
+     "count": 5,
+     "options": [
+      "板烧鸡腿堡",
+      "龙焰鸡腿堡",
+      "龙焰芝士棒鸡腿堡",
+      "枫糖风味厚松饼猪柳蛋堡",
+      "麦辣鸡腿汉堡"
+     ]
+    },
+    {
+     "name": "选择小食",
+     "count": 5,
+     "options": [
+      "麦乐鸡4块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦辣鸡翅2块",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择小食",
+     "count": 4,
+     "options": [
+      "麦辣鸡翅2块",
+      "马来咖喱风味薄皮肉骨鸡3块",
+      "薄皮焦香V翅",
+      "麦麦脆汁鸡-琵琶腿"
+     ]
+    },
+    {
+     "name": "选择小食",
+     "count": 8,
+     "options": [
+      "中薯条",
+      "马苏里拉拉丝芝士条",
+      "蓝莓爆爆珠麦旋风",
+      "5块心形薯饼+韩式辣椒黄油风味酱",
+      "泷愿成真麦旋风——大米风味",
+      "奥利奥麦旋风"
+     ]
+    },
+    {
+     "name": "选择套餐内饮料",
+     "count": 31,
+     "options": [
+      "可乐中杯",
+      "冰浓浓黑巧中杯",
+      "麦咖啡™冰美式中杯",
+      "鲜萃冰咖",
+      "大杯鲜萃咖啡",
+      "麦咖啡™热美式中杯"
      ]
     }
    ],
