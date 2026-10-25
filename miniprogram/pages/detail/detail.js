@@ -59,6 +59,7 @@ Page({
                     tags: raw.official_tags || raw.flavor_tags || [],
                     flavorTags: raw.flavor_tags || [],
                     ingredients: raw.ingredients || [],
+                    officialRounds: raw.official_rounds || [],
                     officialDesc: raw.official_desc || '',
                     real: raw.real || [],
                     img: IMAGES[raw.name] || '',
