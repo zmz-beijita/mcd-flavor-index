@@ -177,7 +177,8 @@ python scripts/refresh_all.py --push
 | 4 | `flavor_index.py --render` | 渲染单文件 `index.html` |
 | 5 | `sync_miniprogram.py` | 同步微信小程序数据与资源 |
 | 6 | `build_social_preview.py` / `build_social_card.py` | 重生成社交预览图与引流长图（数字自动注入） |
-| 7 | `check_numbers.py --fix` | **15 项一致性自检**，并自动同步 README 里的数字 |
+| 7 | `build_screenshots.py` | 重新生成全部页面截图（README 的图必须与当前数据一致） |
+| 8 | `check_numbers.py --fix` | **19 项一致性自检**，并自动同步 README 里的数字 |
 | 8 | `push_via_api.py` | 推送到 GitHub，Pages 1-3 分钟后自动生效 |
 
 ### 数据分两层，刷新策略不同
@@ -202,7 +203,7 @@ python scripts/refresh_all.py --push
    两个同名不同义的指标混用，页面和预览图数字对不上，肉眼极难发现。
 2. 菜单轮换后新上架 5 个商品，本地没有官方图，直接刷新会出现缺图。
 
-所以 `check_numbers.py` 把这类检查固化成 **15 项断言**，其中包括
+所以 `check_numbers.py` 把这类检查固化成 **19 项断言**，其中包括
 **校验页面模板的 DENY 规则与预览图脚本的 DENY 规则语义一致**——
 规则公开不等于口径唯一，凡是页面上算的数，脚本必须用同一套判定规则。
 
@@ -224,7 +225,9 @@ mcd-flavor-index/
 │   ├── sync_miniprogram.py        # 同步数据到微信小程序
 │   ├── build_social_preview.py    # 生成 GitHub 社交预览图（数字自动注入）
 │   ├── build_social_card.py       # 生成社媒引流长图 1080×1440
-│   └── check_numbers.py           # 数字一致性自检（13 项，防止各处数字漂移）
+│   ├── build_screenshots.py       # 统一生成全部页面截图
+│   ├── refresh_all.py             # 一键全链路更新（采集→渲染→自检→推送）
+│   └── check_numbers.py           # 数字一致性自检（19 项，防止各处数字漂移）
 ├── miniprogram/                  # 微信小程序版（原生，零依赖）
 └── skills/mcd-flavor-index/
     ├── SKILL.md                  # Skill 主流程与铁律
@@ -294,7 +297,10 @@ python scripts/sync_miniprogram.py
 python scripts/build_social_preview.py
 python scripts/build_social_card.py
 
-# 数字一致性自检（15 项：落差规则 / 篇数 / 在售数 / 内联数据 / README 数字）
+# 重新生成全部页面截图
+python scripts/build_screenshots.py
+
+# 数字一致性自检（19 项：落差规则 / 篇数 / 在售数 / 内联数据 / README 与文案数字）
 python scripts/check_numbers.py --fix
 
 # 重新生成全部页面截图
