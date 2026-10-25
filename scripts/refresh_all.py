@@ -81,12 +81,15 @@ def main():
     run("重生成 GitHub 社交预览图", [PY, "scripts/build_social_preview.py"])
     run("重生成社媒引流长图", [PY, "scripts/build_social_card.py"])
 
-    # 7) 数字一致性自检（防止各处数字漂移）
+    # 7) 重生成页面截图（README 里的图必须与当前数据一致）
+    run("重新生成全部页面截图", [PY, "scripts/build_screenshots.py"])
+
+    # 8) 数字一致性自检（防止各处数字漂移）
     #    --fix：README 里的「N 个在售」随菜单轮换变化，自动改写
     run("数字一致性自检（并同步 README 数字）",
         [PY, "scripts/check_numbers.py", "--fix"])
 
-    # 8) 推送
+    # 9) 推送
     if args.push and not args.dry_run:
         if not os.environ.get("GITHUB_TOKEN"):
             raise SystemExit("需要 GITHUB_TOKEN")
