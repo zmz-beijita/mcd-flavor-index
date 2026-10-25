@@ -429,3 +429,39 @@
     font-size: 26rpx;
     line-height: 1.8;
 }
+
+/* ===== 官方套餐结构 ===== */
+.sr {
+    padding: 12rpx 0;
+    border-top: 2rpx solid #f7f1e6;
+}
+
+.sr:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.sr-h {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.sr-h text:first-child {
+    color: #231f20;
+    font-size: 25rpx;
+    font-weight: 800;
+}
+
+.sr-c {
+    color: #7fa8c4;
+    font-size: 21rpx;
+    font-weight: 600;
+}
+
+.sr-o {
+    margin-top: 5rpx;
+    color: #5a6570;
+    font-size: 23rpx;
+    line-height: 1.7;
+}
