@@ -10,7 +10,7 @@
 > **同一个汉堡，5 星和 2 星同时存在。** 麦当劳菜单接口和真实用户口碑之间那道裂缝，
 > 就是这个项目要量出来的东西。
 
-### 🎮 在线试玩（免 Token，打开即玩）
+## 🎮 在线试玩（免 Token，打开即玩）
 
 **<https://zmz-beijita.github.io/mcd-flavor-index/>**
 
@@ -21,9 +21,9 @@
 [![MCP](https://img.shields.io/badge/MCP-mcp.mcd.cn-FFC72C?style=flat-square)](https://mcp.mcd.cn)
 [![零依赖](https://img.shields.io/badge/dependencies-stdlib%20only-brightgreen?style=flat-square)](#-免-token-打开即玩)
 [![免Token体验](https://img.shields.io/badge/体验-免%20Token-orange?style=flat-square)](#-免-token-打开即玩)
+[![Windows](https://img.shields.io/badge/WeChat-小程序-07C160?style=flat-square)](#-微信小程序版)
 
 **49 篇真实评价 · 9 款有口碑商品 · 115 个当前在售 · 官方标签落差逐条对账**
-
 
 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品
 
@@ -35,6 +35,8 @@
 
 **打开就能玩，什么都不用装、不用填 Token。** 点商品卡展开：官方风味标签 ↔ 真实共识对照、
 官方配料清单、评分离散度条、评价原文，**还有一个能投票写理由的评论区**。
+
+<img src="docs/screenshot-stats.png" width="100%" alt="统计条：最低真香分 3.2、真实评价样本 49、在售商品 115、官方标签落差 3 处">
 
 ## 🏆 真香榜（按真实评价均分排序）
 
@@ -55,6 +57,20 @@
 **评分离散度 3.0（满分 3），全榜分歧最大。** 均分 3.7 只是平均，掩盖不了这个分歧。
 
 <img src="docs/screenshot-rank.png" width="100%" alt="真香榜：排名号、真香指数、样本量、评分区间、官方风味标签、分歧标记">
+
+### 展开任意商品：官方标签 ↔ 真实共识，逐条对账
+
+<img src="docs/screenshot-detail.png" width="100%" alt="展开详情：官方风味标签与真实共识对账、官方配料清单、评分离散度条、投票区、评价原文">
+
+这是本项目的核心界面。把同一个商品的**官方说法**和**真实说法**摆在同一屏：
+
+| 区块 | 内容 | 数据来源 |
+|---|---|---|
+| 官方风味标签 | 麦当劳自己写的营销语言 | MCP `query-meals` |
+| 真实共识 | 真实用户反复提到的关键词 | 49 篇公开评价 |
+| 官方配料清单 | 逐项配料 | MCP `query-meal-detail` |
+| 评分离散度条 | 最高星 − 最低星，一眼看出口碑多分裂 | 真实评价 |
+| 官方核价 | 当前时段能点到的价格 | MCP `calculate-price` |
 
 ## ✍️ 麦门广场：你能投票，也能写理由
 
@@ -107,6 +123,8 @@
 
 **115 个商品**，覆盖门店当前在售的每一项，按品类与官方销量信号排序。
 有真实评价的显示真香分，没有的标「待评价」——你投完，它就成了真香分。
+
+<img src="docs/screenshot-hot.png" width="100%" alt="人气榜：全量在售商品，按品类与官方销量信号排序，有评价的显示真香分">
 
 > 麦当劳菜单**每日轮换**（凌晨切早餐、上午切正餐），所以人气榜是「现在能点什么」，
 > 真香榜是「历史上大家怎么说」。两个时间维度，两个用途。
@@ -221,7 +239,7 @@ mcd-flavor-index/
         └── ugc-collection.md     # 评价采集方法与口径
 ```
 
-## 🚀 免 Token 打开即玩
+## 📥 本地跑起来
 
 ```bash
 git clone https://github.com/zmz-beijita/mcd-flavor-index.git
@@ -274,23 +292,14 @@ python scripts/sync_miniprogram.py
 python scripts/build_social_preview.py
 python scripts/build_social_card.py
 
-# 数字一致性自检（13 项：落差规则 / 篇数 / 在售数 / 内联数据 / README 数字）
-python scripts/check_numbers.py
+# 数字一致性自检（15 项：落差规则 / 篇数 / 在售数 / 内联数据 / README 数字）
+python scripts/check_numbers.py --fix
+
+# 重新生成全部页面截图
+python scripts/build_screenshots.py
 ```
 
 > 全部脚本零第三方依赖，只用 Python 标准库。
-
-### 为什么要有 `check_numbers.py`
-
-这个项目的数据散在 5 个地方：`data_ugc.json` → `data/home.json` → `index.html` 内联数据 →
-微信小程序 `flavor.json` → README 文案。**任何一处数字不同步，评审一眼就能看出来。**
-
-开发中真实踩过：社交预览图脚本把「评分离散度 ≥3 的商品数」（1 个）
-当成了「官方标签落差」（3 个）——两个同名不同义的指标混用，
-预览图和页面显示的数字对不上，肉眼极难发现。
-
-`check_numbers.py` 把这类检查固化成 13 项断言，**包括校验页面模板的 DENY 规则
-与预览图脚本的 DENY 规则语义一致**，任何一处漂移都会被立刻抓出来。
 
 ## 📄 许可证
 
