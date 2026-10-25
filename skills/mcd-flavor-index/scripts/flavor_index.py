@@ -175,13 +175,23 @@ def cmd_render(args):
     """生成单文件交互式真香榜 HTML。
 
     产物把 data/home.json 内联为 window.__FLAVOR_HOME__，
-    页面在 file:// 下 fetch 失败时回退到它，保证双击即开。
+    把 data/img_map.json 内联为 window.__FLAVOR_IMG__，
+    页面在 file:// 下 fetch 失败时回退到它们，保证双击即开。
+
+    图片映射从 img_map.json 注入（由 scripts/build_img_map.py 从菜单数据推导），
+    不在模板里硬编码——避免「改了产物又被重新渲染覆盖」的老问题。
     """
     home_path = os.path.join(ROOT, "data", "home.json")
     if not os.path.exists(home_path):
         raise SystemExit(f"找不到 {home_path}，先运行 scripts/build_home_data.py")
     with open(home_path, encoding="utf-8") as f:
         home = json.load(f)
+
+    img_path = os.path.join(ROOT, "data", "img_map.json")
+    img_map = {}
+    if os.path.exists(img_path):
+        with open(img_path, encoding="utf-8") as f:
+            img_map = json.load(f)
 
     tpl_path = os.path.join(ROOT, "templates", "index.template.html")
     if not os.path.exists(tpl_path):
@@ -190,7 +200,9 @@ def cmd_render(args):
         tpl = f.read()
 
     payload = json.dumps(home, ensure_ascii=False, indent=2)
-    inject = "<script>window.__FLAVOR_HOME__ = " + payload + ";</script>"
+    img_payload = json.dumps(img_map, ensure_ascii=False, indent=1)
+    inject = ("<script>window.__FLAVOR_HOME__ = " + payload + ";</script>\n"
+              "<script>window.__FLAVOR_IMG__ = " + img_payload + ";</script>")
     marker = "<script>\n/* ================= 数据 ================="
     if marker not in tpl:
         raise SystemExit("模板结构变化：找不到注入点")
@@ -201,7 +213,7 @@ def cmd_render(args):
         f.write(tpl)
     n_truth = len(home.get("truth", []))
     n_hot = len(home.get("hot", []))
-    print(f"已生成 {out}（真香榜 {n_truth} 个 · 人气榜 {n_hot} 个）")
+    print(f"已生成 {out}（真香榜 {n_truth} 个 · 人气榜 {n_hot} 个 · 本地图 {len(img_map)} 张）")
     return out
 
 
