@@ -108,6 +108,15 @@
   .d-desc{font-size:13.5px;line-height:1.8;color:var(--ink);font-style:normal}
   .d-desc .src{display:block;font-size:11px;color:#B9ADA0;margin-top:5px;font-style:normal}
 
+  /* 官方套餐结构 */
+  .d-struct{background:#F7FAFD;border-color:#D6E7F5}
+  .d-struct .dh{color:#3A7CA8}
+  .sr{padding:9px 0;border-top:1.5px solid #E4EEF7}
+  .sr:first-of-type{border-top:none;padding-top:0}
+  .sr-h{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;font-weight:800;color:#231F20}
+  .sr-h span{font-family:var(--mono);font-size:11.5px;color:#7FA8C4;font-weight:600}
+  .sr-o{font-size:12.5px;color:#5A6570;line-height:1.75;margin-top:3px}
+
   /* 离散度 */
   .d-spread{margin-top:16px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:15px 18px}
   .d-spread .sh{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:12px}
@@ -224,14 +233,14 @@
   <!-- 真香榜 -->
   <div class="rank-hd">
     <h2>🏆 真香榜 <span class="em" id="truthCount">—</span></h2>
-    <div class="note">按<b>真实评价均分</b>排序 · 点条目展开详情与投票 · 分数色：<span style="color:var(--green)">绿 ≥4.3</span> / <span style="color:var(--yellow-d)">黄 3.8–4.2</span> / <span style="color:var(--red)">红 &lt;3.8</span></div>
+    <div class="note">按<b>真实评价均分</b>排序 · 点条目展开详情与投票 · 分数色：<span style="color:var(--green)">绿 ≥4.3</span> / <span style="color:var(--yellow-d)">黄 3.8–4.2</span> / <span style="color:var(--red)">红 &lt;3.8</span><br><span style="color:#B9ADA0">评价为 2026-10-25 采集的历史快照，不随时段菜单变化</span>
   </div>
   <div class="rank-list" id="truthList"></div>
 
   <!-- 人气榜 -->
   <div class="rank-hd" style="margin-top:38px">
     <h2>📋 人气榜 <span class="em" id="hotCount">—</span></h2>
-    <div class="note">门店<b>全部在售商品</b>，按麦当劳官方标签里的销量信号排序（人气/爆款/上新/粉丝之选）· 有真实评价的显示真香分</div>
+    <div class="note">门店<b>当前时段在售</b>的全部商品（每日轮换），按品类与官方销量信号排序 · 有真实评价的显示真香分</div>
   </div>
   <div class="rank-list" id="hotList"></div>
 
@@ -279,14 +288,9 @@
       "flavor_tags": [
         "100%纯牛肉"
       ],
-      "ingredients": [
-        "吉士",
-        "酸黄瓜",
-        "洋葱粒",
-        "番茄酱",
-        "芥末酱"
-      ],
+      "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
       "real": [
         "芝士控最爱",
         "争议大看个人口味",
@@ -340,11 +344,9 @@
         "板烧滋滋",
         "多汁惹味"
       ],
-      "ingredients": [
-        "烤味酱",
-        "切块生菜"
-      ],
+      "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
       "real": [
         "清爽不油腻",
         "必须趁热吃",
@@ -398,12 +400,10 @@
         "人气",
         "人气经典"
       ],
-      "flavor_tags": [
-        "人气",
-        "人气经典"
-      ],
+      "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
       "real": [
         "满足感天花板",
         "减脂期控制"
@@ -455,14 +455,9 @@
       "flavor_tags": [
         "100%纯牛肉"
       ],
-      "ingredients": [
-        "巨无霸酱",
-        "吉士",
-        "生菜",
-        "酸黄瓜",
-        "洋葱粒"
-      ],
+      "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
       "real": [
         "经典不翻车",
         "酱味偏重",
@@ -528,14 +523,12 @@
         "上新"
       ],
       "flavor_tags": [
-        "上新",
-        "浓郁奶香拉丝芝士"
+        "浓郁奶香拉丝芝士",
+        "韩式辣椒黄油风味"
       ],
-      "ingredients": [
-        "辣椒黄油风味酱",
-        "切块生菜"
-      ],
-      "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，",
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
       "real": [
         "没拉丝",
         "芝士棒空心",
@@ -591,11 +584,11 @@
         "单炸鸡类"
       ],
       "flavor_tags": [
-        "人气",
         "单炸鸡类"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
       "real": [
         "物美价廉",
         "就只是个鸡肉饼",
@@ -628,663 +621,1695 @@
   ],
   "hot": [
     {
-      "name": "精选单人餐三件套",
-      "cat": "精选单人餐",
-      "price": 34.5,
-      "signal": 90,
-      "flavor_tags": [
-        "爆款"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "薄皮焦香V翅",
-      "cat": "炸鸡",
-      "price": 16.0,
-      "signal": 88,
-      "flavor_tags": [
-        "人气"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "高达吉士双牛堡",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 22.5,
-      "signal": 88,
-      "flavor_tags": [
-        "100%纯牛肉",
-        "人气"
-      ],
+      "name": "猪柳蛋麦满分",
+      "cat": "麦满分系列",
+      "price": 18.0,
+      "signal": 100,
+      "flavor_tags": [],
       "ingredients": [
-        "酸黄瓜",
-        "洋葱粒",
-        "番茄酱",
-        "芥末酱",
-        "高达干酪片"
+        "吉士"
       ],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "鸡肉堡单品精选",
-      "cat": "鸡肉汉堡/卷",
-      "price": 23.5,
-      "signal": 88,
-      "flavor_tags": [
-        "人气"
-      ],
+      "name": "猪柳蛋麦满分组合",
+      "cat": "麦满分系列",
+      "price": 21.0,
+      "signal": 100,
+      "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        },
+        {
+          "name": "猪柳蛋麦满分",
+          "count": 1,
+          "options": [
+            "猪柳蛋麦满分"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "麦乐鸡5块",
-      "cat": "炸鸡",
-      "price": 14.0,
-      "signal": 88,
-      "flavor_tags": [
-        "人气"
-      ],
+      "name": "原味板烧鸡腿麦满分套餐",
+      "cat": "麦满分系列",
+      "price": 23.0,
+      "signal": 52,
+      "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "原味板烧鸡腿麦满分",
+          "count": 1,
+          "options": [
+            "原味板烧鸡腿麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "“堡”你欢乐套餐",
-      "cat": "500大卡套餐",
-      "price": 28.0,
-      "signal": 86,
-      "flavor_tags": [
-        "粉丝之选"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "龙焰芝士棒鸡腿堡",
-      "cat": "鸡肉汉堡/卷",
-      "price": 27.0,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "浓郁奶香拉丝芝士"
-      ],
-      "ingredients": [
-        "辣椒黄油风味酱",
-        "切块生菜"
-      ],
-      "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，",
-      "has_review": true,
-      "avg": 3.7,
-      "n": 6
-    },
-    {
-      "name": "“我就喜欢”鸡薯双全盒",
-      "cat": "人气热卖",
-      "price": 15.9,
-      "signal": 80,
-      "flavor_tags": [
-        "心形薯饼同款比心",
-        "上新"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "“葱不求人“按摩捶痒痒挠",
-      "cat": "小食甜品/其他",
-      "price": 14.9,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "既可捶背",
-        "又可挠痒"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "【美汁源】“多汁柠柠”",
-      "cat": "饮品",
-      "price": 12.0,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "清爽上新"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "心形薯饼5块",
-      "cat": "小食甜品/其他",
-      "price": 14.5,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "口口酥脆",
-        "含一份蘸酱"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "心形薯饼8块",
-      "cat": "人气热卖",
-      "price": 22.5,
-      "signal": 80,
-      "flavor_tags": [
-        "含一份蘸酱",
-        "上新"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "旋旋水手帽",
-      "cat": "小食甜品/其他",
-      "price": 48.8,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "汪苏泷限量周边"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "韩式甜辣酱鸡块",
-      "cat": "炸鸡",
-      "price": 15.0,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "韩式风味"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "马来咖喱风味薄皮肉骨鸡3块",
-      "cat": "炸鸡",
-      "price": 15.5,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "浓郁咖喱飘香"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "马苏里拉拉丝芝士条",
-      "cat": "小食甜品/其他",
-      "price": 15.0,
-      "signal": 80,
-      "flavor_tags": [
-        "上新",
-        "趁热拉丝",
-        "奶香醇厚"
-      ],
-      "ingredients": [],
-      "official_desc": "两根马苏里拉拉丝芝士条，热时双倍拉丝更过瘾🧀",
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "麦当劳限定丝巾",
-      "cat": "人气热卖",
-      "price": 39.9,
-      "signal": 80,
-      "flavor_tags": [
-        "上新"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "龙焰芝士棒鸡腿堡三件套",
-      "cat": "人气热卖",
+      "name": "巧克力味厚松饼猪柳蛋堡套餐",
+      "cat": "厚松饼堡系列",
       "price": 29.9,
-      "signal": 80,
-      "flavor_tags": [
-        "浓郁奶香拉丝芝士",
-        "上新"
-      ],
-      "ingredients": [],
-      "official_desc": "还可升级29.9元龙焰芝士棒鸡腿堡三件套，",
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "龙焰鸡腿堡",
-      "cat": "人气热卖",
-      "price": 15.9,
-      "signal": 80,
-      "flavor_tags": [
-        "韩式辣椒黄油风味",
-        "上新"
-      ],
-      "ingredients": [
-        "辣椒黄油风味酱",
-        "切块生菜"
-      ],
-      "official_desc": "龙焰鸡腿堡三件套 26.9 元起即刻开吃🍔",
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "龙焰鸡腿堡三件套",
-      "cat": "人气热卖",
-      "price": 26.9,
-      "signal": 80,
-      "flavor_tags": [
-        "韩式辣椒黄油风味",
-        "上新"
-      ],
-      "ingredients": [],
-      "official_desc": "龙焰鸡腿堡三件套 26.9 元起即刻开吃🍔",
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "冰浓浓燕麦黑巧中杯",
-      "cat": "麦咖啡™",
-      "price": 23.0,
-      "signal": 74,
-      "flavor_tags": [
-        "限定特惠",
-        "浓浓黑巧"
-      ],
+      "signal": 52,
+      "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "巧克力味厚松饼猪柳蛋堡",
+          "count": 1,
+          "options": [
+            "巧克力味厚松饼猪柳蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "冰浓浓黑巧中杯",
-      "cat": "麦咖啡™",
-      "price": 21.0,
-      "signal": 74,
-      "flavor_tags": [
-        "限定特惠",
-        "浓浓黑巧"
-      ],
+      "name": "枫糖风味厚松饼猪柳蛋堡套餐",
+      "cat": "厚松饼堡系列",
+      "price": 29.9,
+      "signal": 52,
+      "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "麦咖啡™冰奶铁中杯",
-      "cat": "麦咖啡™",
-      "price": 21.0,
-      "signal": 74,
-      "flavor_tags": [
-        "限定特惠"
+      "official_rounds": [
+        {
+          "name": "枫糖风味厚松饼猪柳蛋堡",
+          "count": 1,
+          "options": [
+            "枫糖风味厚松饼猪柳蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
       ],
-      "ingredients": [],
-      "official_desc": null,
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "麦咖啡™冰美式中杯",
-      "cat": "人气热卖",
-      "price": 19.0,
-      "signal": 74,
-      "flavor_tags": [
-        "限定特惠"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "板烧鸡腿堡三件套",
-      "cat": "鸡肉汉堡/卷",
-      "price": 34.5,
-      "signal": 70,
-      "flavor_tags": [
-        "更多汁"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "人气经典随心配",
-      "cat": "随心配1+1",
-      "price": 14.9,
-      "signal": 64,
-      "flavor_tags": [
-        "超值百种组合随心配"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "精选超值随心配",
-      "cat": "随心配1+1",
-      "price": 14.9,
-      "signal": 64,
-      "flavor_tags": [
-        "超值百种组合随心配"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "堡堡随心拼（7件任选）",
-      "cat": "小食拼盘/多人餐",
-      "price": 72.5,
-      "signal": 60,
-      "flavor_tags": [
-        "万种组合"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "BFF四宫格小食盘",
-      "cat": "小食拼盘/多人餐",
-      "price": 40.8,
-      "signal": 58,
-      "flavor_tags": [
-        "随心拼"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "双层吉士汉堡",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 23.0,
+      "name": "火腿扒麦满分",
+      "cat": "麦满分系列",
+      "price": 10.0,
       "signal": 0,
-      "flavor_tags": [
-        "100%纯牛肉"
-      ],
+      "flavor_tags": [],
       "ingredients": [
+        "生菜"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "吉士蛋麦满分",
+      "cat": "麦满分系列",
+      "price": 10.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "麦香鸡酱",
         "吉士",
-        "酸黄瓜",
-        "洋葱粒",
-        "番茄酱",
-        "芥末酱"
+        "番茄酱"
       ],
       "official_desc": null,
-      "has_review": true,
-      "avg": 4.4,
-      "n": 5
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "板烧鸡腿堡",
-      "cat": "鸡肉汉堡/卷",
-      "price": 23.5,
+      "name": "大脆鸡扒麦满分",
+      "cat": "麦满分系列",
+      "price": 11.0,
       "signal": 0,
-      "flavor_tags": [
-        "板烧滋滋",
-        "多汁惹味"
-      ],
+      "flavor_tags": [],
       "ingredients": [
-        "烤味酱",
-        "切块生菜"
+        "麦香鸡酱"
       ],
       "official_desc": null,
-      "has_review": true,
-      "avg": 4.2,
-      "n": 6
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "巨无霸",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 25.5,
-      "signal": 0,
-      "flavor_tags": [
-        "100%纯牛肉"
-      ],
-      "ingredients": [
-        "巨无霸酱",
-        "吉士",
-        "生菜",
-        "酸黄瓜",
-        "洋葱粒"
-      ],
-      "official_desc": null,
-      "has_review": true,
-      "avg": 4.0,
-      "n": 8
-    },
-    {
-      "name": "100% 苹果汁(盒装)",
-      "cat": "饮品",
-      "price": 11.5,
+      "name": "火腿扒麦满分组合",
+      "cat": "麦满分系列",
+      "price": 12.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        },
+        {
+          "name": "火腿扒麦满分",
+          "count": 1,
+          "options": [
+            "火腿扒麦满分"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "【美汁源】“黄金橙橙”",
-      "cat": "饮品",
+      "name": "大脆鸡扒麦满分组合",
+      "cat": "麦满分系列",
       "price": 13.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "大脆鸡扒麦满分",
+          "count": 1,
+          "options": [
+            "大脆鸡扒麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "中杯怡泉+C",
-      "cat": "饮品",
-      "price": 11.5,
+      "name": "猪柳麦满分",
+      "cat": "麦满分系列",
+      "price": 14.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "吉士"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "原味板烧鸡腿麦满分",
+      "cat": "麦满分系列",
+      "price": 15.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "烤味酱",
+        "生菜"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "火腿扒麦满分套餐",
+      "cat": "麦满分系列",
+      "price": 17.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "火腿扒麦满分",
+          "count": 1,
+          "options": [
+            "火腿扒麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "中薯条",
-      "cat": "小食甜品/其他",
-      "price": 13.5,
+      "name": "吉士蛋麦满分套餐",
+      "cat": "麦满分系列",
+      "price": 17.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "吉士蛋麦满分",
+          "count": 1,
+          "options": [
+            "吉士蛋麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "人气超值四件套随心选",
-      "cat": "精选单人餐",
-      "price": 58.0,
+      "name": "猪柳麦满分组合",
+      "cat": "麦满分系列",
+      "price": 17.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "猪柳麦满分",
+          "count": 1,
+          "options": [
+            "猪柳麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "全明星双人分享餐八件套",
-      "cat": "人气热卖",
-      "price": 117.0,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "冰燕麦奶铁中杯",
-      "cat": "麦咖啡™",
-      "price": 23.0,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "北美招牌牧场酱",
-      "cat": "蘸酱炸鸡",
-      "price": 3.0,
+      "name": "巧克力味厚松饼猪柳堡",
+      "cat": "厚松饼堡系列",
+      "price": 18.0,
       "signal": 0,
       "flavor_tags": [
-        "使用动物奶油"
+        "浓郁巧克力"
+      ],
+      "ingredients": [
+        "吉士"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "枫糖风味厚松饼猪柳堡",
+      "cat": "厚松饼堡系列",
+      "price": 18.0,
+      "signal": 0,
+      "flavor_tags": [
+        "咸甜美味"
+      ],
+      "ingredients": [
+        "吉士"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "原味板烧鸡腿炒双蛋堡",
+      "cat": "炒双蛋堡系列",
+      "price": 18.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "烤味酱"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "猪柳炒双蛋堡",
+      "cat": "炒双蛋堡系列",
+      "price": 18.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "双层原味板烧鸡腿麦满分",
+      "cat": "麦满分系列",
+      "price": 19.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "生菜",
+        "烤味酱"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "巧克力味厚松饼猪柳堡组合",
+      "cat": "厚松饼堡系列",
+      "price": 21.0,
+      "signal": 0,
+      "flavor_tags": [
+        "浓郁巧克力"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "巧克力味厚松饼猪柳堡",
+          "count": 1,
+          "options": [
+            "巧克力味厚松饼猪柳堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "卡布奇诺中杯",
-      "cat": "麦咖啡™",
+      "name": "枫糖风味厚松饼猪柳堡组合",
+      "cat": "厚松饼堡系列",
+      "price": 21.0,
+      "signal": 0,
+      "flavor_tags": [
+        "咸甜美味"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "枫糖风味厚松饼猪柳堡",
+          "count": 1,
+          "options": [
+            "枫糖风味厚松饼猪柳堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "双层猪柳蛋麦满分",
+      "cat": "麦满分系列",
+      "price": 21.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "吉士"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "猪柳炒双蛋堡组合",
+      "cat": "炒双蛋堡系列",
       "price": 21.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "猪柳炒双蛋堡",
+          "count": 1,
+          "options": [
+            "猪柳炒双蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "双层吉士汉堡中套餐",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 34.0,
+      "name": "巧克力味厚松饼猪柳蛋堡",
+      "cat": "厚松饼堡系列",
+      "price": 22.0,
       "signal": 0,
       "flavor_tags": [
-        "100%纯牛肉"
+        "浓郁巧克力"
+      ],
+      "ingredients": [
+        "吉士"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "枫糖风味厚松饼猪柳蛋堡",
+      "cat": "厚松饼堡系列",
+      "price": 22.0,
+      "signal": 0,
+      "flavor_tags": [
+        "咸甜美味"
+      ],
+      "ingredients": [
+        "吉士"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "猪柳麦满分套餐",
+      "cat": "麦满分系列",
+      "price": 22.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "猪柳麦满分",
+          "count": 1,
+          "options": [
+            "猪柳麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "双层板烧鸡腿麦满分组合",
+      "cat": "麦满分系列",
+      "price": 22.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        },
+        {
+          "name": "双层原味板烧鸡腿麦满分",
+          "count": 1,
+          "options": [
+            "双层原味板烧鸡腿麦满分"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "巧克力味厚松饼猪柳蛋堡组合",
+      "cat": "厚松饼堡系列",
+      "price": 25.0,
+      "signal": 0,
+      "flavor_tags": [
+        "浓郁巧克力"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "巧克力味厚松饼猪柳蛋堡",
+          "count": 1,
+          "options": [
+            "巧克力味厚松饼猪柳蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 0
     },
     {
-      "name": "可乐",
-      "cat": "饮品",
+      "name": "枫糖风味厚松饼猪柳蛋堡组合",
+      "cat": "厚松饼堡系列",
+      "price": 25.0,
+      "signal": 0,
+      "flavor_tags": [
+        "咸甜美味"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "枫糖风味厚松饼猪柳蛋堡",
+          "count": 1,
+          "options": [
+            "枫糖风味厚松饼猪柳蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "巧克力味厚松饼猪柳堡套餐",
+      "cat": "厚松饼堡系列",
+      "price": 25.9,
+      "signal": 0,
+      "flavor_tags": [
+        "浓郁巧克力"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "巧克力味厚松饼猪柳堡",
+          "count": 1,
+          "options": [
+            "巧克力味厚松饼猪柳堡"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "枫糖风味厚松饼猪柳堡套餐",
+      "cat": "厚松饼堡系列",
+      "price": 25.9,
+      "signal": 0,
+      "flavor_tags": [
+        "咸甜美味"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "枫糖风味厚松饼猪柳堡",
+          "count": 1,
+          "options": [
+            "枫糖风味厚松饼猪柳堡"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "猪柳蛋麦满分套餐",
+      "cat": "麦满分系列",
+      "price": 26.0,
+      "signal": 0,
+      "flavor_tags": [
+        "麦金卡同享"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "猪柳蛋麦满分",
+          "count": 1,
+          "options": [
+            "猪柳蛋麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "原味板烧鸡腿炒双蛋堡套餐",
+      "cat": "炒双蛋堡系列",
+      "price": 26.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "原味板烧鸡腿炒双蛋堡",
+          "count": 1,
+          "options": [
+            "原味板烧鸡腿炒双蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "猪柳炒双蛋堡套餐",
+      "cat": "炒双蛋堡系列",
+      "price": 26.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "猪柳炒双蛋堡",
+          "count": 1,
+          "options": [
+            "猪柳炒双蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "双层原味板烧鸡腿麦满分套餐",
+      "cat": "麦满分系列",
+      "price": 27.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "双层原味板烧鸡腿麦满分",
+          "count": 1,
+          "options": [
+            "双层原味板烧鸡腿麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 0
+    },
+    {
+      "name": "雪菜脆笋鸡肉粥",
+      "cat": "粥王系列",
+      "price": 7.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "雪菜脆笋鸡肉粥组合",
+      "cat": "粥王系列",
+      "price": 12.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "雪菜脆笋鸡肉粥",
+          "count": 1,
+          "options": [
+            "雪菜脆笋鸡肉粥"
+          ]
+        },
+        {
+          "name": "选择小食",
+          "count": 3,
+          "options": [
+            "脆香油条",
+            "脆薯饼",
+            "德式图林根香肠"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "雪菜脆笋鸡肉粥套餐",
+      "cat": "粥王系列",
+      "price": 15.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "雪菜脆笋鸡肉粥",
+          "count": 1,
+          "options": [
+            "雪菜脆笋鸡肉粥"
+          ]
+        },
+        {
+          "name": "脆香油条",
+          "count": 1,
+          "options": [
+            "脆香油条"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "火腿扒早安营养卷",
+      "cat": "早安营养卷",
+      "price": 15.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "番茄酱"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "图林根香肠早安营养卷",
+      "cat": "早安营养卷",
+      "price": 16.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [
+        "芥末沙拉酱"
+      ],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "图林根香肠早安营养卷组合",
+      "cat": "早安营养卷",
+      "price": 19.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "图林根香肠早安营养卷",
+          "count": 1,
+          "options": [
+            "图林根香肠早安营养卷"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "火腿扒早安营养卷套餐",
+      "cat": "早安营养卷",
+      "price": 23.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "火腿扒早安营养卷",
+          "count": 1,
+          "options": [
+            "火腿扒早安营养卷"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "图林根香肠早安营养卷套餐",
+      "cat": "早安营养卷",
+      "price": 24.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "图林根香肠早安营养卷",
+          "count": 1,
+          "options": [
+            "图林根香肠早安营养卷"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 1
+    },
+    {
+      "name": "灰焰圆筒",
+      "cat": "小食甜品/其他",
+      "price": 5.0,
+      "signal": 82,
+      "flavor_tags": [
+        "灰焰"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "蓝莓爆爆珠麦旋风",
+      "cat": "小食甜品/其他",
+      "price": 16.5,
+      "signal": 82,
+      "flavor_tags": [
+        "蓝莓"
+      ],
+      "ingredients": [],
+      "official_desc": "🫐蓝莓爆爆珠麦旋风上新",
+      "official_rounds": [],
+      "official_desc_date": "2026-10-25",
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "泷愿成真麦旋风——大米风味",
+      "cat": "小食甜品/其他",
+      "price": 16.5,
+      "signal": 82,
+      "flavor_tags": [
+        "快乐旋开吃"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "旋旋水手帽",
+      "cat": "小食甜品/其他",
+      "price": 48.8,
+      "signal": 82,
+      "flavor_tags": [
+        "汪苏泷限量周边"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "圆筒冰淇淋",
+      "cat": "小食甜品/其他",
+      "price": 5.0,
+      "signal": 58,
+      "flavor_tags": [
+        "冰淇淋"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "派",
+      "cat": "小食甜品/其他",
+      "price": 8.5,
+      "signal": 58,
+      "flavor_tags": [
+        "派"
+      ],
+      "ingredients": [],
+      "official_desc": "过家家派对就要开始啦",
+      "official_rounds": [],
+      "official_desc_date": "2026-10-25",
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "新地",
+      "cat": "小食甜品/其他",
+      "price": 12.0,
+      "signal": 58,
+      "flavor_tags": [
+        "冰淇淋"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "经典麦旋风",
+      "cat": "小食甜品/其他",
+      "price": 15.5,
+      "signal": 58,
+      "flavor_tags": [
+        "冰淇淋"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "脆薯饼",
+      "cat": "小食甜品/其他",
+      "price": 8.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "脆香油条",
+      "cat": "小食甜品/其他",
+      "price": 8.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "德式图林根香肠",
+      "cat": "小食甜品/其他",
       "price": 9.5,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 2
     },
     {
-      "name": "吉士汉堡包中套餐",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 26.0,
+      "name": "小杯玉米杯",
+      "cat": "小食甜品/其他",
+      "price": 13.0,
       "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "脆香油条豆浆组合",
+      "cat": "小食甜品/其他",
+      "price": 17.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "脆香油条",
+          "count": 1,
+          "options": [
+            "脆香油条"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "优品豆浆大杯",
+            "鲜萃冰咖",
+            "大杯鲜萃咖啡",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 2
+    },
+    {
+      "name": "【美汁源】“多汁柠柠”",
+      "cat": "饮品",
+      "price": 12.0,
+      "signal": 82,
       "flavor_tags": [
-        "100%纯牛肉"
+        "清爽上新"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "大堡口福三件套",
-      "cat": "大堡口福单人餐",
-      "price": 23.9,
-      "signal": 0,
-      "flavor_tags": [
-        "大口吃肉好快乐"
-      ],
+      "name": "麦咖啡™冰美式中杯",
+      "cat": "麦咖啡™",
+      "price": 11.9,
+      "signal": 76,
+      "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "冰浓浓黑巧中杯",
+      "cat": "麦咖啡™",
+      "price": 13.9,
+      "signal": 76,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "冰浓浓燕麦黑巧中杯",
+      "cat": "麦咖啡™",
+      "price": 15.9,
+      "signal": 76,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "纯悦",
+      "cat": "饮品",
+      "price": 7.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
     },
     {
       "name": "小杯鲜萃咖啡",
@@ -1294,76 +2319,196 @@
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "巨无霸三件套",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 36.5,
-      "signal": 0,
-      "flavor_tags": [
-        "100%纯牛肉"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "巨无霸四件套",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 58.5,
+      "name": "优品豆浆小杯",
+      "cat": "饮品",
+      "price": 9.5,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "板烧鸡腿堡四件套",
-      "cat": "鸡肉汉堡/卷",
-      "price": 57.0,
+      "name": "阳光柠檬红茶小杯",
+      "cat": "饮品",
+      "price": 9.5,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "汉堡开心乐园餐",
-      "cat": "开心乐园",
-      "price": 23.5,
+      "name": "雪碧（小杯）",
+      "cat": "饮品",
+      "price": 9.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "可乐",
+      "cat": "饮品",
+      "price": 9.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "纯牛奶(盒装)",
+      "cat": "饮品",
+      "price": 10.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "锡兰红茶",
+      "cat": "饮品",
+      "price": 11.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "100% 苹果汁(盒装)",
+      "cat": "饮品",
+      "price": 11.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "中杯怡泉+C",
+      "cat": "饮品",
+      "price": 11.5,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "麦咖啡™热美式中杯",
+      "cat": "饮品",
+      "price": 11.9,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "【美汁源】“黄金橙橙”",
+      "cat": "饮品",
+      "price": 13.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 3
+    },
+    {
+      "name": "麦咖啡™热奶铁中杯",
+      "cat": "饮品",
+      "price": 13.9,
       "signal": 0,
       "flavor_tags": [
-        "童年童款"
+        "更奶更浓"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "派",
-      "cat": "小食甜品/其他",
-      "price": 8.5,
+      "name": "咖啡阿芙佳朵",
+      "cat": "麦咖啡™",
+      "price": 15.0,
       "signal": 0,
       "flavor_tags": [
-        "派",
-        "第二份优惠"
+        "冰淇淋"
       ],
       "ingredients": [],
-      "official_desc": "过家家派对就要开始啦",
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
       "name": "浓缩咖啡",
@@ -1373,23 +2518,30 @@
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "热燕麦奶中杯",
+      "name": "抹茶阿芙佳朵",
       "cat": "麦咖啡™",
-      "price": 21.0,
+      "price": 15.0,
       "signal": 0,
       "flavor_tags": [
-        "其他"
+        "其他",
+        "冰淇淋"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
       "name": "热牛奶中杯",
@@ -1401,295 +2553,573 @@
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "牛肉堡单品精选",
-      "cat": "巨无霸牛鱼肉堡",
-      "price": 14.0,
-      "signal": 0,
-      "flavor_tags": [
-        "100%纯牛肉"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "牛肉汉堡四件套随心选",
-      "cat": "精选单人餐",
-      "price": 54.0,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "纯悦",
+      "name": "冰牛奶中杯",
       "cat": "饮品",
-      "price": 7.5,
+      "price": 19.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "纯牛奶(盒装)",
-      "cat": "饮品",
-      "price": 10.5,
+      "name": "卡布奇诺中杯",
+      "cat": "麦咖啡™",
+      "price": 21.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "脆脆薯条",
-      "cat": "小食甜品/其他",
-      "price": 16.0,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "脆薯饼",
-      "cat": "小食甜品/其他",
-      "price": 8.5,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "苹果片",
-      "cat": "小食甜品/其他",
-      "price": 7.0,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "蘸酱BFF四宫格小食盘",
-      "cat": "蘸酱炸鸡",
-      "price": 43.8,
+      "name": "热燕麦奶中杯",
+      "cat": "麦咖啡™",
+      "price": 21.0,
       "signal": 0,
       "flavor_tags": [
-        "蘸酱炸鸡新吃法"
+        "其他"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "蘸酱炸鸡",
-      "cat": "人气热卖",
-      "price": 11.9,
-      "signal": 0,
-      "flavor_tags": [
-        "韩式芝士风味酱上新"
-      ],
-      "ingredients": [],
-      "official_desc": "蘸酱炸鸡仅需11.9元起🍗",
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "蘸酱麦麦脆汁鸡",
-      "cat": "蘸酱炸鸡",
-      "price": 11.9,
-      "signal": 0,
-      "flavor_tags": [
-        "韩式芝士风味酱上新"
-      ],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "酥脆无双套餐",
-      "cat": "500大卡套餐",
-      "price": 20.0,
+      "name": "冰燕麦奶铁中杯",
+      "cat": "麦咖啡™",
+      "price": 23.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 3
     },
     {
-      "name": "锡兰红茶",
-      "cat": "饮品",
-      "price": 11.5,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "阳光柠檬红茶小杯",
-      "cat": "饮品",
-      "price": 9.5,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "雪碧（小杯）",
-      "cat": "饮品",
-      "price": 9.5,
-      "signal": 0,
-      "flavor_tags": [],
-      "ingredients": [],
-      "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "韩式烟熏芝士风味酱",
-      "cat": "蘸酱炸鸡",
-      "price": 3.0,
-      "signal": 0,
+      "name": "芝芝火腿扒堡组合",
+      "cat": "超值早餐",
+      "price": 9.9,
+      "signal": 100,
       "flavor_tags": [
-        "韩式风味",
-        "浓郁芝香"
-      ],
-      "ingredients": [],
-      "official_desc": "🆕韩式烟熏芝士风味酱",
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "鲜萃冰咖",
-      "cat": "饮品",
-      "price": 11.5,
-      "signal": 0,
-      "flavor_tags": [
-        "冰爽上新"
+        "超值早餐"
       ],
       "ingredients": [],
       "official_desc": null,
-      "has_review": false,
-      "avg": null,
-      "n": 0
-    },
-    {
-      "name": "麦乐鸡经典中套餐",
-      "cat": "炸鸡",
-      "price": 25.0,
-      "signal": 0,
-      "flavor_tags": [
-        "立省10.5元起"
+      "official_rounds": [
+        {
+          "name": "芝芝火腿扒堡",
+          "count": 1,
+          "options": [
+            "芝芝火腿扒堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
       ],
-      "ingredients": [],
-      "official_desc": null,
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 5
     },
     {
-      "name": "麦香鸡",
-      "cat": "鸡肉汉堡/卷",
-      "price": 17.0,
-      "signal": 0,
+      "name": "芝芝火腿扒堡",
+      "cat": "超值早餐",
+      "price": 13.0,
+      "signal": 100,
       "flavor_tags": [],
       "ingredients": [
-        "麦香鸡酱",
-        "生菜"
+        "吉士"
       ],
       "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 5
     },
     {
-      "name": "麦香鸡中套餐",
-      "cat": "鸡肉汉堡/卷",
-      "price": 28.0,
+      "name": "麦当劳奶昔",
+      "cat": "满分假日",
+      "price": 15.0,
+      "signal": 82,
+      "flavor_tags": [
+        "奶昔回归"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "麦咖啡™冰奶铁中杯",
+      "cat": "满分假日",
+      "price": 13.9,
+      "signal": 76,
+      "flavor_tags": [
+        "更奶更浓"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "芝芝火腿扒堡套餐",
+      "cat": "超值早餐",
+      "price": 19.0,
+      "signal": 52,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "芝芝火腿扒堡",
+          "count": 1,
+          "options": [
+            "芝芝火腿扒堡"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "厚松饼猪柳蛋堡三件套",
+      "cat": "满分假日",
+      "price": 29.9,
+      "signal": 52,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择主食",
+          "count": 2,
+          "options": [
+            "巧克力味厚松饼猪柳蛋堡",
+            "枫糖风味厚松饼猪柳蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "脆香油条组合",
+      "cat": "6折起早餐卡专区",
+      "price": 11.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "脆香油条",
+          "count": 1,
+          "options": [
+            "脆香油条"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "吉士蛋麦满分组合",
+      "cat": "6折起早餐卡专区",
+      "price": 12.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "吉士蛋麦满分",
+          "count": 1,
+          "options": [
+            "吉士蛋麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "一早现磨 超值二件套",
+      "cat": "满分假日",
+      "price": 14.9,
       "signal": 0,
       "flavor_tags": [
-        "立省10.5元起"
+        "金奖豆",
+        "现磨"
       ],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择早餐主食",
+          "count": 5,
+          "options": [
+            "吉士蛋麦满分",
+            "巧克力味厚松饼猪柳堡",
+            "大脆鸡扒麦满分",
+            "火腿扒麦满分",
+            "原味板烧鸡腿麦满分"
+          ]
+        },
+        {
+          "name": "选择麦咖啡饮品",
+          "count": 6,
+          "options": [
+            "麦咖啡™冰美式中杯",
+            "麦咖啡™热美式中杯",
+            "麦咖啡™冰奶铁中杯",
+            "麦咖啡™热奶铁中杯",
+            "冰燕麦奶铁中杯",
+            "热燕麦奶铁中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 5
     },
     {
-      "name": "麦麦脆汁鸡1块",
-      "cat": "炸鸡",
-      "price": 15.0,
+      "name": "原味板烧鸡腿麦满分组合",
+      "cat": "6折起早餐卡专区",
+      "price": 18.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        },
+        {
+          "name": "原味板烧鸡腿麦满分",
+          "count": 1,
+          "options": [
+            "原味板烧鸡腿麦满分"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 5
     },
     {
-      "name": "龙焰芝士棒鸡腿堡四件套",
-      "cat": "鸡肉汉堡/卷",
-      "price": 57.0,
+      "name": "大脆鸡扒麦满分套餐",
+      "cat": "6折起早餐卡专区",
+      "price": 18.0,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "大脆鸡扒麦满分",
+          "count": 1,
+          "options": [
+            "大脆鸡扒麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐套餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 5
     },
     {
-      "name": "龙焰鸡腿堡四件套",
-      "cat": "鸡肉汉堡/卷",
-      "price": 57.0,
+      "name": "火腿扒早安营养卷组合",
+      "cat": "6折起早餐卡专区",
+      "price": 18.5,
       "signal": 0,
       "flavor_tags": [],
       "ingredients": [],
       "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "火腿扒早安营养卷",
+          "count": 1,
+          "options": [
+            "火腿扒早安营养卷"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
       "has_review": false,
       "avg": null,
-      "n": 0
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "原味板烧鸡腿炒双蛋堡组合",
+      "cat": "6折起早餐卡专区",
+      "price": 21.0,
+      "signal": 0,
+      "flavor_tags": [],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "原味板烧鸡腿炒双蛋堡",
+          "count": 1,
+          "options": [
+            "原味板烧鸡腿炒双蛋堡"
+          ]
+        },
+        {
+          "name": "选择早餐组合饮料",
+          "count": 34,
+          "options": [
+            "小杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆小杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
+    },
+    {
+      "name": "满分厚松饼堡双人餐",
+      "cat": "满分假日",
+      "price": 39.9,
+      "signal": 0,
+      "flavor_tags": [
+        "松软香甜"
+      ],
+      "ingredients": [],
+      "official_desc": null,
+      "official_rounds": [
+        {
+          "name": "选择主食",
+          "count": 4,
+          "options": [
+            "巧克力味厚松饼猪柳堡",
+            "枫糖风味厚松饼猪柳堡",
+            "巧克力味厚松饼猪柳蛋堡",
+            "枫糖风味厚松饼猪柳蛋堡"
+          ]
+        },
+        {
+          "name": "选择主食",
+          "count": 2,
+          "options": [
+            "原味板烧鸡腿麦满分",
+            "猪柳蛋麦满分"
+          ]
+        },
+        {
+          "name": "选择早餐小食",
+          "count": 3,
+          "options": [
+            "脆薯饼",
+            "脆香油条",
+            "德式图林根香肠"
+          ]
+        },
+        {
+          "name": "选择早餐套餐饮料",
+          "count": 32,
+          "options": [
+            "大杯鲜萃咖啡",
+            "鲜萃冰咖",
+            "优品豆浆大杯",
+            "香草风味奶昔",
+            "草莓风味奶昔",
+            "冰浓浓黑巧中杯"
+          ]
+        }
+      ],
+      "official_desc_date": null,
+      "has_review": false,
+      "avg": null,
+      "n": 0,
+      "cat_rank": 5
     }
-  ]
+  ],
+  "truth_note": "真香榜：基于 2026-10-25 采集的 34 篇真实评价，与当前时段菜单无关（评价是历史快照）",
+  "hot_note": "人气榜：门店当前时段在售菜单，随麦当劳每日轮换"
 };</script>
 <script>
 /* ================= 数据 ================= */
@@ -1817,6 +3247,13 @@ function detailHtml(it){
     DENY.some(d=>d.re.test(t)&&(it.real||[]).some(r=>d.neg.test(r))));
   const ing=it.ingredients&&it.ingredients.length?`<div class="d-ings"><b>官方配料：</b>${it.ingredients.map(esc).join('、')}</div>`:'';
   const desc=it.official_desc?`<div class="d-box"><div class="dh">麦当劳官方介绍</div><div class="d-desc">${esc(it.official_desc)}</div></div>`:'';
+  const rounds=(it.official_rounds&&it.official_rounds.length)?`<div class="d-box d-struct">
+      <div class="dh">官方套餐结构 · 每一档都能换</div>
+      ${it.official_rounds.map(r=>`<div class="sr">
+        <div class="sr-h">${esc(r.name)}<span>${r.count} 选</span></div>
+        <div class="sr-o">${(r.options||[]).slice(0,6).map(esc).join(' / ')}</div>
+      </div>`).join('')}
+    </div>`:'';
   const ugc=(it.ugc&&it.ugc.length)?`<div class="d-ugc"><div class="uh">真实评价原文<span>${it.ugc.length} 条</span></div>
     ${it.ugc.map(u=>`<div class="urow"><div class="ubadge"><div class="s ${scoreCls(u.score)}">${u.score}.0</div><div class="w">★</div></div>
       <div><div class="utext">${u.text}</div><div class="usrc">— ${esc(u.source)}</div></div></div>`).join('')}</div>`:'';
@@ -1842,6 +3279,7 @@ function detailHtml(it){
       </div>
     </div>
     ${desc}
+    ${rounds}
     ${spread}
     <div class="d-vote">
       <div class="vh">这顿你觉得值不值？<span class="cnt" id="vc-${encodeURIComponent(it.name)}">${mine?'已投票':'还没投'}</span></div>
