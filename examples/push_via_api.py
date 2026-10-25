@@ -61,11 +61,16 @@ def main():
     repo = sys.argv[1]
     root = sys.argv[2]
     files = []
+    # 凭据文件绝不能进仓库
+    SKIP_FILES = {".env", ".env.local", ".env.production"}
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames
                        if d not in (".git", "__pycache__", ".venv", "node_modules")]
         for fn in filenames:
             if fn.endswith((".pyc", ".pyo")):
+                continue
+            if fn in SKIP_FILES:
+                print(f"  ! 跳过凭据文件 {fn}", flush=True)
                 continue
             full = os.path.join(dirpath, fn)
             rel = os.path.relpath(full, root).replace("\\", "/")
