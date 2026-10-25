@@ -159,6 +159,41 @@ def main():
     stale3 = [b for b in bad3 if b != str(n_hot)]
     check("README 目录结构在售数", not stale3, f"发现 {stale3}" if stale3 else "")
 
+    print("\n=== 6. 其它文档的过期数字 ===")
+    # 文案 / 技术长文 / 工作上下文里也会引用在售数与覆盖率，
+    # 菜单轮换后一样会过期 —— 一并扫。
+    n_desc = sum(1 for x in home["hot"] if x.get("official_desc"))
+    n_rounds = sum(1 for x in home["hot"] if x.get("official_rounds"))
+    n_either = sum(1 for x in home["hot"]
+                   if x.get("official_desc") or x.get("official_rounds"))
+    n_img = sum(1 for x in home["hot"] if x.get("image"))
+
+    docs = ["docs/SOCIAL_POSTS.md", "docs/TECH_ARTICLE.md",
+            "workbuddy.md", "skills/mcd-flavor-index/workbuddy.md"]
+    for rel in docs:
+        p = os.path.join(ROOT, rel)
+        if not os.path.exists(p):
+            continue
+        t = open(p, encoding="utf-8").read()
+        problems = []
+        # 「N 个在售商品」「N 个商品」
+        for m in re.findall(r"(\d{2,3}) 个在售商品", t):
+            if m != str(n_hot):
+                problems.append(f"{m} 个在售商品")
+        for m in re.findall(r"拉 (\d{2,3}) 个在售商品", t):
+            if m != str(n_hot):
+                problems.append(f"拉 {m} 个在售商品")
+        # 覆盖率 A/B
+        for a, b in re.findall(r"(\d{1,3})/(\d{2,3})", t):
+            if b == "115" and a != str(n_either):
+                problems.append(f"覆盖率 {a}/{b}")
+        # 营养库条数
+        for m in re.findall(r"营养库 (\d{2,3}) 条", t):
+            if m != "160":
+                problems.append(f"营养库 {m} 条")
+        check(f"{rel} 无过期数字", not problems,
+              "、".join(problems) if problems else "")
+
     print("\n" + "=" * 52)
     if FAIL:
         print(f"❌ {len(FAIL)} 项不通过：")
