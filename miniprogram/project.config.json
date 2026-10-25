@@ -1,10 +1,14 @@
 {
-  "description": "WorkBuddy 原生微信小程序基础模板",
+  "description": "麦门真香榜 · 麦当劳真实口碑对账器（微信小程序版）",
   "packOptions": {
     "ignore": [
       {
         "type": "folder",
         "value": ".workbuddy"
+      },
+      {
+        "type": "folder",
+        "value": "node_modules"
       }
     ],
     "include": []
@@ -14,10 +18,18 @@
     "es6": true,
     "minified": true,
     "postcss": true,
-    "urlCheck": true
+    "urlCheck": true,
+    "coverView": true,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
+  "libVersion": "3.0.0",
   "appid": "touristappid",
-  "projectname": "workbuddy-native-basic",
-  "miniprogramRoot": "./"
+  "projectname": "mcd-flavor-index",
+  "miniprogramRoot": "./",
+  "condition": {}
 }
