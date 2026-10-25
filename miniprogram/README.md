@@ -34,8 +34,8 @@
 
 | 内容 | 来源 |
 |---|---|
-| 官方风味标签 | 麦当劳 MCP `query-meals` 的 `tags` 字段（44 种官方标注） |
-| 真实评价 | 34 篇公开 UGC（小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研 / 新厨房） |
+| 官方风味标签 | 麦当劳 MCP `query-meals` 的 `tags` 字段（实测 66 种官方标注，菜单每日轮换） |
+| 真实评价 | 49 篇公开 UGC（小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研 / 新厨房） |
 | 价格 | 麦当劳 MCP `calculate-price` 官方核价 |
 
 `data/flavor.json` 是预置数据，与 GitHub 版 `mcd-flavor-index` 的 `data_ugc.json` 同源。
@@ -53,7 +53,7 @@ mcd-flavor-mp/
 ├── app.js / app.json / app.wxss
 ├── project.config.json
 ├── data/
-│   └── flavor.json              # 预置榜单数据（6 商品 / 34 篇评价）
+│   └── flavor.json              # 预置榜单数据（9 商品 / 49 篇评价 + 118 在售人气榜）
 ├── assets/
 │   ├── icons/                   # tabBar 图标
 │   └── food-*.png               # 官方商品图（MCP image 字段）
