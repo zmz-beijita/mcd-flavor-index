@@ -54,7 +54,7 @@
 | 发现 | 实测证据 |
 |---|---|
 | 官方风味标签 66 种（实测） | `query-meals` 的 `tags` 字段 |
-| 营养库 158 条，含钠 | `list-nutrition-foods` |
+| 营养库 160 条，含钠 | `list-nutrition-foods` |
 | 真实评价严重分裂 | 同一商品 5 星与 2 星并存（49 篇样本） |
 | `roundList.round` 必须传 id | 传中文名 → 服务端 500 |
 | `searchType` 必须为 2 | 默认 1 → 「收藏餐厅列表为空」 |
