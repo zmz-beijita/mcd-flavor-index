@@ -1,14 +1,5 @@
 const store = require('../../utils/flavor-store.js');
 
-const IMAGES = {
-    '龙焰芝士棒鸡腿堡': '/assets/food-521953.png',
-    '巨无霸': '/assets/food-1100.png',
-    '板烧鸡腿堡': '/assets/food-1406.png',
-    '麦辣鸡腿堡': '/assets/food-1440.png',
-    '双层吉士汉堡': '/assets/food-1120.png',
-    '麦香鸡汉堡': '/assets/food-9900005453.png',
-};
-
 Page({
     data: {
         item: null,
@@ -62,7 +53,7 @@ Page({
                     officialRounds: raw.official_rounds || [],
                     officialDesc: raw.official_desc || '',
                     real: raw.real || [],
-                    img: IMAGES[raw.name] || '',
+                    img: raw.local_image || '',
                     rangeLeft: ((raw.min - 2) / 3 * 100).toFixed(1),
                     rangeWidth: (((raw.max - raw.min) / 3) * 100).toFixed(1),
                     markerLeft: (((avg - 2) / 3) * 100).toFixed(1),
