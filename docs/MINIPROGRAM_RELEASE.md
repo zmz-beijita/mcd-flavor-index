@@ -47,8 +47,13 @@ WorkBuddy 已经为这个项目注册好小程序应用（`wbapp_4KmyljumDI0OOe6
 编辑 `miniprogram/project.config.json`，把 `appid` 换成你的真实 AppID：
 
 ```json
-"appid": "wx1234567890abcdef",
+"appid": "wx在此填入你的AppID",
 ```
+
+> ⚠️ **别照抄示例里的占位符**。微信 AppID 的格式是 `wx` 开头 + 16 位十六进制字符，
+> 如果你随手写一个符合这个格式的示例值，GitHub 的 Secret Scanning 会把它当成
+> 真密钥报警（这是**误报**，但会一直发邮件提醒）。
+> 用上面这种带中文的占位符就不会被扫出来。
 
 > 现在填的是 `touristappid`（游客模式），只能预览不能上传。
 > 如果你还没注册 AppID，**先别改**，用路线一就够了。
