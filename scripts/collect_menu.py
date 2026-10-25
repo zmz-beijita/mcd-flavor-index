@@ -38,12 +38,13 @@ def collect(cli, store_code, workers=5):
 
     def fetch(item):
         code, name = item
-        rounds, ings = [], []
+        rounds, ings, image = [], [], ""
         for _ in range(3):
             try:
                 d = cli.call("query-meal-detail",
                             {"storeCode": store_code, "orderType": "1",
                              "beType": 1, "code": code})
+                image = d.get("image") or ""
                 for r in (d.get("rounds") or []):
                     if r.get("name"):
                         rounds.append({
@@ -60,12 +61,12 @@ def collect(cli, store_code, workers=5):
                 break
             except McdError:
                 continue
-        return name, rounds, ings
+        return name, rounds, ings, image
 
     detail = {}
     with cf.ThreadPoolExecutor(max_workers=workers) as ex:
-        for i, (name, rounds, ings) in enumerate(ex.map(fetch, codes), 1):
-            detail[name] = (rounds, ings)
+        for i, (name, rounds, ings, image) in enumerate(ex.map(fetch, codes), 1):
+            detail[name] = (rounds, ings, image)
             if i % 20 == 0:
                 print(f"  {i}/{len(codes)}", flush=True)
 
@@ -74,8 +75,9 @@ def collect(cli, store_code, workers=5):
         name = p.get("name")
         if not name:
             continue
-        rounds, ings = detail.get(name, ([], []))
+        rounds, ings, image = detail.get(name, ([], [], ""))
         out[name] = {
+            "image": image,
             "code": code,
             "price": round(p["price"] / 100, 2) if p.get("price") else None,
             "cats": p.get("categories", []),
@@ -100,10 +102,12 @@ def collect(cli, store_code, workers=5):
     n_rounds = sum(1 for v in out.values() if len(v["rounds"]) >= 2)
     n_ings = sum(1 for v in out.values() if v["ings"])
     n_tags = sum(1 for v in out.values() if v["tags"])
+    n_img = sum(1 for v in out.values() if v.get("image"))
     print(f"\n已写入 {path}")
     print(f"  商品总数        {len(out)}")
     print(f"  有官方风味标签  {n_tags}")
     print(f"  有官方配料清单  {n_ings}")
+    print(f"  有官方商品图    {n_img}")
     print(f"  有套餐结构说明  {n_rounds}")
     return out
 
