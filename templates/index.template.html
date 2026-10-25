@@ -108,6 +108,15 @@
   .d-desc{font-size:13.5px;line-height:1.8;color:var(--ink);font-style:normal}
   .d-desc .src{display:block;font-size:11px;color:#B9ADA0;margin-top:5px;font-style:normal}
 
+  /* 官方套餐结构 */
+  .d-struct{background:#F7FAFD;border-color:#D6E7F5}
+  .d-struct .dh{color:#3A7CA8}
+  .sr{padding:9px 0;border-top:1.5px solid #E4EEF7}
+  .sr:first-of-type{border-top:none;padding-top:0}
+  .sr-h{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;font-weight:800;color:#231F20}
+  .sr-h span{font-family:var(--mono);font-size:11.5px;color:#7FA8C4;font-weight:600}
+  .sr-o{font-size:12.5px;color:#5A6570;line-height:1.75;margin-top:3px}
+
   /* 离散度 */
   .d-spread{margin-top:16px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:15px 18px}
   .d-spread .sh{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:12px}
@@ -224,14 +233,14 @@
   <!-- 真香榜 -->
   <div class="rank-hd">
     <h2>🏆 真香榜 <span class="em" id="truthCount">—</span></h2>
-    <div class="note">按<b>真实评价均分</b>排序 · 点条目展开详情与投票 · 分数色：<span style="color:var(--green)">绿 ≥4.3</span> / <span style="color:var(--yellow-d)">黄 3.8–4.2</span> / <span style="color:var(--red)">红 &lt;3.8</span></div>
+    <div class="note">按<b>真实评价均分</b>排序 · 点条目展开详情与投票 · 分数色：<span style="color:var(--green)">绿 ≥4.3</span> / <span style="color:var(--yellow-d)">黄 3.8–4.2</span> / <span style="color:var(--red)">红 &lt;3.8</span><br><span style="color:#B9ADA0">评价为 2026-10-25 采集的历史快照，不随时段菜单变化</span>
   </div>
   <div class="rank-list" id="truthList"></div>
 
   <!-- 人气榜 -->
   <div class="rank-hd" style="margin-top:38px">
     <h2>📋 人气榜 <span class="em" id="hotCount">—</span></h2>
-    <div class="note">门店<b>全部在售商品</b>，按麦当劳官方标签里的销量信号排序（人气/爆款/上新/粉丝之选）· 有真实评价的显示真香分</div>
+    <div class="note">门店<b>当前时段在售</b>的全部商品（每日轮换），按品类与官方销量信号排序 · 有真实评价的显示真香分</div>
   </div>
   <div class="rank-list" id="hotList"></div>
 
@@ -384,6 +393,13 @@ function detailHtml(it){
     DENY.some(d=>d.re.test(t)&&(it.real||[]).some(r=>d.neg.test(r))));
   const ing=it.ingredients&&it.ingredients.length?`<div class="d-ings"><b>官方配料：</b>${it.ingredients.map(esc).join('、')}</div>`:'';
   const desc=it.official_desc?`<div class="d-box"><div class="dh">麦当劳官方介绍</div><div class="d-desc">${esc(it.official_desc)}</div></div>`:'';
+  const rounds=(it.official_rounds&&it.official_rounds.length)?`<div class="d-box d-struct">
+      <div class="dh">官方套餐结构 · 每一档都能换</div>
+      ${it.official_rounds.map(r=>`<div class="sr">
+        <div class="sr-h">${esc(r.name)}<span>${r.count} 选</span></div>
+        <div class="sr-o">${(r.options||[]).slice(0,6).map(esc).join(' / ')}</div>
+      </div>`).join('')}
+    </div>`:'';
   const ugc=(it.ugc&&it.ugc.length)?`<div class="d-ugc"><div class="uh">真实评价原文<span>${it.ugc.length} 条</span></div>
     ${it.ugc.map(u=>`<div class="urow"><div class="ubadge"><div class="s ${scoreCls(u.score)}">${u.score}.0</div><div class="w">★</div></div>
       <div><div class="utext">${u.text}</div><div class="usrc">— ${esc(u.source)}</div></div></div>`).join('')}</div>`:'';
@@ -409,6 +425,7 @@ function detailHtml(it){
       </div>
     </div>
     ${desc}
+    ${rounds}
     ${spread}
     <div class="d-vote">
       <div class="vh">这顿你觉得值不值？<span class="cnt" id="vc-${encodeURIComponent(it.name)}">${mine?'已投票':'还没投'}</span></div>
