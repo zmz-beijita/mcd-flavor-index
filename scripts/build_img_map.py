@@ -18,6 +18,7 @@ import json
 import os
 import re
 import urllib.parse
+import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSET_DIR = os.path.join(ROOT, "assets", "mcd-brand")
@@ -121,15 +122,48 @@ def main():
         if len(lst) == 1:
             mapping[nm] = "assets/mcd-brand/" + lst[0][1]
 
-    # 只保留本地文件真实存在的
+    # 补下载：菜单轮换后会有新品，官方图地址在 menu_full.json 里是现成的。
+    # 不补的话，定时更新后新上架的商品会缺图（页面走分类占位）。
+    #
+    # 顺序很重要：先按「文件是否真的存在」过滤，再对缺图的商品去下载。
+    # 反过来做会死循环——第一轮 mapping 里已经有新品，但文件还没下，
+    # 于是被误判为「已处理」而跳过下载。
     mapping = {k: v for k, v in mapping.items()
                if os.path.exists(os.path.join(ROOT, v))}
+
+    downloaded = 0
+    for name, m in menu.items():
+        if name in mapping:
+            continue
+        ln = local_name(m.get("image", ""))
+        if not ln:
+            continue
+        url = m["image"]
+        dst = os.path.join(ASSET_DIR, ln)
+        if os.path.exists(dst):
+            # 文件已在本地图里，只是上一轮映射没建立（如别名商品）
+            mapping[name] = "assets/mcd-brand/" + ln
+            continue
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "wb"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                data = r.read()
+            if len(data) < 500:          # 明显不是图片（多半是错误页）
+                continue
+            with open(dst, "wb") as f:
+                f.write(data)
+            mapping[name] = "assets/mcd-brand/" + ln
+            downloaded += 1
+        except Exception as e:
+            print(f"  ! 下载失败 {name}: {str(e)[:60]}", flush=True)
 
     out = os.path.join(ROOT, "data", "img_map.json")
     with open(out, "w", encoding="utf-8") as f:
         json.dump(mapping, f, ensure_ascii=False, indent=1, sort_keys=True)
 
     print(f"映射 {len(mapping)} 条（菜单 {len(menu)} 个商品）")
+    if downloaded:
+        print(f"新下载商品图 {downloaded} 张")
     missing = [k for k in menu if k not in mapping]
     print(f"无本地图 {len(missing)} 个")
     if missing:
