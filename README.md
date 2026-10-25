@@ -17,6 +17,8 @@
 
 **49 篇真实评价 · 9 款有口碑商品 · 118 个当前在售 · 官方标签落差逐条对账**
 
+**[▶ 在线体验：zmz-beijita.github.io/mcd-flavor-index](https://zmz-beijita.github.io/mcd-flavor-index/)**（免 Token，打开即玩）
+
 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品
 
 ---
@@ -50,15 +52,20 @@
 
 ## ✍️ 麦门广场：你能投票，也能写理由
 
-<img src="docs/screenshot-detail.png" width="100%" alt="展开详情：官方风味标签与真实共识对账、官方配料清单、评分离散度条、投票区、评价原文">
+<img src="docs/screenshot-plaza.png" width="100%" alt="麦门广场：可就地发帖、按商品分组展示 49 条真实评价">
 
-每个商品都能投 **真香 / 一般 / 踩雷**，并写一句理由（≤60 字），发到广场。
+**两个地方都能评论**——展开商品卡可以投票写理由，广场页顶部也有一张发帖框，
+选商品 → 投票 → 写理由 → 发出，立刻按商品分组出现在广场里。
 
 **理由才是可传播的内容。** 麦门已有的梗就是这么来的：
 
 > 「宣传图的拉丝完全是诈骗来的」
 > 「两根没有奶酪的芝士棒在麦当劳值三块钱」
 > 「芝士棒是空心的，只有面粉皮子」
+
+广场里的 49 条种子评价全部来自公开平台（小红书 / 什么值得买 / 大众点评 / 微信公众号 /
+今日头条 / 现食研 / 新厨房 / 携程点评 / 新浪看点 / 搜狐美食），每条都标注来源，
+差评也必须给出——不筛掉负面评价。
 
 投票与投稿存在浏览器本地，不上传。
 
@@ -84,7 +91,7 @@
 | `calculate-price` | **唯一可信的价格来源**（单位：分） |
 | `query-nearby-stores` | 按位置搜门店（`searchType` 必须是 2） |
 | `campaign-calendar` | 官方活动文案（新品描述、联名、优惠预告） |
-| `list-nutrition-foods` | 158 条营养数据（副维度：钠 / 蛋白 / 热量） |
+| `list-nutrition-foods` | 160 条营养数据（副维度：钠 / 蛋白 / 热量） |
 | `now-time-info` | 确认当前时间 |
 
 详见 [`MCP_INTEGRATION.md`](skills/mcd-flavor-index/MCP_INTEGRATION.md)，含 **8 条实测踩坑记录**。
@@ -125,7 +132,9 @@ mcd-flavor-index/
 ├── docs/                         # 截图与社交预览图
 ├── scripts/
 │   ├── collect_menu.py            # 采集门店菜单全量官方信息
-│   └── build_home_data.py         # 生成首页双榜数据
+│   ├── build_home_data.py         # 生成首页双榜数据
+│   ├── build_img_map.py           # 从菜单数据推导「商品名 → 本地图片」映射
+│   └── sync_miniprogram.py        # 同步数据到微信小程序
 ├── miniprogram/                  # 微信小程序版（原生，零依赖）
 └── skills/mcd-flavor-index/
     ├── SKILL.md                  # Skill 主流程与铁律
@@ -151,8 +160,9 @@ open index.html          # macOS
 # Windows：直接双击 index.html
 ```
 
-零依赖、零构建、单文件。**商品图已全部下载到 `assets/mcd-brand/`（117 张官方图），离线可用**；
-远程 CDN 地址作为兜底，图挂了会自动切换。
+零依赖、零构建、单文件。**商品图已全部下载到 `assets/mcd-brand/`（116 张官方图），离线可用**；
+远程 CDN 地址作为兜底，图挂了会自动切换。图片映射由 `scripts/build_img_map.py` 从菜单数据自动推导，
+菜单每日轮换后重跑一次即可，不会失配。
 
 ### 作为 WorkBuddy Skill 使用
 
@@ -182,10 +192,16 @@ export MCD_MCP_TOKEN=你的token
 # 采集门店菜单全量官方信息（标签 / 配料 / 套餐结构 / 核价）
 python scripts/collect_menu.py --store 1450713
 
-# 重新生成首页数据与页面
+# 重新生成首页数据、图片映射与页面
 python scripts/build_home_data.py
+python scripts/build_img_map.py
 python skills/mcd-flavor-index/scripts/flavor_index.py --render
+
+# 同步到微信小程序（数据 / 图片映射 / 资源文件）
+python scripts/sync_miniprogram.py
 ```
+
+> 全部脚本零第三方依赖，只用 Python 标准库。
 
 ## 📄 许可证
 
