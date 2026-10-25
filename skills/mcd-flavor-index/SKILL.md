@@ -82,10 +82,10 @@ allowed-tools:
 | 真实用户评价 | 小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研，采集于 2026-10-25 | `data_ugc.json` |
 | 官方风味标签 | 麦当劳 MCP `query-meals` 的 `tags` 字段 | 运行时调用 |
 | 官方价格 | 麦当劳 MCP `calculate-price` | 运行时调用 |
-| 营养数据 | 麦当劳 MCP `list-nutrition-foods`（158 条） | 运行时调用 |
+| 营养数据 | 麦当劳 MCP `list-nutrition-foods`（160 条） | 运行时调用 |
 | 餐品图 | MCP `query-meal-detail` 的 `image` 字段（官方 CDN） | `assets/mcd-brand/` |
 
-**样本量说明**：当前基线为 34 篇评价 / 6 个商品。样本量小是本项目的已知局限，
+**样本量说明**：当前基线为 49 篇评价 / 9 个商品。样本量小是本项目的已知局限，
 页面上必须如实展示 n 值，不夸大结论强度。
 
 ## 脚本
