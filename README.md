@@ -1,54 +1,34 @@
 # 麦门真香榜 · McDonald's Flavor Index
 
-> **官方说「浓郁奶香拉丝芝士」，真实评价说「宣传图的拉丝完全是诈骗来的」。**
+<p align="center">
+  <img src="docs/social-preview.png" width="100%" alt="官方说的 vs 大家说的：麦当劳真实口碑对账器">
+</p>
+
+> ## 官方说「浓郁奶香拉丝芝士」
+> ## 真实评价说「宣传图的拉丝完全是诈骗来的」
 >
-> 麦当劳菜单接口和真实用户口碑之间那道裂缝，就是这个项目要量出来的东西。
+> **同一个汉堡，5 星和 2 星同时存在。** 麦当劳菜单接口和真实用户口碑之间那道裂缝，
+> 就是这个项目要量出来的东西。
 
 [![MCD FLAVOR INDEX](https://img.shields.io/badge/MCD-FLAVOR%20INDEX-DA291C?style=flat-square)](https://github.com/zmz-beijita/mcd-flavor-index)
 [![MCP](https://img.shields.io/badge/MCP-mcp.mcd.cn-FFC72C?style=flat-square)](https://mcp.mcd.cn)
-[![零依赖](https://img.shields.io/badge/dependencies-stdlib%20only-brightgreen?style=flat-square)](#安装)
+[![零依赖](https://img.shields.io/badge/dependencies-stdlib%20only-brightgreen?style=flat-square)](#-免-token-打开即玩)
 [![免Token体验](https://img.shields.io/badge/体验-免%20Token-orange?style=flat-square)](#-免-token-打开即玩)
+
+**34 篇真实评价 · 96 个在售商品 · 3 处官方标签落差 · 1 款商品 5★↔2★ 两极分化**
 
 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品
 
 ---
 
-## 这是什么
+## 🎬 30 秒看懂
 
-一个**把官方宣传和真实口碑摆在一起对账**的麦当劳口味索引。
+<img src="docs/screenshot-hero.png" width="100%" alt="麦门真香榜首页：真香榜为主体，凸起按钮，可点商品卡展开详情与投票">
 
-市面上的麦当劳工具几乎都在回答同一个问题：「这一单怎么点最省」。
-本项目换个方向——**点餐决策的真正起点不是价格，是「我今天想吃什么味」，而官方推荐的东西不一定真好吃。**
+**打开就能玩，什么都不用装、不用填 Token。** 点商品卡展开：官方风味标签 ↔ 真实共识对照、
+官方配料清单、评分离散度条、评价原文，**还有一个能投票写理由的评论区**。
 
-具体做法：
-
-1. 从麦当劳 MCP `query-meals` 拿**官方风味标签**（44 种，是麦当劳自己写在菜单接口里的）
-2. 从公开用户评价（小红书 / 什么值得买 / 大众点评 / 微信公众号 / 今日头条 / 现食研）拿**真实口碑**
-3. 算出**真香指数**（真实评价评分的算术平均）、**评分离散度**、**官方标签落差**
-4. 把两边逐条摊开——**差评原文必须给出来，均分不算数**
-
-## 📱 微信小程序版
-
-同款数据的小程序实现，三个 Tab：**真香榜 / 麦门广场 / 我的**。
-
-「麦门广场」借鉴了爆款小程序「钱包请等等」的核心机制——**投票 + 理由**：
-光点赞不够，要让人写一句理由，理由才是可传播的内容。
-
-问法不是「该不该买」（用户没这动机），而是：
-
-> **「这顿你觉得值不值？」** → 真香 / 一般 / 踩雷 + 一句理由（≤60 字）→ 发到麦门广场
-
-纯原生微信小程序，零 npm 依赖、零云服务，投票与投稿只存本机。
-源码见 [`miniprogram/`](miniprogram/)。
-
-## 💡 一句话看懂
-
-麦当劳菜单接口给「龙焰芝士棒鸡腿堡」打的是<b>「浓郁奶香拉丝芝士」「趁热拉丝」</b>，
-而 34 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。
-
-**麦门真香榜把两边的账摊开，然后给你排个座次。**
-
-### 🏆 真香榜（6 个有真实评价的商品）
+## 🏆 真香榜（按真实评价均分排序）
 
 | 排名 | 商品 | 真香指数 | 评分区间 | 样本 | 官方核价 | 官方风味标签 |
 |:--:|---|:--:|:--:|:--:|:--:|---|
@@ -59,59 +39,75 @@
 | 5 | 龙焰芝士棒鸡腿堡 | **3.7** | 2.0–5.0 | n=6 | ¥29.90 | 浓郁奶香拉丝芝士 / 韩式辣椒黄油风味 / 上新 |
 | 6 | 麦香鸡汉堡 | **3.5** | 3.0–4.0 | n=4 | ¥17.00 | 人气 / 单炸鸡类 |
 
-点任意条目**就地展开**：官方风味标签 ↔ 真实评价共识对照、官方配料清单、评分离散度条、
-**投票区（真香 / 一般 / 踩雷 + 写一句理由）**、评价原文摘录。
+**为什么龙焰芝士棒排倒数第一？** 它的官方标签写着「浓郁奶香拉丝芝士」「趁热拉丝」，
+但 6 篇真实评价里有人说「层次感拉满」，有人说「芝士棒是空心的，只有面粉皮子」——
+**评分离散度 3.0（满分 3），全榜分歧最大。** 均分 3.7 只是平均，掩盖不了这个分歧。
 
-### 📋 人气榜（门店全部在售商品）
+<img src="docs/screenshot-rank.png" width="100%" alt="真香榜：排名号、真香指数、样本量、评分区间、官方风味标签、分歧标记">
 
-**76 个商品**，按麦当劳官方标签里的销量信号排序（人气 / 爆款 / 上新 / 粉丝之选 / 限时特惠）。
-有真实评价的显示真香分，没有的标「待评价」。
+## ✍️ 麦门广场：你能投票，也能写理由
 
-> 两个榜解决两个问题：**真香榜回答「什么真的好吃」，人气榜回答「麦当劳自己在推什么」。**
+<img src="docs/screenshot-detail.png" width="100%" alt="展开详情：官方风味标签与真实共识对账、官方配料清单、评分离散度条、投票区、评价原文">
 
-### ✍️ 麦门广场
+每个商品都能投 **真香 / 一般 / 踩雷**，并写一句理由（≤60 字），发到广场。
 
-所有真实评价 + 你的投稿合成一条流，可按「👍 好评 5 星 / 👎 差评 ≤3 星」筛选。
-投票和理由存在浏览器本地，不上传。
+**理由才是可传播的内容。** 麦门已有的梗就是这么来的：
 
-<img src="docs/screenshot-hero.png" width="100%" alt="麦门真香榜首页：排行榜为主体，76 个在售商品统计">
+> 「宣传图的拉丝完全是诈骗来的」
+> 「两根没有奶酪的芝士棒在麦当劳值三块钱」
+> 「芝士棒是空心的，只有面粉皮子」
 
-<img src="docs/screenshot-rank.png" width="100%" alt="真香榜：排名号、真香指数、样本量、评分区间、官方风味标签">
+投票与投稿存在浏览器本地，不上传。
 
-<img src="docs/screenshot-detail.png" width="100%" alt="展开详情：官方风味标签与真实共识对账、离散度条、投票区、评价原文">
+## 📋 人气榜（当前时段在售全量）
+
+**96 个商品**，覆盖门店当前在售的每一项，按品类与官方销量信号排序。
+有真实评价的显示真香分，没有的标「待评价」——你投完，它就成了真香分。
+
+> 麦当劳菜单**每日轮换**（凌晨切早餐、上午切正餐），所以人气榜是「现在能点什么」，
+> 真香榜是「历史上大家怎么说」。两个时间维度，两个用途。
+
+## 📱 微信小程序版
+
+同款数据的小程序实现，三个 Tab：**真香榜 / 麦门广场 / 我的**。
+纯原生微信小程序，零 npm 依赖、零云服务，投票与投稿只存本机。源码见 [`miniprogram/`](miniprogram/)。
 
 ## 🔌 用了哪些 MCP 工具
 
 | 工具 | 用途 |
 |---|---|
-| `query-meals` | 拿在售商品与**官方风味标签**（`tags` 字段，44 种） |
-| `query-meal-detail` | 拿套餐结构、子项差价、官方商品图地址 |
-| `calculate-price` | **唯一可信的价格来源**，单位是分 |
-| `query-nearby-stores` | 按位置搜门店（`searchType=2` 才是按位置搜） |
-| `list-nutrition-foods` | 158 条营养数据（副维度：钠/蛋白/热量） |
+| `query-meals` | **官方风味标签**（`tags` 字段，麦当劳自己写的）与在售分类 |
+| `query-meal-detail` | **官方配料清单**（`modification`）与**官方套餐结构**（`rounds`，每一档能换什么） |
+| `calculate-price` | **唯一可信的价格来源**（单位：分） |
+| `query-nearby-stores` | 按位置搜门店（`searchType` 必须是 2） |
+| `campaign-calendar` | 官方活动文案（新品描述、联名、优惠预告） |
+| `list-nutrition-foods` | 158 条营养数据（副维度：钠 / 蛋白 / 热量） |
 | `now-time-info` | 确认当前时间 |
 
-详见 [`MCP_INTEGRATION.md`](MCP_INTEGRATION.md)，含 8 条实测踩坑记录。
+详见 [`MCP_INTEGRATION.md`](skills/mcd-flavor-index/MCP_INTEGRATION.md)，含 **8 条实测踩坑记录**。
 
 ## 💡 为什么不是"又一个点餐助手"
 
 | | 点餐助手 | 麦门真香榜 |
 |---|---|---|
-| 回答的问题 | 怎么点最省 | 官方说的和实际差多少 |
+| 回答的问题 | 怎么点最省 | **官方说的和实际差多少** |
 | 数据来源 | 菜单 + 券 | 菜单**官方标签** + **真实评价原文** |
 | 是否需要消费记录 | 需要 | 不需要 |
-| 产物 | 一个订单 | 一份可核查的口碑审计 + 可下单的方案 |
-| 别人做过吗 | 133+ 个项目 | 口味方向已有 `mcd-flavor-scout`（7星，手工标 119 款）、`mcd-mood-palette`（154星）；<br>**「官方标签 vs 真实口碑」的对账维度无人做** |
+| 产物 | 一个订单 | **可核查的口碑审计 + 可下单的方案** |
+| 互动 | 无 | 投票 + 写理由 + 广场 |
 
-**关键差异**：同赛道已有项目手工标注口味（不可溯源、会过时），本项目的官方标签**直接来自 MCP 接口、每日自动更新**，并且**多出"官方 vs 真实"这道对账**。
+**同赛道已有** `mcd-flavor-scout`（7 星，手工标 119 款口味）与 `mcd-mood-palette`（154 星，心情 × 营养打分）。
+两者的口味数据都是**手工标注**的，不可溯源、不会更新。
+本项目的官方标签**直接来自 MCP 接口、每日自动更新**，
+并且多做一件没人做的事——**「官方 vs 真实」这道对账**。
 
 ## 📐 方法与边界
 
 - **真香指数** = 该商品全部真实评价评分的算术平均（5 分制，采用各平台原生评分，未二次折算）
-- **评分离散度** = 该商品最高星 − 最低星
-- **官方标签落差** = 官方标签声称的效果，是否被真实评价否定（关键词规则公开在 `flavor_index.py`）
+- **评分离散度** = 最高星 − 最低星，越大说明口碑越分裂
+- **官方标签落差** = 官方标签声称的效果，是否被真实评价否定（关键词规则公开在 `build_home_data.py`，不做黑箱）
+- 样本量与评分区间随商品一并公开，**样本少则可信度低**
 - 评价原文版权归原作者所有，此处仅作短引用与统计
-- **本项目为民间口碑整理，非麦当劳官方产品**，不构成对任何商品的评价或推荐
 
 ## 📁 目录结构
 
@@ -119,20 +115,14 @@
 mcd-flavor-index/
 ├── index.html                    # 交互式真香榜（单文件，免 Token）
 ├── data_ugc.json                 # 34 篇真实评价原始数据（含来源与评分）
-├── data/home.json                # 首页双榜数据（真香榜 6 + 人气榜 76）
-├── data/menu_full.json           # 门店 76 个在售商品的官方标签与配料清单
-├── scripts/build_home_data.py     # 由上面两个源生成 home.json
+├── data/home.json                # 首页双榜数据（真香榜 6 + 人气榜 96）
+├── data/menu_full.json           # 96 个在售商品的官方标签 / 配料 / 套餐结构
 ├── assets/mcd-brand/             # 官方商品图（来自 MCP 返回的 CDN 地址）
+├── docs/                         # 截图与社交预览图
+├── scripts/
+│   ├── collect_menu.py            # 采集门店菜单全量官方信息
+│   └── build_home_data.py         # 生成首页双榜数据
 ├── miniprogram/                  # 微信小程序版（原生，零依赖）
-│   ├── app.js / app.json / app.wxss
-│   ├── data/flavor.json          # 预置榜单数据
-│   ├── assets/                   # 商品图 + tabBar 图标
-│   ├── utils/flavor-store.js     # 数据层：读榜单 / 投票 / 投稿 / 广场流
-│   └── pages/{index,detail,square,profile}/
-├── docs/
-│   ├── screenshot-hero.png       # 首页截图
-│   ├── screenshot-detail.png     # 详情页截图
-│   └── screenshots/              # README 图集
 └── skills/mcd-flavor-index/
     ├── SKILL.md                  # Skill 主流程与铁律
     ├── MCP_INTEGRATION.md        # MCP 调用说明 + 8 条踩坑
@@ -146,6 +136,50 @@ mcd-flavor-index/
     │   └── menu_solver.py        # 菜单抓取 + 组合枚举
     └── references/
         └── ugc-collection.md     # 评价采集方法与口径
+```
+
+## 🚀 免 Token 打开即玩
+
+```bash
+git clone https://github.com/zmz-beijita/mcd-flavor-index.git
+cd mcd-flavor-index
+open index.html          # macOS
+# Windows：直接双击 index.html
+```
+
+零依赖、零构建、单文件，图片已相对路径内嵌。
+
+### 作为 WorkBuddy Skill 使用
+
+```bash
+cp -r skills/mcd-flavor-index ~/.workbuddy/skills/
+```
+
+在 WorkBuddy 左侧【专家·技能·连接器】→【自定义连接器】→【配置MCP】填入：
+
+```json
+{
+  "mcpServers": {
+    "mcd-mcp": {
+      "type": "streamablehttp",
+      "url": "https://mcp.mcd.cn",
+      "headers": { "Authorization": "Bearer YOUR_MCP_TOKEN" }
+    }
+  }
+}
+```
+
+保存并启用后，在对话里说「**麦当劳现在什么最值得吃**」即可。
+
+```bash
+export MCD_MCP_TOKEN=你的token
+
+# 采集门店菜单全量官方信息（标签 / 配料 / 套餐结构 / 核价）
+python scripts/collect_menu.py --store 1450713
+
+# 重新生成首页数据与页面
+python scripts/build_home_data.py
+python skills/mcd-flavor-index/scripts/flavor_index.py --render
 ```
 
 ## 📄 许可证
