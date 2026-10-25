@@ -120,13 +120,44 @@ def main():
           == load("data/img_map.json"))
 
     print("\n=== 5. README 关键数字 ===")
-    rm = open(os.path.join(ROOT, "README.md"), encoding="utf-8").read()
+    rm_path = os.path.join(ROOT, "README.md")
+    rm = open(rm_path, encoding="utf-8").read()
+    n_hot = len(home["hot"])
+
+    # README 里的数字会随菜单轮换变化，手工维护必然漂移。
+    # --fix 自动改写（只动匹配到的数字，不改其它内容），
+    # 必须在校验之前执行，否则刚更新完仍会报「不一致」。
+    if "--fix" in sys.argv:
+        new_rm = rm
+        # 位置 1：首屏粗体摘要   **118 个当前在售**
+        new_rm = re.sub(r"(\d{2,3}) 个当前在售", f"{n_hot} 个当前在售", new_rm)
+        # 位置 2：人气榜正文     **118 个商品**
+        new_rm = re.sub(r"\*\*(\d{2,3}) 个商品\*\*", f"**{n_hot} 个商品**", new_rm)
+        # 位置 3：目录结构注释   （真香榜 9 + 人气榜 118）
+        new_rm = re.sub(r"(真香榜 \d+ \+ 人气榜 )\d{2,3}", rf"\g<1>{n_hot}", new_rm)
+        # 位置 4：目录结构注释   118 个在售商品
+        new_rm = re.sub(r"(\d{2,3}) 个在售商品", f"{n_hot} 个在售商品", new_rm)
+        if new_rm != rm:
+            with open(rm_path, "w", encoding="utf-8", newline="") as f:
+                f.write(new_rm)
+            print(f"  🔧 已自动更新 README 数字（在售 {n_hot} / 评价 {n_ugc}）")
+            rm = new_rm
+        else:
+            print("  · README 数字无需更新")
+
     check("README 评价篇数", f"{n_ugc} 篇真实评价" in rm, f"应为 {n_ugc} 篇")
-    check("README 在售数", f"{len(home['hot'])} 个当前在售" in rm,
-          f"应为 {len(home['hot'])} 个")
+    check("README 在售数", f"{n_hot} 个当前在售" in rm, f"应为 {n_hot} 个")
     bad = re.findall(r"\b(\d{2,3}) 篇(真实|公开)评价", rm)
     stale = [b for b in bad if b[0] != str(n_ugc)]
     check("README 无过期篇数", not stale, f"发现 {stale}" if stale else "")
+    # 「N 个当前在售」也检查一遍
+    bad2 = re.findall(r"\*\*(\d{2,3}) 个当前在售\*\*", rm)
+    stale2 = [b for b in bad2 if b != str(n_hot)]
+    check("README 无过期在售数", not stale2, f"发现 {stale2}" if stale2 else "")
+    # 目录结构注释里的在售数
+    bad3 = re.findall(r"人气榜 (\d{2,3})", rm)
+    stale3 = [b for b in bad3 if b != str(n_hot)]
+    check("README 目录结构在售数", not stale3, f"发现 {stale3}" if stale3 else "")
 
     print("\n" + "=" * 52)
     if FAIL:
