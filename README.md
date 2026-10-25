@@ -22,7 +22,7 @@
 [![零依赖](https://img.shields.io/badge/dependencies-stdlib%20only-brightgreen?style=flat-square)](#-免-token-打开即玩)
 [![免Token体验](https://img.shields.io/badge/体验-免%20Token-orange?style=flat-square)](#-免-token-打开即玩)
 
-**49 篇真实评价 · 9 款有口碑商品 · 118 个当前在售 · 官方标签落差逐条对账**
+**49 篇真实评价 · 9 款有口碑商品 · 114 个当前在售 · 官方标签落差逐条对账**
 
 
 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品
@@ -105,7 +105,7 @@
 
 ## 📋 人气榜（当前时段在售全量）
 
-**118 个商品**，覆盖门店当前在售的每一项，按品类与官方销量信号排序。
+**114 个商品**，覆盖门店当前在售的每一项，按品类与官方销量信号排序。
 有真实评价的显示真香分，没有的标「待评价」——你投完，它就成了真香分。
 
 > 麦当劳菜单**每日轮换**（凌晨切早餐、上午切正餐），所以人气榜是「现在能点什么」，
@@ -144,8 +144,8 @@
 mcd-flavor-index/
 ├── index.html                    # 交互式真香榜（单文件，免 Token）
 ├── data_ugc.json                 # 49 篇真实评价原始数据（含来源与评分）
-├── data/home.json                # 首页双榜数据（真香榜 9 + 人气榜 118）
-├── data/menu_full.json           # 118 个在售商品的官方标签 / 配料 / 套餐结构 / 图片地址
+├── data/home.json                # 首页双榜数据（真香榜 9 + 人气榜 114）
+├── data/menu_full.json           # 114 个在售商品的官方标签 / 配料 / 套餐结构 / 图片地址
 ├── data/img_map.json            # 商品名 → 本地图片路径映射
 ├── assets/mcd-brand/             # 官方商品图（来自 MCP 返回的 CDN 地址）
 ├── docs/                         # 截图与社交预览图
