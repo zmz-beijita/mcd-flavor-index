@@ -68,6 +68,21 @@
         <text class="official-desc">{{item.officialDesc}}</text>
     </view>
 
+    <!-- 官方套餐结构 -->
+    <view class="block" wx:if="{{item.officialRounds.length}}">
+        <view class="block-hd">
+            <text class="block-t">官方套餐结构</text>
+            <text class="block-n">每一档都能换</text>
+        </view>
+        <view class="sr" wx:for="{{item.officialRounds}}" wx:key="name">
+            <view class="sr-h">
+                <text>{{item.name}}</text>
+                <text class="sr-c">{{item.count}} 选</text>
+            </view>
+            <view class="sr-o">{{item.options}}</view>
+        </view>
+    </view>
+
     <!-- 投票 -->
     <view class="block vote-block">
         <view class="block-hd">
