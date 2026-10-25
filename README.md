@@ -119,7 +119,8 @@ mcd-flavor-index/
 ├── index.html                    # 交互式真香榜（单文件，免 Token）
 ├── data_ugc.json                 # 49 篇真实评价原始数据（含来源与评分）
 ├── data/home.json                # 首页双榜数据（真香榜 6 + 人气榜 96）
-├── data/menu_full.json           # 96 个在售商品的官方标签 / 配料 / 套餐结构
+├── data/menu_full.json           # 118 个在售商品的官方标签 / 配料 / 套餐结构 / 图片地址
+├── data/img_map.json            # 商品名 → 本地图片路径映射
 ├── assets/mcd-brand/             # 官方商品图（来自 MCP 返回的 CDN 地址）
 ├── docs/                         # 截图与社交预览图
 ├── scripts/
@@ -150,7 +151,8 @@ open index.html          # macOS
 # Windows：直接双击 index.html
 ```
 
-零依赖、零构建、单文件，图片已相对路径内嵌。
+零依赖、零构建、单文件。**商品图已全部下载到 `assets/mcd-brand/`（117 张官方图），离线可用**；
+远程 CDN 地址作为兜底，图挂了会自动切换。
 
 ### 作为 WorkBuddy Skill 使用
 
