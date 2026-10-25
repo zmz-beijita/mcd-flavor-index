@@ -1,5 +1,15 @@
 const store = require('../../utils/flavor-store.js');
 
+const IMG_LOCAL={
+  "不素之霸双层牛堡": "assets/mcd-brand/cdn-MS_4648_600_1749175329279.png",
+  "双层吉士汉堡": "assets/mcd-brand/cdn-MS_1120_600.png",
+  "巨无霸": "assets/mcd-brand/cdn-MS_1100_600_1749175370846.png",
+  "板烧鸡腿堡": "assets/mcd-brand/cdn-MS_1406_600.png",
+  "麦香鱼": "assets/mcd-brand/cdn-MS_1600_600.png",
+  "龙焰芝士棒鸡腿堡": "assets/mcd-brand/cdn-MS_521953_600.png",
+};
+
+
 /* 官方商品图映射（来自麦当劳 MCP query-meal-detail 的 image 字段） */
 const IMAGES = {
     '龙焰芝士棒鸡腿堡': '/assets/food-521953.png',
@@ -69,7 +79,7 @@ Page({
                     spread: it.spread,
                     price: it.price,
                     tags: tags,
-                    img: IMAGES[it.name] || '',
+                    img: IMG_LOCAL[it.name] || IMAGES[it.name] || it.image || '',
                 };
             });
             const hot = (data.hot || []).map((it) => {
@@ -83,7 +93,7 @@ Page({
                     hasReview: !!it.has_review,
                     avg: avg ? avg.toFixed(1) : '',
                     scoreClass: avg ? scoreClass(avg) : 'none',
-                    img: IMAGES[it.name] || '',
+                    img: IMG_LOCAL[it.name] || IMAGES[it.name] || it.image || '',
                 };
             });
             const total = items.reduce((s, x) => s + x.n, 0);
