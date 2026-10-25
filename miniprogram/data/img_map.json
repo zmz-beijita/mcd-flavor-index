@@ -1,8 +1,11 @@
 {
- "龙焰芝士棒鸡腿堡": "assets/mcd-brand/cdn-MS_521953_600.png",
- "双层吉士汉堡": "assets/mcd-brand/cdn-MS_1120_600.png",
- "板烧鸡腿堡": "assets/mcd-brand/cdn-MS_1406_600.png",
- "麦香鱼": "assets/mcd-brand/cdn-MS_1600_600.png",
- "巨无霸": "assets/mcd-brand/cdn-MS_1100_600_1749175370846.png",
- "不素之霸双层牛堡": "assets/mcd-brand/cdn-MS_4648_600_1749175329279.png"
+ "龙焰芝士棒鸡腿堡": "/assets/cdn-MS_521953_600.png",
+ "双层吉士汉堡": "/assets/cdn-MS_1120_600.png",
+ "板烧鸡腿堡": "/assets/cdn-MS_1406_600.png",
+ "麦香鱼": "/assets/cdn-MS_1600_600.png",
+ "巨无霸": "/assets/cdn-MS_1100_600_1749175370846.png",
+ "不素之霸双层牛堡": "/assets/cdn-MS_4648_600_1749175329279.png",
+ "麦辣鸡腿堡": "/assets/cdn-MS_1440_600_0_1744772198163.png",
+ "安格斯厚牛堡": "/assets/cdn-MS_511781_600.png",
+ "麦香鸡汉堡": "/assets/cdn-MS_1450_600.png"
 }
