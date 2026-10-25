@@ -136,6 +136,14 @@
 同款数据的小程序实现，三个 Tab：**真香榜 / 麦门广场 / 我的**。
 纯原生微信小程序，零 npm 依赖、零云服务，投票与投稿只存本机。源码见 [`miniprogram/`](miniprogram/)。
 
+- 包体 **864KB**（上限 2MB），零云服务依赖，数据预置在包内
+- 广场支持就地发帖、按商品分组、筛选
+- 发布步骤（WorkBuddy 应用卡扫码即用 / 微信公众平台正式上架）：
+  [`docs/MINIPROGRAM_RELEASE.md`](docs/MINIPROGRAM_RELEASE.md)
+
+> 小程序**不直连麦当劳 MCP**（客户端不能带 Bearer Token 调外部接口）。
+> 官方数据由定时任务刷新后重新上传，这样 Token 不会暴露在前端。
+
 ## 🔌 用了哪些 MCP 工具
 
 | 工具 | 用途 |
