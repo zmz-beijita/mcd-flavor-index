@@ -27,11 +27,11 @@
 
 | 工具 | 本项目用它做什么 | 关键返回字段 |
 |---|---|---|
-| `query-meals` | **官方风味标签**的唯一来源；拿在售商品与分类 | `data.categories[].meals[].tags`（44 种官方风味词）、`.code` |
+| `query-meals` | **官方风味标签**的唯一来源；拿在售商品与分类 | `data.categories[].meals[].tags`（实测 66 种官方风味词，菜单每日轮换）、`.code` |
 | `query-meal-detail` | 套餐结构（rounds）、子项差价、**官方商品图地址** | `data.rounds[].choices[].diffPrice`、`data.image` |
 | `calculate-price` | **唯一可信的价格来源** | `data.price`（单位：分）、`data.productList`、`data.takeWayList` |
 | `query-nearby-stores` | 按位置搜门店 | `data[].storeCode`、`data[].storeName`、`data[].reservationTimeOptions` |
-| `list-nutrition-foods` | 副维度：钠 / 蛋白 / 热量（158 条） | `data` 是**逗号分隔文本表格**，不是 JSON |
+| `list-nutrition-foods` | 副维度：钠 / 蛋白 / 热量（160 条） | `data` 是**逗号分隔文本表格**，不是 JSON |
 | `now-time-info` | 确认当前时间 | `data.formatted`、`data.dayOfWeek` |
 
 未使用任何写操作（`create-order` / `cancel-order` / `auto-bind-coupons` / `mall-create-order` /
