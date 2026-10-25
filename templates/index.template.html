@@ -16,7 +16,7 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--cream);color:var(--ink);font-family:var(--round);-webkit-font-smoothing:antialiased;line-height:1.6}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 70px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 70px;overflow-x:hidden}
 
   /* ===== 顶栏 ===== */
   .top{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:2px solid var(--line);margin-bottom:26px}
@@ -29,12 +29,15 @@
   .pill.y .d{background:var(--yellow)} .pill.b .d{background:var(--blue)}
 
   /* ===== Hero ===== */
-  .hero{text-align:center;padding:10px 0 26px}
+  .hero{text-align:center;padding:20px 0 44px}
   .hero .kicker{display:block;color:var(--red);font-size:12.5px;font-weight:800;letter-spacing:.16em}
-  .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.16;letter-spacing:-.02em;margin-top:12px}
+  .hero h1{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.18;letter-spacing:-.02em;margin-top:18px}
   .hero h1 em{font-style:normal;background:var(--yellow);padding:0 10px;border-radius:12px;box-shadow:0 4px 0 var(--yellow-d)}
-  .hero .sub{font-size:15.5px;color:var(--mute);max-width:640px;margin:16px auto 0}
-  .hero .sub b{color:var(--ink)}
+  .hero .sub{font-size:16px;line-height:1.95;color:var(--mute);max-width:720px;margin:26px auto 0;word-break:normal;overflow-wrap:break-word}
+  .hero .sub b{color:var(--ink);font-weight:700}
+  .hero .sub .q{white-space:nowrap}
+  .hero .sub .sep{display:block;height:10px}
+  .hero .btns{margin-top:34px}
   .btns{display:flex;gap:13px;justify-content:center;margin-top:26px;flex-wrap:wrap}
   .btn{border:none;cursor:pointer;font-family:var(--round);font-weight:800;font-size:16px;padding:15px 28px;border-radius:16px;color:#fff;transition:transform .12s,box-shadow .12s}
   .btn:active{transform:translateY(4px);box-shadow:none!important}
@@ -183,6 +186,17 @@
   .foot code{font-family:var(--mono);background:var(--cream);padding:1px 6px;border-radius:5px;font-size:11.5px}
 
   @media(max-width:900px){
+    .top{display:grid;grid-template-columns:1fr;gap:12px}
+    .logo .nm{white-space:nowrap;font-size:17px}
+    .pills{justify-content:flex-start;flex-wrap:wrap;gap:7px}
+    .pill{font-size:11.5px;padding:5px 11px}
+    .hero{padding:14px 0 36px}
+    .hero h1{margin-top:14px}
+    .hero .sub{font-size:15px;line-height:1.85;margin-top:22px}
+    .hero .sub .q{white-space:normal}
+    .hero .btns{margin-top:28px}
+    .btn{flex:1 1 100%;justify-content:center;padding:15px 18px}
+    .btns{flex-direction:column}
     .stats{grid-template-columns:1fr 1fr}
     .stat:nth-child(2){border-left:none}
     .stat:nth-child(1),.stat:nth-child(2){border-bottom:2px solid var(--line)}
@@ -213,8 +227,11 @@
     <span class="kicker">MCD FLAVOR RANKING · 麦当劳真实口碑排行榜</span>
     <h1>麦当劳真香榜<br>官方说的 <em>vs</em> 大家说的</h1>
     <p class="sub">
-      麦当劳菜单接口给「龙焰芝士棒鸡腿堡」打的是<b>「浓郁奶香拉丝芝士」「趁热拉丝」</b>。<br>
-      而 <span id="heroN">—</span> 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。我们把两边的账摊开，给你排个座次。
+      麦当劳菜单接口给「龙焰芝士棒鸡腿堡」打的是<b class="q">「浓郁奶香拉丝芝士」「趁热拉丝」</b>。
+      <span class="sep"></span>
+      而 <span id="heroN">—</span> 篇真实公开评价里，<b>5 星和 2 星同时存在</b>。
+      <span class="sep"></span>
+      我们把两边的账摊开，给你排个座次。
     </p>
     <div class="btns">
       <button class="btn red" onclick="jumpTop()">🏆 看真香榜第 1 名</button>
