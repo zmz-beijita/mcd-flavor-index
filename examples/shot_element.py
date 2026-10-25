@@ -128,6 +128,10 @@ class CDP:
 
 
 def main():
+    """用法: python shot_element.py <html> <目标> <out.png> [筛选按钮data-f] [点击选择器]
+
+    <目标> 可以是元素 id，也可以是 CSS 选择器（以 # / . 开头时按选择器处理）。
+    """
     html, elem_id, out = sys.argv[1], sys.argv[2], sys.argv[3]
     click_filter = sys.argv[4] if len(sys.argv) > 4 else None
     click_selector = sys.argv[5] if len(sys.argv) > 5 else None
@@ -142,13 +146,31 @@ def main():
         if click_selector:
             cdp.evaluate(f'document.querySelector(\'{click_selector}\').click()')
             time.sleep(0.8)
+        # js: 参数存在时先执行一段 JS（用于展开详情等前置动作）
+        if len(sys.argv) > 6 and sys.argv[6]:
+            cdp.evaluate(sys.argv[6])
+            time.sleep(1.0)
+        # 目标定位：
+        #   js:<表达式>     → 表达式返回的元素（最灵活，能处理中文 id）
+        #   #x / .x        → CSS 选择器
+        #   其它            → 当作元素 id
+        if elem_id.startswith("js:"):
+            expr = elem_id[3:]
+            sel = "(" + expr + ")"
+        elif elem_id.startswith("#") or elem_id.startswith("."):
+            sel = "document.querySelector('" + elem_id + "')"
+        else:
+            sel = 'document.getElementById("' + elem_id + '")'
         box = json.loads(cdp.evaluate(
-            f'(()=>{{const e=document.getElementById("{elem_id}");'
+            f'(()=>{{const e={sel};'
+            f'if(!e) return JSON.stringify({{err:"找不到元素 {elem_id}"}});'
             f'const r=e.getBoundingClientRect();'
             f'return JSON.stringify({{x:Math.max(0,r.left-24),'
             f'y:Math.max(0,r.top+window.scrollY-24),'
             f'width:Math.min(1440,r.width+48),'
             f'height:e.offsetHeight+48,scale:1}})}})()'))
+        if "err" in box:
+            raise SystemExit("截图失败：" + box["err"])
         cdp.shot({"x": box["x"], "y": box["y"],
                   "width": box["width"], "height": box["height"]}, out)
         print(f"已保存 {out}  ({int(box['width'])}x{int(box['height'])})")
