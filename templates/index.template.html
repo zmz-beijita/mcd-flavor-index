@@ -73,6 +73,7 @@
   .rank-item:nth-child(3) .rank-no{color:#C08552}
   .rank-pic{width:60px;height:60px;border-radius:14px;background:var(--cream);display:grid;place-items:center}
   .rank-pic img{max-width:52px;max-height:52px;object-fit:contain}
+  .rank-pic img[src=""],.rank-pic img.broken{display:none}
   .rank-pic.none{font-size:11px;color:#C9C0B2;font-weight:700;text-align:center;line-height:1.3}
   .rank-main{min-width:0}
   .rank-name{font-size:16.5px;font-weight:800;line-height:1.3}
@@ -319,6 +320,125 @@ const IMG={
   "可乐中杯":"assets/mcd-brand/food-3050.png",
   "无糖可口可乐中杯":"assets/mcd-brand/food-3071.png"
 };
+const IMG_LOCAL={
+  "100% 苹果汁(盒装)": "assets/mcd-brand/cdn-MS_6362_600_1745552990018.png",
+  "BFF四宫格小食盘": "assets/mcd-brand/cdn-MS_9900015730_600.png",
+  "BFF四宫格小食盘双人餐": "assets/mcd-brand/cdn-MS_9900005321_600.png",
+  "“堡”你欢乐套餐": "assets/mcd-brand/cdn-MS_9900011128_600.png",
+  "“我就喜欢”鸡薯双全盒": "assets/mcd-brand/cdn-MS_9900016076_600.png",
+  "“苹”水相“鱼”套餐": "assets/mcd-brand/cdn-MS_9900011121_600.png",
+  "“苹板”支撑Pro套餐": "assets/mcd-brand/cdn-MS_9900009242_600.png",
+  "“葱不求人“按摩捶痒痒挠": "assets/mcd-brand/cdn-MS_521914_600.png",
+  "“辣”么快乐套餐": "assets/mcd-brand/cdn-MS_9900011123_600.png",
+  "【美汁源】“多汁柠柠”": "assets/mcd-brand/cdn-MS_521817_600.png",
+  "【美汁源】“黄金橙橙”": "assets/mcd-brand/cdn-MS_2430_600.png",
+  "不素之霸双层牛堡": "assets/mcd-brand/cdn-MS_4648_600_1749175329279.png",
+  "不素之霸双层牛堡三件套": "assets/mcd-brand/cdn-MS_9900005411_600.png",
+  "不素之霸双层牛堡四件套": "assets/mcd-brand/cdn-MS_9900000886_600.png",
+  "中杯怡泉+C": "assets/mcd-brand/cdn-MS_515520_600.png",
+  "中薯条": "assets/mcd-brand/cdn-MS_4810_600_1745199801147.png",
+  "人气经典随心配": "assets/mcd-brand/cdn-MS_9900013304_600.png",
+  "人气超值四件套随心选": "assets/mcd-brand/cdn-MS_9900004236_600.png",
+  "全明星双人分享餐八件套": "assets/mcd-brand/cdn-MS_9900011056_600.png",
+  "冰浓浓燕麦黑巧中杯": "assets/mcd-brand/cdn-MS_515955_600.png",
+  "冰浓浓黑巧中杯": "assets/mcd-brand/cdn-MS_515946_600.png",
+  "冰燕麦奶铁中杯": "assets/mcd-brand/cdn-MS_510479_600.png",
+  "北美招牌牧场酱": "assets/mcd-brand/cdn-MS_521797_600.png",
+  "卡布奇诺中杯": "assets/mcd-brand/cdn-MS_507387_600.png",
+  "双层吉士汉堡": "assets/mcd-brand/cdn-MS_1120_600.png",
+  "双层吉士汉堡中套餐": "assets/mcd-brand/cdn-MS_9900005464_600.png",
+  "双层深海鳕鱼堡": "assets/mcd-brand/cdn-MS_9900003586_600.png",
+  "双层深海鳕鱼堡三件套": "assets/mcd-brand/cdn-MS_9900005413_600.png",
+  "双层深海鳕鱼堡四件套": "assets/mcd-brand/cdn-MS_9900000893_600.png",
+  "可乐": "assets/mcd-brand/cdn-MS_9900008751_600.png",
+  "吉士汉堡包中套餐": "assets/mcd-brand/cdn-MS_9900005449_600.png",
+  "咖啡阿芙佳朵": "assets/mcd-brand/cdn-MS_514851_600.png",
+  "圆筒冰淇淋": "assets/mcd-brand/cdn-MS_515837_600.png",
+  "培根安格斯厚牛堡": "assets/mcd-brand/cdn-MS_511781_600.png",
+  "培根安格斯厚牛堡三件套": "assets/mcd-brand/cdn-MS_9900005428_600.png",
+  "培根安格斯厚牛堡四件套": "assets/mcd-brand/cdn-MS_9900000881_600.png",
+  "培根蔬萃双层牛堡": "assets/mcd-brand/cdn-MS_1106_600.png",
+  "培根蔬萃双层牛堡三件套": "assets/mcd-brand/cdn-MS_9900005468_600.png",
+  "培根蔬萃双层牛堡四件套": "assets/mcd-brand/cdn-MS_9900000885_600.png",
+  "大堡口福三件套": "assets/mcd-brand/cdn-MS_9900015602_600.png",
+  "安格斯厚牛堡四件套随心选": "assets/mcd-brand/cdn-MS_9900006957_600.gif",
+  "小杯玉米杯": "assets/mcd-brand/cdn-MS_4437_600.png",
+  "小杯鲜萃咖啡": "assets/mcd-brand/cdn-MS_520689_600.png",
+  "巨无霸": "assets/mcd-brand/cdn-MS_1100_600_1749175370846.png",
+  "巨无霸三件套": "assets/mcd-brand/cdn-MS_9900005466_600.png",
+  "巨无霸四件套": "assets/mcd-brand/cdn-MS_9900000888_600.png",
+  "开心亲子双人餐": "assets/mcd-brand/cdn-MS_9900005439_600.png",
+  "心形薯饼8块": "assets/mcd-brand/cdn-MS_9900016566_600.png",
+  "抹茶阿芙佳朵": "assets/mcd-brand/cdn-MS_514850_600.png",
+  "新地": "assets/mcd-brand/cdn-MS_9900008745_600.png",
+  "旋旋水手帽": "assets/mcd-brand/cdn-MS_521929_600.png",
+  "板烧鸡腿堡": "assets/mcd-brand/cdn-MS_1406_600.png",
+  "板烧鸡腿堡三件套": "assets/mcd-brand/cdn-MS_9900005462_600.png",
+  "板烧鸡腿堡四件套": "assets/mcd-brand/cdn-MS_9900000890_600.png",
+  "枫糖风味厚松饼猪柳堡": "assets/mcd-brand/cdn-MS_521731_600.png",
+  "枫糖风味厚松饼猪柳堡三件套": "assets/mcd-brand/cdn-MS_9900014974_600.png",
+  "枫糖风味厚松饼猪柳蛋堡": "assets/mcd-brand/cdn-MS_521730_600.png",
+  "枫糖风味厚松饼猪柳蛋堡三件套": "assets/mcd-brand/cdn-MS_9900014837_600.png",
+  "枫糖风味厚松饼猪柳蛋堡四件套": "assets/mcd-brand/cdn-MS_9900016301_600.png",
+  "汉堡开心乐园餐": "assets/mcd-brand/cdn-MS_9900005422_600.png",
+  "泷愿成真麦旋风——大米风味": "assets/mcd-brand/cdn-MS_521917_600.png",
+  "派": "assets/mcd-brand/cdn-MS_9900008752_600.png",
+  "浓缩咖啡": "assets/mcd-brand/cdn-MS_507389_600.png",
+  "灰焰圆筒": "assets/mcd-brand/cdn-MS_521951_600.png",
+  "热燕麦奶中杯": "assets/mcd-brand/cdn-MS_510488_600.png",
+  "热牛奶中杯": "assets/mcd-brand/cdn-MS_507394_600.png",
+  "牛气满满套餐": "assets/mcd-brand/cdn-MS_9900009245_600.png",
+  "牛肉堡单品精选": "assets/mcd-brand/cdn-MS_9900008747_600.png",
+  "精选单人餐三件套": "assets/mcd-brand/cdn-MS_9900004064_600.png",
+  "精选超值随心配": "assets/mcd-brand/cdn-MS_9900015568_600.png",
+  "纯悦": "assets/mcd-brand/cdn-MS_3757_600.png",
+  "纯牛奶(盒装)": "assets/mcd-brand/cdn-MS_3755_600.png",
+  "经典麦旋风": "assets/mcd-brand/cdn-MS_9900008754_600.png",
+  "脆脆薯条": "assets/mcd-brand/cdn-MS_514782_600.png",
+  "脆薯饼": "assets/mcd-brand/cdn-MS_521741_600.png",
+  "芝士安格斯厚牛堡": "assets/mcd-brand/cdn-MS_511782_600.png",
+  "芝士安格斯厚牛堡三件套": "assets/mcd-brand/cdn-MS_9900005430_600.png",
+  "芝士安格斯厚牛堡四件套": "assets/mcd-brand/cdn-MS_9900000882_600.png",
+  "苹果片": "assets/mcd-brand/cdn-MS_6102_600.png",
+  "蓝莓爆爆珠麦旋风": "assets/mcd-brand/cdn-MS_521950_600.png",
+  "薄皮V翅双拼十翅": "assets/mcd-brand/cdn-MS_9900006332_600_1745288015452.png",
+  "蘸酱BFF四宫格小食盘": "assets/mcd-brand/cdn-MS_9900015729_600.png",
+  "蘸酱麦麦脆汁鸡": "assets/mcd-brand/cdn-MS_9900016078_600.png",
+  "酥脆无双套餐": "assets/mcd-brand/cdn-MS_9900011126_600.png",
+  "锡兰红茶": "assets/mcd-brand/cdn-MS_3505_600.png",
+  "阳光柠檬红茶小杯": "assets/mcd-brand/cdn-MS_515280_600.png",
+  "阳光橙麦炫酷": "assets/mcd-brand/cdn-MS_6352_600.png",
+  "雪碧（小杯）": "assets/mcd-brand/cdn-MS_3010_600.png",
+  "马来咖喱风味薄皮肉骨鸡3块": "assets/mcd-brand/cdn-MS_521881_600.png",
+  "马苏里拉拉丝芝士条": "assets/mcd-brand/cdn-MS_521986_600.png",
+  "高达吉士双牛堡": "assets/mcd-brand/cdn-MS_521316_600.png",
+  "鱼排堡开心乐园餐": "assets/mcd-brand/cdn-MS_9900005421_600_1745810423708.png",
+  "鱼牛汉堡四件套随心选": "assets/mcd-brand/cdn-MS_9900010110_600.png",
+  "鸡肉堡单品精选": "assets/mcd-brand/cdn-MS_9900008746_600.png",
+  "麦乐鸡5块": "assets/mcd-brand/cdn-MS_1401_600.png",
+  "麦乐鸡经典中套餐": "assets/mcd-brand/cdn-MS_9900004835_600.png",
+  "麦咖啡™冰奶铁中杯": "assets/mcd-brand/cdn-MS_507409_600.png",
+  "麦咖啡™冰美式中杯": "assets/mcd-brand/cdn-MS_507411_600.png",
+  "麦当劳奶昔": "assets/mcd-brand/cdn-MS_9900014092_600.png",
+  "麦当劳限定丝巾": "assets/mcd-brand/cdn-MS_521956_600.png",
+  "麦辣鸡翅2块": "assets/mcd-brand/cdn-MS_1700_600.png",
+  "麦辣鸡翅4块中套餐": "assets/mcd-brand/cdn-MS_9900005451_600.png",
+  "麦辣鸡腿堡四件套": "assets/mcd-brand/cdn-MS_9900000891_600.png",
+  "麦辣鸡腿汉堡": "assets/mcd-brand/cdn-MS_1440_600_0_1744772198163.png",
+  "麦辣鸡腿汉堡三件套": "assets/mcd-brand/cdn-MS_9900005456_600.png",
+  "麦香鱼": "assets/mcd-brand/cdn-MS_1600_600.png",
+  "麦香鱼中套餐": "assets/mcd-brand/cdn-MS_9900005460_600.png",
+  "麦香鸡": "assets/mcd-brand/cdn-MS_1450_600.png",
+  "麦香鸡中套餐": "assets/mcd-brand/cdn-MS_9900005453_600.png",
+  "麦麦周末双人餐": "assets/mcd-brand/cdn-MS_9900015151_600.png",
+  "麦麦脆汁鸡1块": "assets/mcd-brand/cdn-MS_9900005432_600.png",
+  "龙焰芝士棒鸡腿堡": "assets/mcd-brand/cdn-MS_521953_600.png",
+  "龙焰芝士棒鸡腿堡三件套": "assets/mcd-brand/cdn-MS_9900016075_600.png",
+  "龙焰芝士棒鸡腿堡四件套": "assets/mcd-brand/cdn-MS_9900016310_600.png",
+  "龙焰鸡腿堡": "assets/mcd-brand/cdn-MS_521952_600.png",
+  "龙焰鸡腿堡三件套": "assets/mcd-brand/cdn-MS_9900016073_600.png",
+  "龙焰鸡腿堡四件套": "assets/mcd-brand/cdn-MS_9900016309_600.png",
+};
 const VOTE_OPTS=[
   {key:'good',label:'真香',score:5},
   {key:'mid', label:'一般',score:3},
@@ -366,9 +486,17 @@ function rankItem(it,idx,isHot){
   const flag=!has?'<span class="rank-flag none">待评价</span>'
     :(it.spread>=3?'<span class="rank-flag div">分歧最大</span>'
     :(it.spread<=1?'<span class="rank-flag same">口碑一致</span>':''));
-  const img=IMG[it.name];
-  const pic=img?`<div class="rank-pic"><img src="${img}" alt=""></div>`
-    :`<div class="rank-pic none">${esc((it.cat||'').slice(0,4))}</div>`;
+  // 图片优先用 MCP 返回的官方 CDN 地址，其次本地已下载的映射
+  const img=it.image || IMG[it.name] || '';
+  // 图片：本地优先（离线可用）→ 远程 CDN → 分类占位
+  const local=IMG_LOCAL[it.name]||IMG[it.name]||'';
+  const remote=it.image||'';
+  const src=local||remote;
+  const fallback=local&&remote&&local!==remote ? remote : '';
+  const pic=src
+    ? `<div class="rank-pic"><img src="${src}" alt="" loading="lazy"
+         onerror="this.onerror=null;${fallback?`this.src='${fallback}'`:"this.classList.add('broken')"}"></div>`
+    : `<div class="rank-pic none">${esc((it.cat||'').slice(0,4))}</div>`;
   const hotTags=fl.filter(t=>['上新','新升级','限时特惠','限定特惠','爆款','人气'].includes(t));
   // 风味标签不足时，用官方配料清单补足信息量
   let tags=fl.slice(0,3);
@@ -380,7 +508,7 @@ function rankItem(it,idx,isHot){
     return `<span class="ftag ${cls}">${esc(t)}</span>`;
   }).join('');
   const score=has?`<div class="rank-score ${scCls}">${sc.toFixed(1)}</div>
-      <div class="rank-sub">n=${it.n} 篇 · ${it.min}–${it.max}★${flag}</div>`
+      <div class="rank-sub">n=${it.n||0} 篇${(it.min!=null&&it.max!=null)?` · ${it.min}–${it.max}★`:''}${flag}</div>`
     :`<div class="rank-score none">—</div>
       <div class="rank-sub">官方价 ¥${it.price==null?'-':it.price}${it.signal?' · 官方推荐':''}</div>`;
   const meta=has?`${esc(it.cat)} · 官方核价 ¥${it.price==null?'-':it.price}`
@@ -424,7 +552,7 @@ function detailHtml(it){
     ${it.ugc.map(u=>`<div class="urow"><div class="ubadge"><div class="s ${scoreCls(u.score)}">${u.score}.0</div><div class="w">★</div></div>
       <div><div class="utext">${u.text}</div><div class="usrc">— ${esc(u.source)}</div></div></div>`).join('')}</div>`:'';
   const spread=it.has_review?`<div class="d-spread">
-      <div class="sh">评分离散度<span>区间 ${it.min} – ${it.max} · ${it.n} 篇</span></div>
+      <div class="sh">评分离散度<span>${(it.min!=null&&it.max!=null)?`区间 ${it.min} – ${it.max}`:''} · ${it.n||0} 篇</span></div>
       <div class="d-track">
         <span class="rng" style="left:${((it.min-2)/3*100).toFixed(1)}%;width:${((it.max-it.min)/3*100).toFixed(1)}%"></span>
         <span class="mk" style="left:calc(${((it.avg-2)/3*100).toFixed(1)}% - 7.5px)"></span>
