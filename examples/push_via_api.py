@@ -79,8 +79,15 @@ def main():
         with open(full, "rb") as f:
             content = base64.b64encode(f.read()).decode()
         last = None
-        for attempt in range(6):
-            sha = get_sha(repo, rel)
+        for attempt in range(10):
+            try:
+                sha = get_sha(repo, rel)
+            except BaseException as e:
+                last = str(e)
+                if attempt < 9:
+                    time.sleep(min(1.5 * (attempt + 1), 12))
+                    continue
+                raise RuntimeError(last)
             payload = {
                 "message": f"feat: {rel}" if not sha else f"chore: update {rel}",
                 "content": content,
@@ -93,15 +100,16 @@ def main():
                 return rel
             except BaseException as e:      # SystemExit 也是 BaseException
                 last = str(e)
-                if attempt < 5:
-                    time.sleep(1.0 * (attempt + 1))
+                if attempt < 9:
+                    time.sleep(min(1.5 * (attempt + 1), 12))
                     continue
                 raise RuntimeError(last)
         raise RuntimeError(last or "unknown")
 
     ok = 0
     errors = []
-    with cf.ThreadPoolExecutor(max_workers=6) as ex:
+    # 代理环境下 502/409 较多，低并发 + 指数退避比高并发更快收敛
+    with cf.ThreadPoolExecutor(max_workers=3) as ex:
         futs = {ex.submit(upload, it): it for it in files}
         for fut in cf.as_completed(futs):
             rel = futs[fut][0]
