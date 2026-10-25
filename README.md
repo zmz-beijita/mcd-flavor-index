@@ -215,6 +215,19 @@ python scripts/refresh_all.py --push
 **校验页面模板的 DENY 规则与预览图脚本的 DENY 规则语义一致**——
 规则公开不等于口径唯一，凡是页面上算的数，脚本必须用同一套判定规则。
 
+## 🔐 凭据与安全
+
+| 凭据 | 存放位置 | 是否进仓库 |
+|---|---|---|
+| 麦当劳 MCP Token | 本地 `.env.local`（已 gitignore） | ❌ **不进** |
+| GitHub PAT | 本地 `.env.local`（已 gitignore） | ❌ **不进** |
+| 示例配置 | [`skills/mcd-flavor-index/mcp-config.example.json`](skills/mcd-flavor-index/mcp-config.example.json) | ✅ 用 `${MCD_MCP_TOKEN}` 占位符 |
+
+- 推送脚本 `examples/push_via_api.py` **显式跳过** `.env` / `.env.local`，不会误传
+- `.github/secret_scanning.yml` 排除了文档目录 —— 里面的示例占位符
+  （如微信 AppID 格式）会被 GitHub Secret Scanning 误判成真密钥
+- **仓库内零真实凭据**，可用 `grep` 自行核验
+
 ## 📁 目录结构
 
 ```
@@ -224,6 +237,7 @@ mcd-flavor-index/
 ├── data/home.json                # 首页双榜数据（真香榜 9 + 人气榜 115）
 ├── data/menu_full.json           # 115 个在售商品的官方标签 / 配料 / 套餐结构 / 图片地址
 ├── data/img_map.json            # 商品名 → 本地图片路径映射
+├── .github/secret_scanning.yml   # Secret Scanning 排除配置（文档目录）
 ├── assets/mcd-brand/             # 官方商品图（来自 MCP 返回的 CDN 地址）
 ├── docs/                         # 截图与社交预览图
 ├── scripts/
