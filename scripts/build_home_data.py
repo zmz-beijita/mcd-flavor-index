@@ -176,6 +176,7 @@ def main():
             "official_tags": it.get("official_tags", []),
             "flavor_tags": flavor_tags(m.get("tags", []) or it.get("official_tags", [])),
             "ingredients": ingredients(m.get("ings", [])),
+            "image": m.get("image") or "",
             "official_desc": (m.get("official_desc") or {}).get("text"),
             "official_rounds": rounds.get(it["name"], []),
             "real": it.get("real", []),
@@ -201,12 +202,16 @@ def main():
             "signal": sig,
             "flavor_tags": fl,
             "ingredients": ings,
+            "image": m.get("image") or "",
             "official_desc": d.get("text"),
             "official_rounds": rounds.get(nm, []),
             "official_desc_date": d.get("date"),
             "has_review": bool(t),
             "avg": round(sum(u["score"] for u in t["ugc"]) / len(t["ugc"]), 1) if t else None,
             "n": len(t["ugc"]) if t else 0,
+            "min": min((u["score"] for u in t["ugc"]), default=None) if t else None,
+            "max": max((u["score"] for u in t["ugc"]), default=None) if t else None,
+            "spread": (max(u["score"] for u in t["ugc"]) - min(u["score"] for u in t["ugc"])) if t else 0,
         }
         hot.append(item)
     # 排序：先按品类（用户真正常点的排前面），再按信号分、评价分、价格
